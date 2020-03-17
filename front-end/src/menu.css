@@ -1,0 +1,50 @@
+.Titre {
+    font-size: 120px;
+    position: absolute;
+    top: 6%;
+    left: 37%;
+}
+
+.description {
+    font-size: 28px;
+    position: absolute;
+    top: 30%;
+    left: 13%;
+}
+
+.bouttons-box {
+    position: absolute;
+    top: 55%;
+    left: 27%;
+}
+
+.jouer {
+    font-size: 40px;
+    width: 200px;
+    height: 120px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.creer {
+    font-size: 40px;
+    width: 400px;
+    height: 120px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.tutoriel {
+    font-size: 40px;
+    width: 200px;
+    height: 120px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.reglage {
+    font-size: 40px;
+    position: absolute;
+    top: 70%;
+    left: 80%;
+}

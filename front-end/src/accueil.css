@@ -68,6 +68,13 @@ a {
     left: 2%;
 }
 
+.test {
+    font-size: 40px;
+    position: absolute;
+    top: 90%;
+    left: 2%;
+}
+
 .reglage {
     font-size: 40px;
     position: absolute;
