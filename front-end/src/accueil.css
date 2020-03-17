@@ -68,16 +68,13 @@ a {
     left: 2%;
 }
 
-.test {
-    font-size: 40px;
-    position: absolute;
-    top: 90%;
-    left: 2%;
-}
-
 .reglage {
     font-size: 40px;
     position: absolute;
     top: 85%;
     left: 45%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }

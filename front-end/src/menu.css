@@ -24,6 +24,10 @@
     height: 120px;
     position: relative;
     margin-right: 50px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .creer {
@@ -32,6 +36,10 @@
     height: 120px;
     position: relative;
     margin-right: 50px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .tutoriel {
@@ -40,6 +48,10 @@
     height: 120px;
     position: relative;
     margin-right: 50px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .reglage {
@@ -47,4 +59,8 @@
     position: absolute;
     top: 70%;
     left: 80%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
