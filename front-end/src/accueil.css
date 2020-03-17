@@ -5,6 +5,20 @@
     left: 37%;
 }
 
+a:focus {
+    border-bottom: 1px solid;
+    background: #c8d6e5;
+  }
+  
+a:hover {
+    border-bottom: 1px solid;     
+    background: #c8d6e5;
+  }
+
+a {
+    color: #ee5253;
+}
+
 .lien1 {
     font-size: 18px;
     position: absolute;
