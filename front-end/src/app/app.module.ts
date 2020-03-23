@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
+import { ReglageComponent } from './reglage/reglage.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -13,6 +14,10 @@ const appRoutes: Routes = [
   {
     path: 'menu',
     component: MenuComponent
+  },
+  {
+    path: 'reglage',
+    component: ReglageComponent
   },
   {
     path: '', 
@@ -25,7 +30,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AccueilComponent,
-    MenuComponent
+    MenuComponent,
+    ReglageComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)
