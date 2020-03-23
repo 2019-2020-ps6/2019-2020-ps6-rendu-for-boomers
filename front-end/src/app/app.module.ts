@@ -13,6 +13,11 @@ const appRoutes: Routes = [
   {
     path: 'menu',
     component: MenuComponent
+  },
+  {
+    path: '', 
+    redirectTo: '/accueil',
+    pathMatch: 'full'
   }
 ];
 
