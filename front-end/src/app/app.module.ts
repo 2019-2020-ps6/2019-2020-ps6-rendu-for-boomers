@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReglageComponent } from './reglage/reglage.component';
+import { EventEmitterService } from './event-emitter.service';
+
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -36,7 +38,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [EventEmitterService],
   bootstrap: [AppComponent]
 })
 
