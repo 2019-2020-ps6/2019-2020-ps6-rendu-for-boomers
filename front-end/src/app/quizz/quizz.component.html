@@ -1,12 +1,15 @@
-<h1>Quiz</h1>
-<h2>La couleur du drapeau francais</h2>
+<h1>Quiz sur {{quiz.name}}</h1>
+<h2>Question : {{question.label}}</h2>
+
+<form>
+    <fieldset>
+        <legend>Question 0/{{quiz.questions.length}} </legend>
+            <button>{{question.answers[0].value}}</button>
+            <button>{{question.answers[1].value}}</button>
+            <button>zzzzz</button>
+            <button>zZzZzZz</button>
+    </fieldset>
+</form>
 <button routerLink="/menu">retour au menu</button>
-<fieldset>
-    <legend>Quiz {{ quiz.name }} #numeroQuiz</legend>
-        <button>bleu blanc rouge</button>
-        <button>bleu blanc rouge</button>
-        <button>bleu blanc rouge</button>
-        <button>bleu blanc rouge</button>
-</fieldset>
 
 <button class="reglage">Réglage##</button>

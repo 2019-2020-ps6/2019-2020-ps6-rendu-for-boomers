@@ -9,7 +9,23 @@ export const QUIZ_LIST: Quiz[] =
         theme: 'France',
         questions: 
         [
+            {
+                id: '1',
+                label: 'Quels sont les couleurs du drapeau francais ?',
+                answers: 
+                [
+                    {
+                        value: 'bleu blanc rouge',
+                        isCorrect: true
+                    },
 
+                    {
+                        value: 'rouge vert jaune',
+                        isCorrect: false
+                    }
+                ]
+                
+            }
         ],
     }
 ];
