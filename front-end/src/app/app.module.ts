@@ -7,6 +7,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReglageComponent } from './reglage/reglage.component';
 import { EventEmitterService } from './event-emitter.service';
+import { QuizzComponent } from './quizz/quizz.component';
 
 
 const appRoutes: Routes = [
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     AppComponent,
     AccueilComponent,
     MenuComponent,
-    ReglageComponent
+    ReglageComponent,
+    QuizzComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)
