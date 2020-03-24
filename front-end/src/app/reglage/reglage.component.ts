@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { setButtonIsActivated } from '../menu/menu.component';
+import { MenuComponent } from '../menu/menu.component';
 import { AccueilComponent } from '../accueil/accueil.component';
 
 @Component({
