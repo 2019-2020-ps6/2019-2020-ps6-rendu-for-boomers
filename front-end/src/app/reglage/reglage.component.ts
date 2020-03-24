@@ -9,7 +9,6 @@ import { AccueilComponent } from '../accueil/accueil.component';
 })
 
 export class ReglageComponent implements OnInit {
-  
 
   constructor() { }
 
@@ -19,5 +18,9 @@ export class ReglageComponent implements OnInit {
   goBack(): void {
 
     
+  }
+
+  updateFontSize(value: BigInteger): void {
+    console.log("new size: " + value);
   }
 }

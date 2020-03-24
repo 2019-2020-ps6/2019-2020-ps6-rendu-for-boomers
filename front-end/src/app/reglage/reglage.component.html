@@ -10,8 +10,8 @@
     <div class="options"> Police d'écriture 
 
     </div>
-    <div class="options"> Taille de la police 
-
+    <div class="options slidecontainer"> Taille de la police
+        <input #slider type="range" (change)="updateFontSize(slider.value)" min="8" max="60" value="45" class="slider" id="myRange">
     </div>
     <div class="options"> Profil Enregistré 
 
@@ -20,6 +20,6 @@
 
     </div>
 
-    <button class="retour" (click)="goBack">Retour</button>
+    <button class="retour btn btn-default" (click)="goBack">Retour</button>
 
 </div>
