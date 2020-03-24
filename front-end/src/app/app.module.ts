@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ReglageComponent } from './reglage/reglage.component';
 import { EventEmitterService } from './event-emitter.service';
 import { QuizzComponent } from './quizz/quizz.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -42,8 +43,11 @@ const appRoutes: Routes = [
     QuizzComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, 
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
+  exports: [RouterModule],
   providers: [EventEmitterService],
   bootstrap: [AppComponent]
 })
