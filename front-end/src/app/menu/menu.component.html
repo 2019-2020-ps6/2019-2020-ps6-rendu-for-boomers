@@ -1,0 +1,30 @@
+<html>
+    <div class="titre"> PolyQuiz </div>
+
+    <div class="description"> PolyQuiz est un site, simple d'utilisation, de divertissement qui vous permez de jouer à des quiz. <br>
+        Plusieurs thèmes et difficultés sont disponibles pour chacun. Vous avez aussi la possibilité de créer vos quiz.
+    </div>
+
+    <div class="bouttons-box">
+        <input class="jouer" type="button" value="Jouer">
+        <input class="creer" type="button" value="Créer / Modifier Quiz">
+        <input class="tutoriel" type="button" value="Tutoriel">
+    </div>
+
+    <div class="quote-container">
+        <i class="pin"></i>
+        <blockquote class="note grey">
+            - Agrandir le texte <br>
+            - Changer de police <br>
+            - Modifier le contraste <br>
+            etc...
+        </blockquote>
+    </div>
+
+    <img class="arrow1" src="../assets/arrow1.png"/> 
+
+    <button class="reglage" (click)="goToReglage()">Réglage</button>
+
+    <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
+    
+</html>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
+import { setButtonIsActivated } from '../menu/menu.component';
 import { AccueilComponent } from '../accueil/accueil.component';
 
 @Component({
@@ -17,6 +17,7 @@ export class ReglageComponent implements OnInit {
   }
 
   goBack(): void {
+
     
   }
 }

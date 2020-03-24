@@ -1,0 +1,18 @@
+
+<html>
+    <div class="titre"> PolyQuiz </div>
+    <nav>
+        <a class="lien1" routerLink="/menu" (click)="onUpdateFontSize(18)">Cliquer ici pour choisir cette taille de police.</a>
+        <a class="lien2" routerLink="/menu" (click)="onUpdateFontSize(24)">Cliquer ici pour choisir cette taille de police.</a>
+        <a class="lien3" routerLink="/menu" (click)="onUpdateFontSize(30)">Cliquer ici pour choisir cette taille de police.</a>
+        <a class="lien4" routerLink="/menu" (click)="onUpdateFontSize(36)">Cliquer ici pour choisir cette taille de police.</a>
+        <a class="lien5" routerLink="/menu" (click)="onUpdateFontSize(42)">Cliquer ici pour choisir cette taille de police.</a>
+        <a class="lien6" routerLink="/menu" (click)="onUpdateFontSize(48)">Cliquer ici pour choisir cette taille de police.</a>
+    </nav>
+
+    <div class="NB"> N.B : Vous pourrez toujours changer à n'importe quel moment via les réglages en cliquant sur l'icône ci-contre : </div>
+
+    <button class="reglage" (click)="goToReglage()">Réglage</button>
+    <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
+    
+</html>
