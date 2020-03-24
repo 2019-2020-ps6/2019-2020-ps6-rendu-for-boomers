@@ -5,3 +5,13 @@ fieldset
     margin-left: 2px;
     margin-right: 2px;
 }
+
+button {
+    font-size: 40px;
+    position: relative;
+    margin: 20px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
