@@ -23,6 +23,10 @@ const appRoutes: Routes = [
     component: ReglageComponent
   },
   {
+    path: 'quizz',
+    component: QuizzComponent
+  },
+  {
     path: '', 
     redirectTo: '/accueil',
     pathMatch: 'full'
