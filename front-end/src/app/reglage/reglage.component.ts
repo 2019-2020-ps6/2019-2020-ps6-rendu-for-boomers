@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
 import { AccueilComponent } from '../accueil/accueil.component';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-reglage',
@@ -20,7 +21,8 @@ export class ReglageComponent implements OnInit {
     
   }
 
-  updateFontSize(value: BigInteger): void {
-    console.log("new size: " + value);
+  updateFontSize(value: number): void {
+    console.log("new font-size :" + value);
+    $(".text").css("font-size", value + "px");
   }
 }
