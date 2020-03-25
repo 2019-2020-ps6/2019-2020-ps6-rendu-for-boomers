@@ -1,8 +1,14 @@
+html{
+    width: 100vw;
+}
+
 .titre {
     font-size: 120px;
-    position: absolute;
-    top: 6%;
-    left: 37%;
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    left: 35%;
 }
 
 a:focus {
@@ -20,57 +26,59 @@ a {
 }
 
 .lien1 {
-    font-size: 18px;
-    position: absolute;
-    top: 31%;
-    left: 25%;
+    font-size: 24px;
+    position: relative;
+    left: 22%;
 }
 
 .lien2 {
-    font-size: 24px;
-    position: absolute;
-    top: 34%;
-    left: 25%;
+    font-size: 30px;
+    position: relative;
+    left: 22%;
 }
 
 .lien3 {
-    font-size: 30px;
-    position: absolute;
-    top: 38%;
-    left: 25%;
+    font-size: 36px;
+    position: relative;
+    left: 22%;
 }
 
 .lien4 {
-    font-size: 36px;
-    position: absolute;
-    top: 43%;
-    left: 25%;
+    font-size: 42px;
+    position: relative;
+    left: 22%;
 }
 
 .lien5 {
-    font-size: 42px;
-    position: absolute;
-    top: 49%;
-    left: 25%;
+    font-size: 48px;
+    position: relative;
+    left: 22%;
 }
 
 .lien6 {
     font-size: 60px;
-    position: absolute;
-    top: 55%;
-    left: 25%;
+    position: relative;
+    left: 22%;
 }
 
 .NB {
+    width: 100vw;
     font-size: 40px;
-    position: absolute;
-    top: 75%;
-    left: 2%;
+    display: inline-block;
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bouton-reglage {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    text-align: center;
 }
 
 .reglage {
     font-size: 40px;
-    position: absolute;
-    top: 85%;
-    left: 45%;
+
 }

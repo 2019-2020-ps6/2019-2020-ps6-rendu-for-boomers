@@ -1,20 +1,22 @@
 .titre {
     font-size: 120px;
-    position: absolute;
-    top: 6%;
-    left: 37%;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .description {
-    position: absolute;
-    top: 30%;
-    left: 13%;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding: 0;
+    border: 0;
 }
 
 .bouttons-box {
-    position: absolute;
-    top: 45%;
-    left: 27%;
+    position: relative;
+    text-align: center;
 }
 
 .jouer {
@@ -41,37 +43,47 @@
     margin-right: 50px;
 }
 
+.fleche-reglage{
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+    top: 50px;
+}
+
 .reglage {
     font-size: 40px;
-    position: absolute;
-    top: 70%;
-    left: 80%;
+    position: relative;
 }
 
 .arrow1 {
-    position: absolute;
-    top: 65%;
-    left: 71.5%;
+    position: relative;
+    transform: rotate(15deg);
+    margin-right: 8px;
 }
+
+
 
 //bloc-note
 .quote-container {
-    margin-top: 50px;
-    position: absolute;
-    top: 60%;
-    left: 55%;
+    width: 70%;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    
 }
   
 .note {
     color: #333;
-    position: relative;
+    position: absolute;
     width: 300px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     box-shadow: 0 10px 10px 5px rgba(0,0,0,0.3);
+    display: inline-block;
     border: 0;
+    right: 0%;
 }
 
 .grey {
@@ -89,7 +101,7 @@
     height: 32px;
     width: 2px;
     position: absolute;
-    left: 50%;
+    right: 150px;
     top: -16px;
     z-index: 1;
 }

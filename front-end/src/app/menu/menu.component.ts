@@ -13,9 +13,9 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToReglage(): void {
-    this.buttonIsActivated = true;
-
+  goToReglageOrQuit(): void {
+    if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
+    else this.buttonIsActivated = false;
   }
 
   getButtonIsActivated(): boolean {

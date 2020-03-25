@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-accueil',
@@ -14,13 +14,14 @@ export class AccueilComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onUpdateFontSize(size: number){
-
-    console.log("");
+  updateFontSize(value: number): void {
+    console.log("new font-size :" + value);
+    $(".text").css("font-size", value + "px");
   }
 
-  goToReglage(): void {
-    this.buttonIsActivated = true;
+  goToReglageOrQuit(): void {
+    if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
+    else this.buttonIsActivated = false;
   }
 
   getButtonIsActivated(): boolean {
