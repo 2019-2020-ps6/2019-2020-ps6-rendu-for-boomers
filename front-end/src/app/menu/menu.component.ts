@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CloseReglageService } from '../close-reglage.service';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -7,23 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   buttonIsActivated: boolean = false;
+  buttonObserver: Subscription;
 
-  constructor() { }
+  constructor(private closeReglageService: CloseReglageService) { 
+  }
 
   ngOnInit(): void {
+    this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+      this.buttonIsActivated = false;
+    });
+    this.closeReglageService.update();
   }
 
   goToReglageOrQuit(): void {
     if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
     else this.buttonIsActivated = false;
-  }
-
-  getButtonIsActivated(): boolean {
-    return this.buttonIsActivated;
-  }
-
-  setButtonIsActivated(boolean): void {
-    this.buttonIsActivated = boolean;
   }
 }
 

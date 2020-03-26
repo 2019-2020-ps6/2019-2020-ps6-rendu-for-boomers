@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Subscription } from 'rxjs';
+import { CloseReglageService } from '../close-reglage.service';
 
 @Component({
   selector: 'app-accueil',
@@ -8,10 +10,15 @@ import * as $ from 'jquery';
 })
 export class AccueilComponent implements OnInit {
   buttonIsActivated: boolean = false;
-
-  constructor() { }
+  buttonObserver: Subscription;
+  
+  constructor(private closeReglageService: CloseReglageService) { }
 
   ngOnInit(): void {
+    this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+      this.buttonIsActivated = false;
+    });
+    this.closeReglageService.update();
   }
 
   updateFontSize(value: number): void {
@@ -22,13 +29,5 @@ export class AccueilComponent implements OnInit {
   goToReglageOrQuit(): void {
     if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
     else this.buttonIsActivated = false;
-  }
-
-  getButtonIsActivated(): boolean {
-    return this.buttonIsActivated;
-  }
-
-  setButtonIsActivated(boolean): void {
-    this.buttonIsActivated = boolean;
   }
 }

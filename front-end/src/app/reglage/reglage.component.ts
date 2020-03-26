@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
-import { AccueilComponent } from '../accueil/accueil.component';
 import * as $ from 'jquery';
+import { CloseReglageService } from '../close-reglage.service';
 
 @Component({
   selector: 'app-reglage',
@@ -11,14 +10,15 @@ import * as $ from 'jquery';
 
 export class ReglageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private closeReglageService: CloseReglageService) { 
+  }
 
   ngOnInit(): void {
   }
 
-  goBack(): void {
-
-    
+  onCloseReglage(): void {
+    console.log("click");
+    this.closeReglageService.setCloseReglage(true);
   }
 
   updateFontSize(value: number): void {

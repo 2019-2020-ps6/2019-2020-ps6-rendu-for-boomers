@@ -9,6 +9,7 @@ import { ReglageComponent } from './reglage/reglage.component';
 import { EventEmitterService } from './event-emitter.service';
 import { QuizzComponent } from './quizz/quizz.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CloseReglageService } from './close-reglage.service';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     HttpClientModule
   ],
   exports: [RouterModule],
-  providers: [EventEmitterService],
+  providers: [EventEmitterService, CloseReglageService],
   bootstrap: [AppComponent]
 })
 
