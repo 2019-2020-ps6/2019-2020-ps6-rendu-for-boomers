@@ -1,12 +1,11 @@
 .titre {
     font-size: 120px;
-    position: relative;
     text-align: center;
     margin-top: 30px;
+    color: black;
 }
 
 .description {
-    position: relative;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
@@ -15,7 +14,6 @@
 }
 
 .bouttons-box {
-    position: relative;
     text-align: center;
 }
 
@@ -23,7 +21,6 @@
     font-size: 40px;
     width: 200px;
     height: 120px;
-    position: relative;
     margin-right: 50px;
 }
 
@@ -31,7 +28,6 @@
     font-size: 40px;
     width: 400px;
     height: 120px;
-    position: relative;
     margin-right: 50px;
 }
 
@@ -39,7 +35,6 @@
     font-size: 40px;
     width: 200px;
     height: 120px;
-    position: relative;
     margin-right: 50px;
 }
 
@@ -52,11 +47,10 @@
 
 .reglage {
     font-size: 40px;
-    position: relative;
 }
 
 .arrow1 {
-    position: relative;
+
     transform: rotate(15deg);
     margin-right: 8px;
 }

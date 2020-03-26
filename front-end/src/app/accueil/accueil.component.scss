@@ -4,8 +4,7 @@ html{
 
 .titre {
     font-size: 120px;
-    display: inline-block;
-    position: relative;
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 90px;
     left: 35%;
@@ -64,15 +63,12 @@ a {
 .NB {
     width: 100vw;
     font-size: 40px;
-    display: inline-block;
-    position: relative;
     margin-top: 70px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .bouton-reglage {
-    position: relative;
     width: 100vw;
     height: fit-content;
     text-align: center;
