@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { QuizService } from '../../services/quiz.service';
 import { Quiz } from 'src/models/quiz.model';
 import { Question } from 'src/models/question.model';
+import { CloseReglageService } from '../close-reglage.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-quizz',
@@ -11,12 +13,13 @@ import { Question } from 'src/models/question.model';
 })
 export class QuizzComponent implements OnInit 
 {
-
+  buttonIsActivated: boolean = false;
+  buttonObserver: Subscription;
   public quiz: Quiz;
   public question: Question;
   public questionIndex: number;
 
-  constructor(private router: Router, public quizService: QuizService) 
+  constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 
     this.quizService.quizzes$.subscribe((quizzes: Quiz[]) => 
     {
@@ -28,6 +31,10 @@ export class QuizzComponent implements OnInit
   }
 
   ngOnInit(): void {
+    this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+      this.buttonIsActivated = false;
+    });
+    this.closeReglageService.update();
   }
 
   selectAnswer(answerIndex:number)
@@ -51,5 +58,10 @@ export class QuizzComponent implements OnInit
     {
       this.question = this.quiz.questions[1];
     }
+  }
+
+  goToReglageOrQuit(): void {
+    if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
+    else this.buttonIsActivated = false;
   }
 }

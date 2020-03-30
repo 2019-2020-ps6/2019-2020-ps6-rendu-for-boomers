@@ -1,8 +1,8 @@
 <h1 class="titre"> PolyQuiz </h1>
 
-<p class="description"> PolyQuiz est un site de divertissement qui vous permez de jouer à des quiz. <br>
+<div class="description"> PolyQuiz est un site de divertissement qui vous permez de jouer à des quiz. <br>
     Plusieurs thèmes et difficultés sont disponibles pour chacun. Vous avez aussi la possibilité de créer vos quiz.
-</p>
+</div>
 
 <div class="bouttons-box">
     <input class="button btn btn-default" type="button" value="Jouer" routerLink="/quizz">
@@ -21,7 +21,7 @@
 <div class="fleche-reglage">
     <img class="arrow1" src="../assets/arrow1.png"/> 
 
-    <button class="reglage btn btn-primary" (click)="goToReglageOrQuit()">Réglage</button>    
+    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
 </div>
 <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
     

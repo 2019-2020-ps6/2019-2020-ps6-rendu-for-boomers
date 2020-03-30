@@ -6,14 +6,12 @@ fieldset
     margin-right: 2px;
 }
 
-button {
-    font-size: 40px;
-    position: relative;
-    margin: 20px;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+.button {
+    font-size: 130%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -21,7 +19,7 @@ h1 {
 }
 
 .reglage {
-    font-size: 40px;
+    font-size: 60px;
     position: absolute;
     top: 85%;
     left: 45%;
