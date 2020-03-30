@@ -14,6 +14,7 @@ export class QuizzComponent implements OnInit
 
   public quiz: Quiz;
   public question: Question;
+  public questionIndex: number;
 
   constructor(private router: Router, public quizService: QuizService) 
   { 
@@ -22,6 +23,8 @@ export class QuizzComponent implements OnInit
       this.quiz = quizzes[0];
       this.question = this.quiz.questions[0];
     })
+
+    this.questionIndex = 1;
   }
 
   ngOnInit(): void {
@@ -36,6 +39,17 @@ export class QuizzComponent implements OnInit
     else
     {
       alert("vous etes nul ! honte a vous !")
+    }
+
+    this.questionIndex++;
+    if(this.questionIndex > this.quiz.questions.length)
+    {
+      alert("bravo le quiz est fini");
+      this.router.navigate(['/menu']);
+    }
+    else
+    {
+      this.question = this.quiz.questions[1];
     }
   }
 }

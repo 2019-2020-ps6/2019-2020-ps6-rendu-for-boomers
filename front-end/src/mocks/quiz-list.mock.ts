@@ -22,10 +22,48 @@ export const QUIZ_LIST: Quiz[] =
                     {
                         value: 'rouge vert jaune',
                         isCorrect: false
+                    },
+
+                    {
+                        value: 'noir gris cyan',
+                        isCorrect: false
+                    },
+
+                    {
+                        value: 'vert orange pourpre',
+                        isCorrect: false
                     }
                 ]
-                
+            },
+
+            {
+                id: '2',
+                label: 'La capitale de la France ?',
+                answers: 
+                [
+                    {
+                        value: 'Paris',
+                        isCorrect: true
+                    },
+
+                    {
+                        value: 'Grenoble',
+                        isCorrect: false
+                    },
+
+                    {
+                        value: 'Valence',
+                        isCorrect: false
+                    },
+
+                    {
+                        value: 'Chicago-sur-Isère',
+                        isCorrect: false
+                    }
+                ]
             }
+
+            
         ],
     }
 ];
