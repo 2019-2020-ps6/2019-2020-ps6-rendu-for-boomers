@@ -3,13 +3,14 @@
 
 <form>
     <fieldset>
-        <legend>Question 0/{{quiz.questions.length}} </legend>
-            <button>{{question.answers[0].value}}</button>
-            <button>{{question.answers[1].value}}</button>
-            <button>zzzzz</button>
-            <button>zZzZzZz</button>
+        <legend>Question 1/{{quiz.questions.length}} </legend>
+            <button (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
+            <button (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
+            <button (click)="selectAnswer(2)">zzzzz</button>
+            <button (click)="selectAnswer(3)">zZzZzZz</button>
     </fieldset>
 </form>
 <button routerLink="/menu">retour au menu</button>
+
 
 <button class="reglage">Réglage##</button>
