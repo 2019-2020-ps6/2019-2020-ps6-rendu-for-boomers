@@ -1,20 +1,17 @@
 
-<html>
-    <h1 class="titre"> PolyQuiz </h1>
-    <nav>
-        <a class="lien1 navbar-link" routerLink="/menu" (click)="updateFontSize(18)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien2 navbar-link" routerLink="/menu" (click)="updateFontSize(24)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien3 navbar-link" routerLink="/menu" (click)="updateFontSize(30)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien4 navbar-link" routerLink="/menu" (click)="updateFontSize(36)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien5 navbar-link" routerLink="/menu" (click)="updateFontSize(42)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien6 navbar-link" routerLink="/menu" (click)="updateFontSize(48)">Cliquer ici pour choisir cette taille de police.</a>
-    </nav>
+<h1 class="titre"> PolyQuiz </h1>
+<nav>
+    <a class="lien1 navbar-link" routerLink="/menu" (click)="updateFontSize(18)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien2 navbar-link" routerLink="/menu" (click)="updateFontSize(24)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien3 navbar-link" routerLink="/menu" (click)="updateFontSize(30)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien4 navbar-link" routerLink="/menu" (click)="updateFontSize(36)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien5 navbar-link" routerLink="/menu" (click)="updateFontSize(42)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien6 navbar-link" routerLink="/menu" (click)="updateFontSize(48)">Cliquer ici pour choisir cette taille de police.</a>
+</nav>
 
-    <p class="NB text"> N.B : Vous pourrez toujours changer à n'importe quel moment via les réglages.</p>
+<p class="NB"> N.B : Vous pourrez toujours changer à n'importe quel moment via les réglages.</p>
 
-    <div class="bouton-reglage">
-        <button class="reglage btn btn-primary" (click)="goToReglageOrQuit()">Réglage</button>
-    </div>
-    <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
-    
-</html>
+<div class="bouton-reglage">
+    <button class="reglage btn btn-primary" (click)="goToReglageOrQuit()">Réglage</button>
+</div>
+<app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
