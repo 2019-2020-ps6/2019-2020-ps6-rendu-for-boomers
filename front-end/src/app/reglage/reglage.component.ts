@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { CloseReglageService } from '../close-reglage.service';
 import { ReglageService } from 'src/services/reglage.service';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-reglage',
@@ -11,8 +12,13 @@ import { ReglageService } from 'src/services/reglage.service';
 
 export class ReglageComponent implements OnInit {
 
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
+  public value:number;
 
+  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
+      this.reglageService.fontsize.subscribe((fontsize: number) => 
+      {
+        this.value = fontsize;
+      })
   }
 
   ngOnInit(): void {
@@ -24,7 +30,7 @@ export class ReglageComponent implements OnInit {
   }
 
   updateFontSize(value: number): void {
-    this.reglageService.defaultValue = value;
+    this.reglageService.setFontSize(value);
     console.log("new font-size :" + value);
     $("body").css("font-size", value + "px");
   }
