@@ -11,7 +11,7 @@
 
     </div>
     <div class="options slidecontainer"> Taille de la police
-        <input #slider type="range" (change)="updateFontSize(slider.value)" min="8" max="60" value="45" class="slider" id="myRange">
+        <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="8" max="60" value="{{reglageService.defaultValue}}" class="slider" id="myRange">
     </div>
     <div class="options"> Profil Enregistré 
 
