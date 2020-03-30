@@ -27,4 +27,15 @@ export class QuizzComponent implements OnInit
   ngOnInit(): void {
   }
 
+  selectAnswer(answerIndex:number)
+  {
+    if(this.question.answers[answerIndex].isCorrect)
+    {
+      alert("c'est la bonne reponse bravo !");
+    }
+    else
+    {
+      alert("vous etes nul ! honte a vous !")
+    }
+  }
 }
