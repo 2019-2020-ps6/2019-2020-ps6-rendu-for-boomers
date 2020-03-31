@@ -34,4 +34,9 @@ export class ReglageComponent implements OnInit {
     console.log("new font-size :" + value);
     $("body").css("font-size", value + "px");
   }
+
+  updateContrast(value: number): void {
+    console.log(value);
+  }
+
 }

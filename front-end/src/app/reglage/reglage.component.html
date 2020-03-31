@@ -1,8 +1,10 @@
-<div class="box-reglage">
+<form class="box-reglage">
     <h1 class="title"> Options Visuelles</h1>
 
-    <div class="options"> Contraste 
-
+    <div class="options"> Contraste <br>
+        <button class="contraste btn btn-default" (click)="updateContrast(1)">Classic</button>
+        <button class="contraste btn daltonien1" (click)="updateContrast(2)">Daltonien1</button>
+        <button class="contraste btn daltonien2" (click)="updateContrast(3)">Daltonien2</button>
     </div>
     <div class="options"> Luminosité 
 
@@ -21,5 +23,5 @@
     </div>
 
     <button class="retour btn btn-default" (click)="onCloseReglage()">Fermer</button>
-</div>
+</form>
 
