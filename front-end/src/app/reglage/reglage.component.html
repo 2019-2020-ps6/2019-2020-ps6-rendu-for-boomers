@@ -2,7 +2,7 @@
     <h1 class="title"> Options Visuelles</h1>
 
     <div class="options"> Contraste 
-        <!-- Ajouter la barre avec le curseur à déplacer -->
+
     </div>
     <div class="options"> Luminosité 
 
@@ -11,7 +11,7 @@
 
     </div>
     <div class="options slidecontainer"> Taille de la police
-        <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="8" max="60" value="{{this.value}}" class="slider" id="myRange">
+        <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="20" max="60" value="{{this.value}}" class="slider" id="myRange">
     </div>
     <div class="options"> Profil Enregistré 
 
@@ -21,6 +21,5 @@
     </div>
 
     <button class="retour btn btn-default" (click)="onCloseReglage()">Fermer</button>
-
 </div>
 
