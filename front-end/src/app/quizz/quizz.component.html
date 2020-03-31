@@ -2,17 +2,15 @@
 <br>
 Quiz sur {{quiz.name}} <br>
 Question : {{question.label}}
+<br>
+Question {{questionIndex}}/{{quiz.questions.length}}
+<br>
+<button class="button btn btn-success" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
+<button class="button btn btn-success" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
+<br>
+<button class="button btn btn-success" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
+<button class="button btn btn-success" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
 
-<form>
-    <fieldset>
-        <legend>Question {{questionIndex}}/{{quiz.questions.length}} </legend>
-            <button class="button btn btn-success" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
-            <button class="button btn btn-success" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
-            <br>
-            <button class="button btn btn-success" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
-            <button class="button btn btn-success" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
-    </fieldset>
-</form>
 
 
 <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
