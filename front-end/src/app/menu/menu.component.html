@@ -1,27 +1,30 @@
-<h1 class="titre"> PolyQuiz </h1>
+<div class="contrast">
+    <h1 class="titre"> PolyQuiz </h1>
 
-<div class="description"> PolyQuiz est un site de divertissement qui vous permez de jouer à des quiz. <br>
-    Plusieurs thèmes et difficultés sont disponibles pour chacun. Vous avez aussi la possibilité de créer vos quiz.
+    <div class="description"> PolyQuiz est un site de divertissement qui vous permez de jouer à des quiz. <br>
+        Plusieurs thèmes et difficultés sont disponibles pour chacun. Vous avez aussi la possibilité de créer vos quiz.
+    </div>
+
+    <div class="bouttons-box">
+        <input class="button btn btn-default" type="button" value="Jouer" routerLink="/quizz">
+        <input class="button btn btn-default" type="button" value="Créer / Modifier Quiz">
+        <input class="button btn btn-default" type="button" value="Tutoriel">
+    </div>
+    <div class="quote-container">
+        <i class="pin"></i>
+        <blockquote class="note grey">
+            - Agrandir le texte <br>
+            - Changer de police <br>
+            - Modifier le contraste <br>
+            etc...
+        </blockquote>
+    </div>
+    <div class="fleche-reglage">
+        <img class="arrow1" src="../assets/arrow1.png"/> 
+
+        <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
+    </div>
+    <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
 </div>
 
-<div class="bouttons-box">
-    <input class="button btn btn-default" type="button" value="Jouer" routerLink="/quizz">
-    <input class="button btn btn-default" type="button" value="Créer / Modifier Quiz">
-    <input class="button btn btn-default" type="button" value="Tutoriel">
-</div>
-<div class="quote-container">
-    <i class="pin"></i>
-    <blockquote class="note grey">
-        - Agrandir le texte <br>
-        - Changer de police <br>
-        - Modifier le contraste <br>
-        etc...
-    </blockquote>
-</div>
-<div class="fleche-reglage">
-    <img class="arrow1" src="../assets/arrow1.png"/> 
-
-    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
-</div>
-<app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
     

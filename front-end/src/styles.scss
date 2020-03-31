@@ -3,3 +3,27 @@ body{
     font-weight: 550;
     font-size: 45px;
 }
+
+.titre {
+    position: relative;
+    font-size: 120px;
+    text-align: center;
+    margin-block-start: 0;
+    padding-top: 30px;
+}
+
+a {
+    color: yellow;
+}
+
+.contrast{
+    height: 100vh;
+    color: yellow;
+    background-color: black;
+    //contrast(color/background-color) : black/ white | yellow/black
+}
+
+.button {
+    background-color: black;
+    color: yellow;
+}

@@ -1,8 +1,9 @@
 .titre {
+    position: relative;
     font-size: 120px;
     text-align: center;
-    margin-top: 30px;
-    color: black;
+    margin-block-start: 0;
+    padding-top: 30px;
 }
 
 .description {
