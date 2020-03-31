@@ -6,6 +6,11 @@ fieldset
     margin-right: 2px;
 }
 
+.nbQuestion{
+    font-size:70%;
+    color:#AAAAAA;
+}
+
 .button {
     font-size: 130%;
     display: inline-block;
@@ -14,13 +19,9 @@ fieldset
     margin-bottom: 50px;
 }
 
-h1 {
-    text-align: center;
-}
-
 .reglage {
     font-size: 60px;
-    position: absolute;
+    position: relative;
     top: 85%;
     left: 45%;
 }
