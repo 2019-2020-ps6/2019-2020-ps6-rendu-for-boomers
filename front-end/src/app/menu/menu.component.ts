@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CloseReglageService } from '../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-menu',
@@ -12,6 +13,7 @@ export class MenuComponent implements OnInit {
   buttonIsActivated: boolean = false;
   buttonObserver: Subscription;
   public valueContrast: number;
+  public height: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    

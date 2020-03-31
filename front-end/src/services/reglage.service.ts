@@ -6,7 +6,7 @@ import * as $ from 'jquery';
   providedIn: 'root'
 })
 export class ReglageService {
-
+  public heightReglage: Subject<number> = new Subject();
   public fontsize: BehaviorSubject<number> = new BehaviorSubject(45);
   public valueContrast: BehaviorSubject<number> = new BehaviorSubject(1);
 
@@ -15,6 +15,10 @@ export class ReglageService {
 
   setFontSize(value: number){
     this.fontsize.next(value);
+  }
+
+  updateHeightReglage(value: number){
+    this.heightReglage.next(value);
   }
 
   updateContrast(value: number): void {

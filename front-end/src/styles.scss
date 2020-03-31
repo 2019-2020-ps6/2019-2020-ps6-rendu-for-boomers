@@ -7,10 +7,15 @@ h2 {
     font-size:130%;
 }
 
+
 body{
     font-weight: 550;
     font-size: 45px;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden; //En attendant de trouver pourquoi on a un bout qui dépasse à droite
 }
+
 
 .titre {
     position: relative;
@@ -25,13 +30,15 @@ a {
 }
 
 .contrast{
-    height: 100vh;
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
     color: black;
     background-color: white;
     //contrast(color/background-color) : black / white | yellow / black | white / blue
 }
 
-button {
+.button {
     background-color: white;
     color: black;
 }

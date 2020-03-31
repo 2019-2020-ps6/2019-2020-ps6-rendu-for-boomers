@@ -11,7 +11,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 
 export class ReglageComponent implements OnInit {
-
+  public height: number;
   public value:number;
   public valueContrast: number;
 
@@ -20,16 +20,16 @@ export class ReglageComponent implements OnInit {
       {
         this.value = fontsize;
       })
-
       this.reglageService.valueContrast.subscribe((value: number) => 
-      {
-        this.valueContrast = value;
-        this.reglageService.updateContrast(this.valueContrast);
-      })
+    {
+      this.valueContrast = value;
+    })
   }
 
   ngOnInit(): void {
     this.updateContrast(this.valueContrast);
+    this.height = document.getElementById("reglageID").offsetHeight;
+    this.updateHeightCompoToHeightReglagle();
   }
 
   onCloseReglage(): void {
@@ -48,4 +48,8 @@ export class ReglageComponent implements OnInit {
     console.log(value);
   }
 
+  updateHeightCompoToHeightReglagle(){
+    this.reglageService.updateHeightReglage(this.height);
+    $(".contrast").css("height", this.height + "px");
+  }
 }
