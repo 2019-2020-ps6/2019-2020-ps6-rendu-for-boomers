@@ -20,7 +20,9 @@
         </blockquote>
     </div>
     <div class="fleche-reglage">
-        <img class="arrow1" src="../assets/arrow1.png"/> 
+        <img class="arrow1" *ngIf="valueContrast == 1" src="../assets/arrow1.png"/> 
+        <img class="arrow1" *ngIf="valueContrast == 2" src="../assets/arrow2.png"/>
+        <img class="arrow1" *ngIf="valueContrast == 3" src="../assets/arrow3.png"/>
 
         <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
     </div>

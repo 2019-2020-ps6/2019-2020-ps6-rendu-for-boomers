@@ -26,8 +26,8 @@ export class MenuComponent implements OnInit {
     this.reglageService.valueContrast.subscribe((value: number) => 
     {
       this.valueContrast = value;
-      this.reglageService.updateContrast(this.valueContrast);
     })
+    this.reglageService.updateContrast(this.valueContrast);
   }
 
   goToReglageOrQuit(): void {

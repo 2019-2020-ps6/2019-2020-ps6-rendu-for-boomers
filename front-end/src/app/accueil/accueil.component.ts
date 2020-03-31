@@ -27,8 +27,8 @@ export class AccueilComponent implements OnInit {
     this.reglageService.valueContrast.subscribe((value: number) => 
     {
       this.valueContrast = value;
-      this.reglageService.updateContrast(this.valueContrast);
     })
+    this.reglageService.updateContrast(this.valueContrast);
   }
 
   updateFontSize(value: number): void {
