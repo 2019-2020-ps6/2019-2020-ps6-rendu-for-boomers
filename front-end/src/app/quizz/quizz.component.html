@@ -1,16 +1,21 @@
-<button class="button btn btn-default" routerLink="/menu">retour au menu</button>
-<br>
+
 <h1>Quiz sur {{quiz.name}}</h1>
 <h2>Question: {{question.label}}</h2>
 <div class="nbQuestion">Question {{questionIndex}}/{{quiz.questions.length}}</div>
 <br>
-<button class="button btn btn-warning" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
-<button class="button btn btn-warning" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
-<br>
-<button class="button btn btn-warning" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
-<button class="button btn btn-warning" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
+<div class="buttonGoup">
+    <button class="button btn btn-warning" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
+    <button class="button btn btn-warning" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
+    <br>
+    <button class="button btn btn-warning" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
+    <button class="button btn btn-warning" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
+</div>
+
 
 <br>
+<footer>
+    <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
+    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+</footer>
 
-<button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
 <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>

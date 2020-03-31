@@ -1,10 +1,3 @@
-fieldset
-{
-    display: block;
-    border: 2px groove;
-    margin-left: 2px;
-    margin-right: 2px;
-}
 
 .nbQuestion{
     font-size:70%;
@@ -13,15 +6,22 @@ fieldset
 
 .button {
     font-size: 130%;
-    display: inline-block;
     text-align: center;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    margin: 20px;
 }
 
 .reglage {
     font-size: 60px;
+    float: right;
+    margin-right: 2%;
+}
+
+.buttonGoup {
+    text-align: center;
+}
+
+.return {
     position: relative;
-    top: 85%;
-    left: 45%;
+    left: 2%;
+    margin: 0px;
 }
