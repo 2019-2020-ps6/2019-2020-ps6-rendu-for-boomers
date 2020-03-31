@@ -13,15 +13,23 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ReglageComponent implements OnInit {
 
   public value:number;
+  public valueContrast: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
       this.reglageService.fontsize.subscribe((fontsize: number) => 
       {
         this.value = fontsize;
       })
+
+      this.reglageService.valueContrast.subscribe((value: number) => 
+      {
+        this.valueContrast = value;
+        this.reglageService.updateContrast(this.valueContrast);
+      })
   }
 
   ngOnInit(): void {
+    this.updateContrast(this.valueContrast);
   }
 
   onCloseReglage(): void {
@@ -36,6 +44,7 @@ export class ReglageComponent implements OnInit {
   }
 
   updateContrast(value: number): void {
+    this.reglageService.updateContrast(value);
     console.log(value);
   }
 

@@ -21,17 +21,17 @@ body{
 }
 
 a {
-    color: yellow;
+    color: black;
 }
 
 .contrast{
     height: 100vh;
-    color: yellow;
-    background-color: black;
-    //contrast(color/background-color) : black/ white | yellow/black
+    color: black;
+    background-color: white;
+    //contrast(color/background-color) : black / white | yellow / black | white / blue
 }
 
-.button {
-    background-color: black;
-    color: yellow;
+button {
+    background-color: white;
+    color: black;
 }

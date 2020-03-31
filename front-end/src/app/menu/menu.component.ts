@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CloseReglageService } from '../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
+import { ReglageService } from 'src/services/reglage.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,8 +11,10 @@ import { Subject, Subscription } from 'rxjs';
 export class MenuComponent implements OnInit {
   buttonIsActivated: boolean = false;
   buttonObserver: Subscription;
+  public valueContrast: number;
 
-  constructor(private closeReglageService: CloseReglageService) { 
+  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
+   
   }
 
   ngOnInit(): void {
@@ -19,6 +22,12 @@ export class MenuComponent implements OnInit {
       this.buttonIsActivated = false;
     });
     this.closeReglageService.update();
+
+    this.reglageService.valueContrast.subscribe((value: number) => 
+    {
+      this.valueContrast = value;
+      this.reglageService.updateContrast(this.valueContrast);
+    })
   }
 
   goToReglageOrQuit(): void {
