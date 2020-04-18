@@ -1,0 +1,19 @@
+<div class="contrast">
+
+    <h1 class="titre">Tutoriel</h1>
+
+    <h2 class="sommaire">Sommaire :</h2>
+
+    <ul class="liste">
+        <li> <a routerLink="/tutoriel/jouer"> Jouer </a></li>
+        <li> <a routerLink="/tutoriel/creer_quiz"> Créer un quiz </a> </li>
+        <li> <a routerLink="/tutoriel/modifier_quiz"> Modifier un quiz </a> </li>
+    </ul>
+    <footer>
+        <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
+        <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+    </footer>
+
+    <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
+
+</div>
