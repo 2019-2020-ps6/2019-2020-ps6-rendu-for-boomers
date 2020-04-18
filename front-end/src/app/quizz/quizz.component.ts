@@ -36,10 +36,14 @@ export class QuizzComponent implements OnInit
   public doughnutChartType = 'doughnut';
   public doughnutChartColor = 
   [
-    { backgroundColor: ['#008000', '#ff0000'], borderColor: ['#808080', '#808080'] }
+    { backgroundColor: ['#008000', '#ff0000'], borderWidth: [0, 0],
+  hoverBackgroundColor: ['#008000', '#ff0000'] }
   ];
-
-  public doughnutChartLegend = false;
+  public doughnutChartOption = 
+  {
+    tooltips : { enabled : false },
+    animation : { duration : 1500, easing : 'easeOutCubic' }
+  };
 
   constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 

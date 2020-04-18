@@ -53,20 +53,20 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: fadein;
-    filter: blur(10px);
+    
 }
 
 @keyframes fadein
 {
     from
     {
-        filter: blur(0px);
+        opacity: 0;
     }
     to
     {
-        filter: blur(10px);
+        opacity: 1;
     }
 }
 
@@ -79,6 +79,13 @@ h1
 
 h2
 {
+    text-align: center;
     font-size: 100%;
+    margin: 30px;
+}
+
+h3
+{
+    text-align: center;
     margin: 30px;
 }

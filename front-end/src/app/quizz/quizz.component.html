@@ -1,7 +1,7 @@
 
 <h1>Quiz sur {{quiz.name}}</h1>
-<h2>Question {{questionIndex}}/{{quiz.questions.length}} : {{question.label}}</h2>
-<br>
+<h2>{{question.label}}</h2>
+
 <div class="buttonGoup">
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
@@ -9,15 +9,13 @@
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
 </div>
+<h3>Question {{questionIndex}}/{{quiz.questions.length}}</h3>
 
 <div class="answerPanel" *ngIf="displayResultPanel == true">
     <p>{{answerString}}</p>
     
     <button (click)="goToNextQuestion()">go next</button>
 </div>
-
-
-
 
 <br>
 <footer>
@@ -36,10 +34,14 @@
         [data]="doughnutChartData"
         [labels]="doughnutChartLabels"
         [colors]="doughnutChartColor"
-        [legend]="doughnutChartLegend"
+        [legend]="false"
+        [options]="doughnutChartOption"
         [chartType]="doughnutChartType"></canvas>
 
     <p>{{mark}}</p>
+    <p>bonne réponse : {{validAnswerCount}}</p>
+    <p>mauvaise réponse : {{invalidAnswerCount}}</p>
+    
 
     <button routerLink="/menu">Retour au menu</button>
 </div>
