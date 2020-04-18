@@ -39,7 +39,7 @@ export class ReglageComponent implements OnInit {
 
   updateFontSize(value: number): void {
     this.reglageService.setFontSize(value);
-    $(":root").css("font-size", value + "px");
+    $(":root").css("--main-font-size", value + "px");
   }
 
   updateContrast(value: number): void {

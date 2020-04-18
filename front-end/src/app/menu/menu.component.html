@@ -10,21 +10,28 @@
         <input class="button menu-button btn btn-default" id="buttonID" type="button" value="Créer / Modifier Quiz" routerLink="/editor">
         <input class="button menu-button btn btn-default" id="buttonID" type="button" value="Tutoriel" routerLink ="/tutoriel">
     </div>
-    <div class="quote-container">
-        <i class="pin"></i>
-        <blockquote class="note grey">
-            - Agrandir le texte <br>
-            - Changer de police <br>
-            - Modifier le contraste <br>
-            etc...
-        </blockquote>
-    </div>
-    <div class="fleche-reglage">
-        <img class="arrow1" *ngIf="valueContrast == 1" src="../assets/arrow1.png"/> 
-        <img class="arrow1" *ngIf="valueContrast == 2" src="../assets/arrow2.png"/>
-        <img class="arrow1" *ngIf="valueContrast == 3" src="../assets/arrow3.png"/>
 
+<<<<<<< HEAD
+    <div class="bloc-note-fleche-reglage-container">
+        <div class="quote-container">
+            <i class="pin"></i>
+            <blockquote class="note grey">
+                - Agrandir le texte <br>
+                - Changer de police <br>
+                - Modifier le contraste <br>
+                etc...
+            </blockquote>
+        </div>
+        <div class="fleche-reglage">
+            <img class="arrow1" *ngIf="valueContrast == 1" src="../assets/arrow1.png"/> 
+            <img class="arrow1" *ngIf="valueContrast == 2" src="../assets/arrow2.png"/>
+            <img class="arrow1" *ngIf="valueContrast == 3" src="../assets/arrow3.png"/>
+
+            <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
+        </div>
+=======
         <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
+>>>>>>> 62f3dd1f96d0ee01c7c652b63ea5367b5ccfded3
     </div>
     
     <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>

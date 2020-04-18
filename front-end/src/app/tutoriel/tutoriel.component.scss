@@ -9,6 +9,10 @@
     text-decoration: underline;
 }
 
+ul {
+    display: inline-block;
+}
+
 .liste {
     margin-left: 220px;
     margin-bottom: 100px;
@@ -17,11 +21,100 @@
 .button {
     font-size: 130%;
     text-align: center;
-    margin: 20px;
+    margin-left: 5%;
 }
 
 .reglage {
     font-size: 60px;
     float: right;
-    margin-right: 30px;
+    margin-right: 5%;
+}
+
+
+
+
+
+
+//bloc-note
+.quote-container {
+    height: 180px;
+    width: auto;
+    position: relative;
+    display: inline-block;
+    left: 30%;    
+    margin-bottom: 10px;
+}
+  
+.note {
+    color: #333;
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    box-shadow: 0 10px 10px 5px rgba(0,0,0,0.3);
+    display: inline-block;
+    border: 0;
+    right: 0%;
+}
+
+.grey {
+    background: #aaaaa5;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+
+.pin {
+    background-color: rgb(133, 128, 128);
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    right: 150px;
+    top: -16px;
+    z-index: 1;
+}
+
+  .pin:after {
+    background-color: #A31;
+    background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+                inset 3px 3px 3px hsla(0,0%,100%,.2),
+                inset -3px -3px 3px hsla(0,0%,0%,.2),
+                23px 20px 3px hsla(0,0%,0%,.15);
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
+}
+
+.pin:before {
+    background-color: hsla(0,0%,0%,0.1);
+    box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+    content: '';
+  
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+  
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
+  
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
 }
