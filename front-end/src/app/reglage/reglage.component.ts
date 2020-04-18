@@ -42,6 +42,11 @@ export class ReglageComponent implements OnInit {
     $(":root").css("--main-font-size", value + "px");
   }
 
+  updateBrightness(value: number): void {
+    this.reglageService.setBrightness(value);
+    $(":root").css("--main-filter:", value + "%;");
+  }
+
   updateContrast(value: number): void {
     this.reglageService.updateContrast(value);
   }
