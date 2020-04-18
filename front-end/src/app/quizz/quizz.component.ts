@@ -25,19 +25,16 @@ export class QuizzComponent implements OnInit
   public answerIsValid: boolean = false;
   public validAnswerCount: number = 0;
   public invalidAnswerCount: number = 0;
+  public marksArray: Array<any> = ["SS", "S", "A", "B", "C", "D"];
+  public mark: string;
 
   public displayResultPanel: boolean = false;
   public displayFinalResultPanel: boolean = false;
 
   public doughnutChartLabels = ['bonne réponse', 'mauvaise réponse'];
-  public doughnutChartData:Array<any>;
+  public doughnutChartData: Array<any>;
   public doughnutChartType = 'doughnut';
-  public doughnutChartColor = 
-  [
-    {
-      backgroundColor: ['#008000', '#ff0000']
-    }
-  ];
+  public doughnutChartColor = [{ backgroundColor: ['#008000', '#ff0000'] }];
 
   constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 
@@ -89,6 +86,7 @@ export class QuizzComponent implements OnInit
     if(this.questionIndex > this.quiz.questions.length)
     {
       this.doughnutChartData = [this.validAnswerCount, this.invalidAnswerCount];
+      this.calculateMark();
       this.displayFinalResultPanel = true;
       //this.router.navigate(['/menu']);
     }
@@ -96,5 +94,22 @@ export class QuizzComponent implements OnInit
     {
       this.question = this.quiz.questions[1];
     }
+  }
+
+  calculateMark(): void
+  {
+    var res = this.validAnswerCount/this.quiz.questions.length;
+    if(res == 1)
+      this.mark = this.marksArray[0];
+    else if(res >= 90)
+      this.mark = this.marksArray[1];
+    else if(res >= 80)
+      this.mark = this.marksArray[2];
+    else if(res >= 70)
+      this.mark = this.marksArray[3];
+    else if(res >= 60)
+      this.mark = this.marksArray[4];
+    else
+      this.mark = this.marksArray[5];
   }
 }

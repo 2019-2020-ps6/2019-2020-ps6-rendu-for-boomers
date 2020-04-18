@@ -44,6 +44,8 @@
     transform: translate(-50%, -50%);
     padding: 25px;
     text-align: center;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
 }
 
 h1
