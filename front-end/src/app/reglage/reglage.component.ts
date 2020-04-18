@@ -12,17 +12,22 @@ import { BehaviorSubject, Subject } from 'rxjs';
 
 export class ReglageComponent implements OnInit {
   public height: number;
-  public value:number;
+  public fontsize:number;
+  public brightness:number;
   public valueContrast: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
       this.reglageService.fontsize.subscribe((fontsize: number) => 
       {
-        this.value = fontsize;
+        this.fontsize = fontsize;
       })
       this.reglageService.valueContrast.subscribe((value: number) => 
     {
       this.valueContrast = value;
+    })
+    this.reglageService.brightness.subscribe((value: number) => 
+    {
+      this.brightness = value;
     })
   }
 
@@ -30,6 +35,7 @@ export class ReglageComponent implements OnInit {
     this.updateContrast(this.valueContrast);
     this.height = document.getElementById("reglageID").offsetHeight;
     this.updateHeightCompoToHeightReglagle();
+    //this.updateBrightness(this.brightness);
   }
 
   onCloseReglage(): void {
