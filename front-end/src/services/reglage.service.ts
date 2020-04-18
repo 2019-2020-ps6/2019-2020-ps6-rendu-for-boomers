@@ -8,7 +8,7 @@ import * as $ from 'jquery';
 export class ReglageService {
   public heightReglage: Subject<number> = new Subject();
   public fontsize: BehaviorSubject<number> = new BehaviorSubject(45);
-  public brightness: BehaviorSubject<number> = new BehaviorSubject(45);
+  //public brightness: BehaviorSubject<number> = new BehaviorSubject(45);
   public valueContrast: BehaviorSubject<number> = new BehaviorSubject(1);
 
   constructor() {
@@ -18,9 +18,9 @@ export class ReglageService {
     this.fontsize.next(value);
   }
 
-  setBrightness(value: number){
-    this.brightness.next(value);
-  }
+ // setBrightness(value: number){
+ //   this.brightness.next(value);
+ // }
 
   updateHeightReglage(value: number){
     this.heightReglage.next(value);

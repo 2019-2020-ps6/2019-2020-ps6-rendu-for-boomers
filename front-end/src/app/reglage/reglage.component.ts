@@ -13,7 +13,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ReglageComponent implements OnInit {
   public height: number;
   public fontsize:number;
-  public brightness:number;
+  //public brightness:number;
   public valueContrast: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
@@ -25,10 +25,10 @@ export class ReglageComponent implements OnInit {
     {
       this.valueContrast = value;
     })
-    this.reglageService.brightness.subscribe((value: number) => 
-    {
-      this.brightness = value;
-    })
+    //this.reglageService.brightness.subscribe((value: number) => 
+    //{
+    //  this.brightness = value;
+    //})
   }
 
   ngOnInit(): void {
@@ -48,10 +48,10 @@ export class ReglageComponent implements OnInit {
     $(":root").css("--main-font-size", value + "px");
   }
 
-  updateBrightness(value: number): void {
-    this.reglageService.setBrightness(value);
-    $(":root").css("--main-filter:", value + "%;");
-  }
+  //updateBrightness(value: number): void {
+  //  this.reglageService.setBrightness(value);
+  //  $(":root").css("--main-filter:", value + "%;");
+  //}
 
   updateContrast(value: number): void {
     this.reglageService.updateContrast(value);
