@@ -1,4 +1,4 @@
-<div class="reglage box-reglage" id="reglageID">
+<div class="reglage box-reglage">
 
     <h1 class="titre"> Options Visuelles</h1>
 
@@ -8,7 +8,7 @@
         <button class="contraste btn daltonien2" (click)="updateContrast(3)">Daltonien2</button>
     </div>
     <div class="options"> Luminosité 
-        <input #slider type="range" (change)="updateBrightness(slider.value)" autocomplete="off" min="20" max="60" value="{{this.value}}" class="slider" id="myRange">
+        <!--<input #slider type="range" (change)="updateBrightness(slider.value)" autocomplete="off" min="20" max="60" value="{{this.brightness}}" class="slider" id="myRange">-->
     </div>
     <div class="options"> Police d'écriture 
 
