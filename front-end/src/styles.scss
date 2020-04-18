@@ -11,6 +11,7 @@ h2 {
     --main-font-size: 45px;
     --main-bg-color: white;
     --main-color: black;
+    --main-filter: brightness(0%);
 }
 
 body{
@@ -19,7 +20,7 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--main-bg-color);
-    color: var(--main-color);
+    color: var(--main-color);   
 }
 
 a {
