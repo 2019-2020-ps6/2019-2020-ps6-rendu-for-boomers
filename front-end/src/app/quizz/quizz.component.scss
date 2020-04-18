@@ -13,6 +13,11 @@
 
 .buttonGoup {
     text-align: center;
+    border: solid 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding:10px
 }
 
 .return {
@@ -31,4 +36,5 @@ h1
 h2
 {
     font-size: 100%;
+    margin: 30px;
 }

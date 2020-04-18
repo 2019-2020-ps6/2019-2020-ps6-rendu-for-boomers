@@ -7,6 +7,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReglageComponent } from './reglage/reglage.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { EditorComponent } from './editor/editor.component';
+import { ModifyComponent } from './editor/modify/modify.component';
+import { CreateComponent } from './editor/create/create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloseReglageService } from './close-reglage.service';
 
@@ -28,6 +31,18 @@ const appRoutes: Routes = [
     component: QuizzComponent
   },
   {
+    path: 'editor',
+    component: EditorComponent
+  }, 
+  {
+    path: 'modify',
+    component: ModifyComponent
+  }, 
+  {
+    path: 'create',
+    component: CreateComponent
+  }, 
+  {
     path: '', 
     redirectTo: '/accueil',
     pathMatch: 'full'
@@ -40,7 +55,10 @@ const appRoutes: Routes = [
     AccueilComponent,
     MenuComponent,
     ReglageComponent,
-    QuizzComponent
+    QuizzComponent,
+    EditorComponent,
+    ModifyComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule, 
