@@ -10,6 +10,25 @@
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
 </div>
 
+<div class="answerPanel" *ngIf="displayResultPanel == true">
+    <p>{{answerString}}</p>
+    
+    <button (click)="goToNextQuestion()">go next</button>
+</div>
+
+<div class="finalResultPanel" *ngIf="displayFinalResultPanel == true">
+    <h2>Résultats du quiz sur {{quiz.name}}</h2>
+
+    <canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [colors]="doughnutChartColor"
+        [chartType]="doughnutChartType"></canvas>
+
+    <p>Réponse vrai: xx</p>
+    <p>Réponse fausse: yy</p> 
+</div>
+
 
 <br>
 <footer>

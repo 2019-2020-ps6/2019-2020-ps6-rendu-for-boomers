@@ -13,12 +13,37 @@
 
 .buttonGoup {
     text-align: center;
+    border: solid 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding:10px
 }
 
 .return {
     position: relative;
     left: 2%;
     margin: 0px;
+}
+
+.answerPanel {
+    position: absolute;
+    background-color: gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    text-align: center;
+}
+
+.finalResultPanel {
+    position: absolute;
+    background-color: gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    text-align: center;
 }
 
 h1
@@ -31,4 +56,5 @@ h1
 h2
 {
     font-size: 100%;
+    margin: 30px;
 }

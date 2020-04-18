@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
-import { Subscription } from 'rxjs';
 import { CloseReglageService } from '../close-reglage.service';
+import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
+import * as $ from 'jquery';
+
 
 @Component({
-  selector: 'app-accueil',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.scss']
+  selector: 'app-editor',
+  templateUrl: './editor.component.html',
+  styleUrls: ['./editor.component.scss']
 })
-export class AccueilComponent implements OnInit {
+export class EditorComponent implements OnInit {
   buttonIsActivated: boolean = false;
   buttonObserver: Subscription;
   public valueContrast: number;
-  
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
+  public height: number;
+
+  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    
-   }
+  }
 
   ngOnInit(): void {
     this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
@@ -29,11 +31,6 @@ export class AccueilComponent implements OnInit {
       this.valueContrast = value;
     })
     this.reglageService.updateContrast(this.valueContrast);
-  }
-
-  updateFontSize(value: number): void {
-    console.log("new font-size :" + value);
-    $(":root").css("--main-font-size", value + "px");
   }
 
   goToReglageOrQuit(): void {
