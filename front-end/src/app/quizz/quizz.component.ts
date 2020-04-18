@@ -34,7 +34,12 @@ export class QuizzComponent implements OnInit
   public doughnutChartLabels = ['bonne réponse', 'mauvaise réponse'];
   public doughnutChartData: Array<any>;
   public doughnutChartType = 'doughnut';
-  public doughnutChartColor = [{ backgroundColor: ['#008000', '#ff0000'] }];
+  public doughnutChartColor = 
+  [
+    { backgroundColor: ['#008000', '#ff0000'], borderColor: ['#808080', '#808080'] }
+  ];
+
+  public doughnutChartLegend = false;
 
   constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 
