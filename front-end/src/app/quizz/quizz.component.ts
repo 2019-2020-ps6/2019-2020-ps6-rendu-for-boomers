@@ -18,6 +18,11 @@ export class QuizzComponent implements OnInit
   public quiz: Quiz;
   public question: Question;
   public questionIndex: number;
+  public answerString: string;
+  public validAnswer: string = "Bravo ! c'est la bonne réponse !";
+  public invalidAnswer: string = "Non non non ! c'est pas bon !";
+  public answerIsValid: boolean = false;
+  public displayResultPanel: boolean = false;
 
   constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 
@@ -41,13 +46,28 @@ export class QuizzComponent implements OnInit
   {
     if(this.question.answers[answerIndex].isCorrect)
     {
-      alert("c'est la bonne reponse bravo !");
+      this.answerIsValid = true;
+      this.answerString = this.validAnswer;
+      this.displayResultPanel = true;
     }
     else
     {
-      alert("vous etes nul ! honte a vous !")
+      this.answerIsValid = false;
+      this.answerString = this.invalidAnswer;
+      this.displayResultPanel = true;
     }
 
+    
+  }
+
+  goToReglageOrQuit(): void {
+    if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
+    else this.buttonIsActivated = false;
+  }
+
+  goToNextQuestion(): void
+  {
+    this.displayResultPanel = false;
     this.questionIndex++;
     if(this.questionIndex > this.quiz.questions.length)
     {
@@ -58,10 +78,5 @@ export class QuizzComponent implements OnInit
     {
       this.question = this.quiz.questions[1];
     }
-  }
-
-  goToReglageOrQuit(): void {
-    if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
-    else this.buttonIsActivated = false;
   }
 }
