@@ -12,14 +12,14 @@ import { BehaviorSubject, Subject } from 'rxjs';
 
 export class ReglageComponent implements OnInit {
   public height: number;
-  public fontsize:number;
+  public value:number;
   //public brightness:number;
   public valueContrast: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
       this.reglageService.fontsize.subscribe((fontsize: number) => 
       {
-        this.fontsize = fontsize;
+        this.value = fontsize;
       })
       this.reglageService.valueContrast.subscribe((value: number) => 
     {
