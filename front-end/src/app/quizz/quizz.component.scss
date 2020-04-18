@@ -44,6 +44,11 @@
     transform: translate(-50%, -50%);
     padding: 25px;
     text-align: center;
+
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-name: fadeinResult;
+    animation-fill-mode: forwards;
 }
 
 #blurImage
@@ -121,6 +126,20 @@
     }
     to
     {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinResult
+{
+    from
+    {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translate(-50%, -50%);
         opacity: 1;
     }
 }
