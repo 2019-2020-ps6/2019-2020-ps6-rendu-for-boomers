@@ -33,7 +33,7 @@ export class AccueilComponent implements OnInit {
 
   updateFontSize(value: number): void {
     console.log("new font-size :" + value);
-    $("body").css("font-size", value + "px");
+    $(":root").css("--main-font-size", value + "px");
   }
 
   goToReglageOrQuit(): void {
