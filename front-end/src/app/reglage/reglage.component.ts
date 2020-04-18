@@ -39,13 +39,11 @@ export class ReglageComponent implements OnInit {
 
   updateFontSize(value: number): void {
     this.reglageService.setFontSize(value);
-    console.log("new font-size :" + value);
-    $("body").css("font-size", value + "px");
+    $(":root").css("font-size", value + "px");
   }
 
   updateContrast(value: number): void {
     this.reglageService.updateContrast(value);
-    console.log(value);
   }
 
   updateHeightCompoToHeightReglagle(){

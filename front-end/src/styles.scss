@@ -7,38 +7,33 @@ h2 {
     font-size:130%;
 }
 
+:root{
+    --main-font-size: 45px;
+    --main-bg-color: white;
+    --main-color: black;
+}
 
 body{
     font-weight: 550;
-    font-size: 45px;
+    font-size: var(--main-font-size);
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden; //En attendant de trouver pourquoi on a un bout qui dépasse à droite
-}
-
-
-.titre {
-    position: relative;
-    font-size: 120px;
-    text-align: center;
-    margin-block-start: 0;
-    padding-top: 30px;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
 }
 
 a {
-    color: black;
+    color: var(--main-color);
 }
 
-.contrast{
-    overflow-x: hidden;
-    max-width: 100vw;
-    min-height: 100vh;
-    color: black;
-    background-color: white;
+.reglage{
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
     //contrast(color/background-color) : black / white | yellow / black | white / blue
 }
 
 .button {
-    background-color: white;
-    color: black;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
 }
