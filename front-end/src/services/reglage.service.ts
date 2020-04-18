@@ -24,25 +24,16 @@ export class ReglageService {
   updateContrast(value: number): void {
     this.valueContrast.next(value);
     if(value == 1){
-      $("a").css("color", "black");
-      $(".contrast").css("color", "black");
-      $(".contrast").css("background-color", "white");
-      $(".button").css("color", "black");
-      $(".button").css("background-color", "white");
+      $(":root").css("--main-color", "black");
+      $(":root").css("--main-bg-color", "white");
     }
     if(value == 2){
-      $("a").css("color", "yellow");
-      $(".contrast").css("color", "yellow");
-      $(".contrast").css("background-color", "black");
-      $(".button").css("color", "yellow");
-      $(".button").css("background-color", "black");
+      $(":root").css("--main-color", "#FEDB01");
+      $(":root").css("--main-bg-color", "black");
     }
     if(value == 3){
-      $("a").css("color", "white");
-      $(".contrast").css("color", "white");
-      $(".contrast").css("background-color", "blue");
-      $(".button").css("color", "white");
-      $(".button").css("background-color", "blue");
+      $(":root").css("--main-color", "white");
+      $(":root").css("--main-bg-color", "#4267B2");
     }
   }
 }

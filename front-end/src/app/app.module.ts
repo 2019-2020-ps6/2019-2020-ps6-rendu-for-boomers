@@ -7,6 +7,9 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { ReglageComponent } from './reglage/reglage.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { EditorComponent } from './editor/editor.component';
+import { ModifyComponent } from './editor/modify/modify.component';
+import { CreateComponent } from './editor/create/create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloseReglageService } from './close-reglage.service';
 import { TutorielComponent } from './tutoriel/tutoriel.component';
@@ -31,6 +34,18 @@ const appRoutes: Routes = [
     path: 'quizz',
     component: QuizzComponent
   },
+  {
+    path: 'editor',
+    component: EditorComponent
+  }, 
+  {
+    path: 'modify',
+    component: ModifyComponent
+  }, 
+  {
+    path: 'create',
+    component: CreateComponent
+  }, 
   {
     path: '', 
     redirectTo: '/accueil',
@@ -61,10 +76,15 @@ const appRoutes: Routes = [
     MenuComponent,
     ReglageComponent,
     QuizzComponent,
+    EditorComponent,
+    ModifyComponent,
+    CreateComponent,
+
     TutorielComponent,
     JouerComponent,
     CreerQuizComponent,
     ModifierQuizComponent
+
   ],
   imports: [
     BrowserModule, 

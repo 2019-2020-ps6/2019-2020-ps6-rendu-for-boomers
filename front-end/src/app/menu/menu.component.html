@@ -1,4 +1,4 @@
-<div class="contrast">
+<div>
     <h1 class="titre"> PolyQuiz </h1>
 
     <div class="description"> PolyQuiz est un site de divertissement qui vous permez de jouer à des quiz. <br>
@@ -6,9 +6,15 @@
     </div>
 
     <div class="bouttons-box">
+<<<<<<< HEAD
         <input class="button btn btn-default" id="buttonID" type="button" value="Jouer" routerLink="/quizz">
-        <input class="button btn btn-default" id="buttonID" type="button" value="Créer / Modifier Quiz">
-        <input class="button btn btn-default" id="buttonID" type="button" value="Tutoriel" routerLink ="/tutoriel">
+        <input class="button btn btn-default" id="buttonID" type="button" value="Créer / Modifier Quiz" routerLink="/editor">
+        <input class="button btn btn-default" id="buttonID" type="button" value="Tutoriel">
+=======
+        <input class="button menu-button btn btn-default" id="buttonID" type="button" value="Jouer" routerLink="/quizz">
+        <input class="button menu-button btn btn-default" id="buttonID" type="button" value="Créer / Modifier Quiz">
+        <input class="button menu-button btn btn-default" id="buttonID" type="button" value="Tutoriel" routerLink ="/tutoriel">
+>>>>>>> 3106b66a8d4263e2254f7f5d8cfb8c8e6270e5df
     </div>
     <div class="quote-container">
         <i class="pin"></i>
@@ -24,7 +30,7 @@
         <img class="arrow1" *ngIf="valueContrast == 2" src="../assets/arrow2.png"/>
         <img class="arrow1" *ngIf="valueContrast == 3" src="../assets/arrow3.png"/>
 
-        <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
+        <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>    
     </div>
     
     <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
