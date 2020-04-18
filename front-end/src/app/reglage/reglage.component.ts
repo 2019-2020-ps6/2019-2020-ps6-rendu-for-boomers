@@ -33,8 +33,6 @@ export class ReglageComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateContrast(this.valueContrast);
-    this.height = document.getElementById("reglageID").offsetHeight;
-    this.updateHeightCompoToHeightReglagle();
     //this.updateBrightness(this.brightness);
   }
 
