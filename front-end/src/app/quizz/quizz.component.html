@@ -1,7 +1,6 @@
 
 <h1>Quiz sur {{quiz.name}}</h1>
-<h2>Question : {{question.label}}</h2>
-<div class="nbQuestion">Question {{questionIndex}}/{{quiz.questions.length}}</div>
+<h2>Question {{questionIndex}}/{{quiz.questions.length}} : {{question.label}}</h2>
 <br>
 <div class="buttonGoup">
     <button class="button btn btn-warning" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
