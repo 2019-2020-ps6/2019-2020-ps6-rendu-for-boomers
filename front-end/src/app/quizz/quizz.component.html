@@ -16,6 +16,19 @@
     <button (click)="goToNextQuestion()">go next</button>
 </div>
 
+<div class="finalResultPanel" *ngIf="displayFinalResultPanel == true">
+    <h2>Résultats du quiz sur {{quiz.name}}</h2>
+
+    <canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [colors]="doughnutChartColor"
+        [chartType]="doughnutChartType"></canvas>
+
+    <p>Réponse vrai: xx</p>
+    <p>Réponse fausse: yy</p> 
+</div>
+
 
 <br>
 <footer>

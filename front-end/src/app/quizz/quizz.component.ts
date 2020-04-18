@@ -6,6 +6,7 @@ import { Question } from 'src/models/question.model';
 import { CloseReglageService } from '../close-reglage.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-quizz',
   templateUrl: './quizz.component.html',
@@ -22,7 +23,21 @@ export class QuizzComponent implements OnInit
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
   public invalidAnswer: string = "Non non non ! c'est pas bon !";
   public answerIsValid: boolean = false;
+  public validAnswerCount: number = 0;
+  public invalidAnswerCount: number = 0;
+
   public displayResultPanel: boolean = false;
+  public displayFinalResultPanel: boolean = false;
+
+  public doughnutChartLabels = ['bonne réponse', 'mauvaise réponse'];
+  public doughnutChartData:Array<any>;
+  public doughnutChartType = 'doughnut';
+  public doughnutChartColor = 
+  [
+    {
+      backgroundColor: ['#008000', '#ff0000']
+    }
+  ];
 
   constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService) 
   { 
@@ -47,12 +62,14 @@ export class QuizzComponent implements OnInit
     if(this.question.answers[answerIndex].isCorrect)
     {
       this.answerIsValid = true;
+      this.validAnswerCount++;
       this.answerString = this.validAnswer;
       this.displayResultPanel = true;
     }
     else
     {
       this.answerIsValid = false;
+      this.invalidAnswerCount++;
       this.answerString = this.invalidAnswer;
       this.displayResultPanel = true;
     }
@@ -71,8 +88,9 @@ export class QuizzComponent implements OnInit
     this.questionIndex++;
     if(this.questionIndex > this.quiz.questions.length)
     {
-      alert("bravo le quiz est fini");
-      this.router.navigate(['/menu']);
+      this.doughnutChartData = [this.validAnswerCount, this.invalidAnswerCount];
+      this.displayFinalResultPanel = true;
+      //this.router.navigate(['/menu']);
     }
     else
     {

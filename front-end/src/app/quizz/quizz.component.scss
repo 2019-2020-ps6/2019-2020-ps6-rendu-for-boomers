@@ -31,6 +31,16 @@
     text-align: center;
 }
 
+.finalResultPanel {
+    position: absolute;
+    background-color: gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    text-align: center;
+}
+
 h1
 {
     text-align: center;

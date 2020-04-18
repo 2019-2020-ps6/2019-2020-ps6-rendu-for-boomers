@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { TutorielComponent } from './tutoriel/tutoriel.component';
 import { JouerComponent } from './jouer/jouer.component';
 import { CreerQuizComponent } from './creer-quiz/creer-quiz.component';
 import { ModifierQuizComponent } from './modifier-quiz/modifier-quiz.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -69,7 +69,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, 
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   exports: [RouterModule],
   providers: [CloseReglageService],
