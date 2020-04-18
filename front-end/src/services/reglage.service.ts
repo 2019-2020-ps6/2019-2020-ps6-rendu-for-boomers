@@ -33,7 +33,7 @@ export class ReglageService {
     }
     if(value == 3){
       $(":root").css("--main-color", "white");
-      $(":root").css("--main-bg-color", "#4267B2");
+      $(":root").css("--main-bg-color", "#3b5998");
     }
   }
 }
