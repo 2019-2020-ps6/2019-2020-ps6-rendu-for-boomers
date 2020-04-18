@@ -16,6 +16,19 @@
     <button (click)="goToNextQuestion()">go next</button>
 </div>
 
+
+
+
+<br>
+<footer>
+    <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
+    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+</footer>
+
+<app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
+
+<img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
+
 <div class="finalResultPanel" *ngIf="displayFinalResultPanel == true">
     <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
@@ -27,12 +40,3 @@
 
     <p>{{mark}}</p>
 </div>
-
-
-<br>
-<footer>
-    <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
-    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
-</footer>
-
-<app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
