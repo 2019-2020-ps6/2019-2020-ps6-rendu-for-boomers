@@ -5,6 +5,19 @@
     margin: 20px;
 }
 
+.answerButton {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.answerButton:hover {
+    background-color: #e0e0e0;
+}
+
 .reglage {
     font-size: 60px;
     float: right;
@@ -13,11 +26,11 @@
 
 .buttonGoup {
     text-align: center;
-    border: solid 10px;
-    border-radius: 10px;
+    border: solid 1px lightgray;
     margin-left: 10%;
     margin-right: 10%;
-    padding:10px
+    padding: 10px;
+    box-shadow: 5px 5px 10px lightgray;
 }
 
 .return {
@@ -26,24 +39,18 @@
     margin: 0px;
 }
 
-.answerPanel {
+.panel {
     position: absolute;
     background-color: gray;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 25px;
     text-align: center;
+    border-radius: 10px;
+    padding: 25px;
 }
 
 .finalResultPanel {
-    position: absolute;
-    background-color: gray;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 25px;
-    text-align: center;
 
     opacity: 0;
     animation-duration: 0.5s;
@@ -147,15 +154,21 @@
 h1
 {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 0px;
+    padding: 20px 0px 20px 0px;
     font-weight: bold;
+    box-shadow: 0px 5px 5px lightgray;
 }
 
 h2
 {
     text-align: center;
     font-size: 100%;
-    margin: 30px;
+}
+
+#questionTitle
+{
+    margin-bottom: 20px;
 }
 
 h3

@@ -22,6 +22,9 @@ export class QuizzComponent implements OnInit
   public answerString: string;
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
   public invalidAnswer: string = "Non non non ! c'est pas bon !";
+  public validAnswerIconSrc: string = "./assets/check_icon.svg";
+  public invalidAnswerIconSrc: string = "./assets/cross_icon.svg";
+  public answerIconSrc: string;
   public answerIsValid: boolean = false;
   public validAnswerCount: number = 0;
   public invalidAnswerCount: number = 0;
@@ -68,6 +71,7 @@ export class QuizzComponent implements OnInit
     if(this.question.answers[answerIndex].isCorrect)
     {
       this.answerIsValid = true;
+      this.answerIconSrc = this.validAnswerIconSrc;
       this.validAnswerCount++;
       this.answerString = this.validAnswer;
       this.displayResultPanel = true;
@@ -75,6 +79,7 @@ export class QuizzComponent implements OnInit
     else
     {
       this.answerIsValid = false;
+      this.answerIconSrc = this.invalidAnswerIconSrc;
       this.invalidAnswerCount++;
       this.answerString = this.invalidAnswer;
       this.displayResultPanel = true;

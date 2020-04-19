@@ -1,20 +1,22 @@
 
 <h1>Quiz sur {{quiz.name}}</h1>
-<h2>{{question.label}}</h2>
+
+<br>
 
 <div class="buttonGoup">
-    <button class="button btn btn-warning" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
-    <button class="button btn btn-warning" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
+    <h2 id="questionTitle">{{question.label}}</h2>
+    <button class="answerButton" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
+    <button class="answerButton" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
     <br>
-    <button class="button btn btn-warning" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
-    <button class="button btn btn-warning" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
+    <button class="answerButton" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
+    <button class="answerButton" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
 </div>
 <h3>Question {{questionIndex}}/{{quiz.questions.length}}</h3>
 
-<div class="answerPanel" *ngIf="displayResultPanel == true">
+<div class="panel finalResultPanel" *ngIf="displayResultPanel == true">
+    <img src={{answerIconSrc}} height="150" width="150"> 
     <p>{{answerString}}</p>
-    
-    <button (click)="goToNextQuestion()">go next</button>
+    <button class="answerButton" (click)="goToNextQuestion()">Suivant</button>
 </div>
 
 <br>
@@ -27,7 +29,7 @@
 
 <img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
 
-<div class="finalResultPanel" *ngIf="displayFinalResultPanel == true">
+<div class="panel finalResultPanel" *ngIf="displayFinalResultPanel == true">
     <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
     <canvas baseChart
