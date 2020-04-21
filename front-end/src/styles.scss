@@ -44,12 +44,11 @@ h3 {
     //--main-filter: brightness(0%);
 }
 
+
 body{
     font-family: var(--main-font);
     font-weight: 550;
     font-size: var(--main-font-size);
-    min-height: 100vh;
-    min-width: 100vw;
     background-color: var(--main-bg-color);
     color: var(--main-color);   
 }

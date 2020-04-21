@@ -14,9 +14,6 @@ import { CreateComponent } from './editor/create/create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloseReglageService } from './close-reglage.service';
 import { TutorielComponent } from './tutoriel/tutoriel.component';
-import { JouerComponent } from './jouer/jouer.component';
-import { CreerQuizComponent } from './creer-quiz/creer-quiz.component';
-import { ModifierQuizComponent } from './modifier-quiz/modifier-quiz.component';
 import { ChartsModule } from 'ng2-charts';
 import { QuizzListComponent } from './quizz/quiz-list/quiz-list.component';
 import { QuizCardComponent } from './quizz/quiz-card/quiz-card.component';
@@ -61,18 +58,6 @@ const appRoutes: Routes = [
   {
     path: 'tutoriel',
     component: TutorielComponent
-  },
-  {
-    path : 'tutoriel/jouer',
-    component: JouerComponent
-  },
-  {
-    path: 'tutoriel/creer_quiz',
-    component: CreerQuizComponent
-  },
-  {
-    path: 'tutoriel/modifier_quiz',
-    component: ModifierQuizComponent
   }
 ];
 
@@ -88,11 +73,7 @@ const appRoutes: Routes = [
     EditorComponent,
     ModifyComponent,
     CreateComponent,
-
-    TutorielComponent,
-    JouerComponent,
-    CreerQuizComponent,
-    ModifierQuizComponent
+    TutorielComponent
 
   ],
   imports: [
