@@ -88,7 +88,11 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule, 
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {
+      anchorScrolling: "enabled",
+      scrollPositionRestoration: 'enabled',
+      scrollOffset: [0, 64],
+    }),
     HttpClientModule,
     ChartsModule
   ],

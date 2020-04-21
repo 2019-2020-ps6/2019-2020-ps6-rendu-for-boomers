@@ -7,6 +7,15 @@
     padding-top: 30px;
 }
 
+.titre2 {
+    position: relative;
+    font-size: 120px;
+    text-align: center;
+    margin-block-start: 0;
+    margin-top: 100px;
+    padding-top: 30px;
+}
+
 .sommaire {
     margin-left: 180px;
     margin-bottom: 30px;
@@ -23,19 +32,52 @@ ul {
 }
 
 .button {
+    position: fixed;
+    bottom: 150px;
+    right: 30px;
     font-size: 130%;
     text-align: center;
-    margin-left: 5%;
 }
 
 .reglage {
+    position: fixed;
+    bottom : 30px;
+    right: 30px;
     font-size: 60px;
     float: right;
-    margin-right: 5%;
 }
 
+.listeLien {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid;
+    position: fixed;
+    bottom : 280px;
+    right: 30px;
+}
 
+h1 {
+    margin-bottom: 60px;
+}
 
+p {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.p-image {
+    margin-left: 20px;
+}
+
+.fleche {
+    position: relative;
+    padding-left: 10px;
+}
+
+.image {
+    display: block;
+    margin-left: 50px;
+}
 
 
 
