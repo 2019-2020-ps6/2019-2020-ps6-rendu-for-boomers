@@ -10,12 +10,20 @@
 
     <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
     </form>-->
-
-    <h3>Titre du Quiz : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="title" size="40">&nbsp;&nbsp;&nbsp;&nbsp;
-    <h3>Nombre de Questions : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="nbQuestions" size="3"><br>
-
+    <div>
+     <h3>Titre du Quiz : </h3>
+        <input type="text" class="formulaire" [(ngModel)]="title" size="30">&nbsp;&nbsp;&nbsp;&nbsp;       
+    </div>
+    <div>
+     <h3>Thème : </h3>
+        <input type="text" class="formulaire" [(ngModel)]="theme" size="30">&nbsp;&nbsp;&nbsp;&nbsp;            
+    </div>
+    <div>
+     <h3>Nombre de Questions : </h3>
+        <input type="text" class="formulaire" [(ngModel)]="nbQuestions" size="3"><br>       
+    </div>
+</div>
+<div class="buttonGroup2">
     <label for="Question">Questions</label>
         <div class="questionCreation" *ngFor="nbQuestions;index as i">
             <h3>Question {{i}}</h3>

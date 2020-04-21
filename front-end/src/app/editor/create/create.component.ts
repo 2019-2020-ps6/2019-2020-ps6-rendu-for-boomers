@@ -20,6 +20,8 @@ export class CreateComponent implements OnInit {
 
   title = "Titre";
   nbQuestions = "1";
+  theme = "";
+  
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    
