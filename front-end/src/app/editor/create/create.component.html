@@ -2,7 +2,7 @@
 
 
 <div class="buttonGroup">
-    <h2>Création d'un quiz. Veuillez remplir les champs ci-dessous.</h2>
+    <h2><b>Création d'un quiz. Veuillez remplir les champs ci-dessous.</b></h2>
 </div>
 <div class="buttonGroup2">
     <!--
@@ -24,11 +24,13 @@
     </div>
 </div>
 <div class="buttonGroup3">
-    <h3>Questions</h3>
-        <div class="questionCreation" *ngFor="let question of questionList;let index = index">
-            <h3>Question {{index}}</h3>
-            <input type="text" class="formulaire" size="40">
-        </div>
+    <div class="questionCreation" *ngFor="let question of tab;let index = index">
+        <h3><U><b>Question {{index}}</b></U></h3><input type="text" class="formulaire" size="40">
+        <h3>Réponse 1</h3><input type="text" class="formulaire" size="40">
+        <h3>Réponse 2</h3><input type="text" class="formulaire" size="40">
+        <h3>Réponse 3</h3><input type="text" class="formulaire" size="40">
+        <h3>Réponse 4</h3><input type="text" class="formulaire" size="40">
+    </div>
 
 </div>
 

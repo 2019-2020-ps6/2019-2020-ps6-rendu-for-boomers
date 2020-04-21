@@ -20,7 +20,8 @@ export class CreateComponent implements OnInit {
 
   title = "Titre";
   nbQuestions = "1";
-  theme = "";
+  theme = "aucun";
+  tab : number[] = [1, 2, 3];
   questionList: Question[];
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
