@@ -7,14 +7,41 @@ h2 {
     font-size:130%;
 }
 
+@font-face {
+    font-family: "Arial";
+    src: url("../font/Arial.ttf")
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../font/Helvetica.ttf")
+}
+
+@font-face {
+    font-family: "Aller";
+    src: url("../font/Aller.ttf")
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url("../font/Calibri.ttf")
+}
+
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("../font/Comic Sans MS.ttf")
+}
+
 :root{
     --main-font-size: 45px;
     --main-bg-color: white;
     --main-color: black;
+    --main-font: Arial, Helvetica, sans-serif;
     //--main-filter: brightness(0%);
 }
 
 body{
+    font-family: var(--main-font);
     font-weight: 550;
     font-size: var(--main-font-size);
     min-height: 100vh;
@@ -41,4 +68,9 @@ a {
 .button:hover {
     background-color: var(--main-bg-color);
     color: var(--main-color);
+}
+
+select {
+    background-color: var(--main-bg-color);
+    color: var(--main-color); 
 }

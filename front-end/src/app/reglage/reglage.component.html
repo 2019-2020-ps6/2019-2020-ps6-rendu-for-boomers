@@ -7,21 +7,21 @@
         <button class="contraste btn daltonien1" (click)="updateContrast(2)">Daltonien1</button>
         <button class="contraste btn daltonien2" (click)="updateContrast(3)">Daltonien2</button>
     </div>
-    <div class="options"> Luminosité 
-        <!--<input #slider type="range" (change)="updateBrightness(slider.value)" autocomplete="off" min="20" max="60" value="{{this.brightness}}" class="slider" id="myRange">-->
-    </div>
-    <div class="options"> Police d'écriture 
 
+    <div class="options"> Police d'écriture 
+        <select #select class="custom-select" (change)="updateFont(select.value)">
+            <option>Arial</option>
+            <option>Calibri</option>
+            <option>Helvetica</option>
+            <option>Aller</option>
+            <option>Comic Sans MS</option>
+        </select> 
     </div>
+
     <div class="options slidecontainer"> Taille de la police
         <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="20" max="60" value="{{this.value}}" class="slider" id="myRange">
     </div>
-    <div class="options"> Profil Enregistré 
-
-    </div>
-    <div class="options"> Enregistrer Profil 
-
-    </div>
+    <br>
 
     <button class="button-retour button btn btn-default" (click)="onCloseReglage()">Fermer</button>
 </div>
