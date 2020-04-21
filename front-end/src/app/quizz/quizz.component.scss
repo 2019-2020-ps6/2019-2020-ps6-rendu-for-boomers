@@ -5,23 +5,24 @@
     margin: 20px;
 }
 
+.button-reglage {
+    font-size: 60px;
+    float: right;
+    margin-right: 2%;
+}
+
 .answerButton {
+    background-color: #e0e0e0;
+    color:black;
     text-align: center;
     padding: 20px;
     margin: 20px;
-    background-color: lightgray;
     border-radius: 10px;
     border: 0px;
 }
 
 .answerButton:hover {
     background-color: #e0e0e0;
-}
-
-.reglage {
-    font-size: 60px;
-    float: right;
-    margin-right: 2%;
 }
 
 .buttonGoup {
@@ -41,6 +42,7 @@
 
 .panel {
     position: absolute;
+    color:black;
     background-color: gray;
     top: 50%;
     left: 50%;
