@@ -28,7 +28,7 @@ export class QuizzComponent implements OnInit
   public answerIsValid: boolean = false;
   public validAnswerCount: number = 0;
   public invalidAnswerCount: number = 0;
-  public marksArray: Array<any> = ["SS", "S", "A", "B", "C", "D"];
+  public marksArray: Array<any> = ["S", "S", "A", "B", "C", "D"];
   public mark: string;
 
   public displayResultPanel: boolean = false;
