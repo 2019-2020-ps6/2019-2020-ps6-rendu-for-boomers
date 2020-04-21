@@ -76,8 +76,6 @@ export class QuizzComponent implements OnInit
       this.answerString = this.invalidAnswer;
       this.displayResultPanel = true;
     }
-
-    
   }
 
   goToNextQuestion(): void
