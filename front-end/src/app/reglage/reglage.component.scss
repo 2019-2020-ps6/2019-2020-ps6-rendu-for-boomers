@@ -1,6 +1,7 @@
 .box-reglage{
+    height: 100%;
     width: 40%;
-    position: absolute;
+    position: fixed;
     left: 60%;
     top: 0%;
     border-left: 2px solid grey;
@@ -46,6 +47,10 @@
     color: white;
     background-color: #4267B2;
     border: 1px solid white;
+}
+
+select {
+    width: 90%;
 }
 
 .slider {
