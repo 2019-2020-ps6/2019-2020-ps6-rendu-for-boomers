@@ -12,19 +12,24 @@ import { BehaviorSubject, Subject } from 'rxjs';
 
 export class ReglageComponent implements OnInit {
   public height: number;
-  public value:number;
+  public fontValue:number;
+  public font:string;
   //public brightness:number;
   public valueContrast: number;
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
       this.reglageService.fontsize.subscribe((fontsize: number) => 
       {
-        this.value = fontsize;
+        this.fontValue = fontsize;
       })
       this.reglageService.valueContrast.subscribe((value: number) => 
-    {
-      this.valueContrast = value;
-    })
+      {
+        this.valueContrast = value;
+      })
+      this.reglageService.font.subscribe((value: string) => 
+      {
+        this.font = value;
+      })
     //this.reglageService.brightness.subscribe((value: number) => 
     //{
     //  this.brightness = value;
@@ -47,6 +52,7 @@ export class ReglageComponent implements OnInit {
   }
 
   updateFont(value: string): void {
+    this.reglageService.setFont(value);
     $(":root").css("--main-font", value);
   }
 

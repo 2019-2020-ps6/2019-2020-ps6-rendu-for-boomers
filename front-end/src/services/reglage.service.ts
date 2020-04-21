@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 export class ReglageService {
   public heightReglage: Subject<number> = new Subject();
   public fontsize: BehaviorSubject<number> = new BehaviorSubject(45);
+  public font: BehaviorSubject<string> = new BehaviorSubject("Arial");
   //public brightness: BehaviorSubject<number> = new BehaviorSubject(45);
   public valueContrast: BehaviorSubject<number> = new BehaviorSubject(1);
 
@@ -16,6 +17,10 @@ export class ReglageService {
 
   setFontSize(value: number){
     this.fontsize.next(value);
+  }
+
+  setFont(value: string){
+    this.font.next(value);
   }
 
  // setBrightness(value: number){
