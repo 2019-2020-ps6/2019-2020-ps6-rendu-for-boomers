@@ -3,6 +3,8 @@ import { CloseReglageService } from '../../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
 import * as $ from 'jquery';
+import { QuizService } from '../../../services/quiz.service';
+import { Quiz } from '../../../models/quiz.model';
 
 
 @Component({
@@ -15,6 +17,9 @@ export class CreateComponent implements OnInit {
   buttonObserver: Subscription;
   public valueContrast: number;
   public height: number;
+
+  title = "Titre";
+  nbQuestions = "1";
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    
@@ -37,4 +42,11 @@ export class CreateComponent implements OnInit {
     if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
     else this.buttonIsActivated = false;
   }
+
+  //addQuiz() {
+    // We retrieve here the quiz object from the quizForm and we cast the type "as Quiz".
+    //const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
+
+    //this.quizService.addQuiz(quizToCreate);
+  //}
 }
