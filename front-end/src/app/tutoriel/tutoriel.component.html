@@ -34,7 +34,7 @@
             <a routerLink="." fragment="Creer"> Modifier</a>
         </div>
         <button class="button btn btn-default return" routerLink="/menu">Menu</button>
-        <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+        <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
     </footer>
 
     <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
