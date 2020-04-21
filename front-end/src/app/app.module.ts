@@ -17,6 +17,8 @@ import { JouerComponent } from './jouer/jouer.component';
 import { CreerQuizComponent } from './creer-quiz/creer-quiz.component';
 import { ModifierQuizComponent } from './modifier-quiz/modifier-quiz.component';
 import { ChartsModule } from 'ng2-charts';
+import { QuizzListComponent } from './quizz/quiz-list/quiz-list.component';
+import { QuizCardComponent } from './quizz/quiz-card/quiz-card.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -33,6 +35,10 @@ const appRoutes: Routes = [
   {
     path: 'quizz',
     component: QuizzComponent
+  },
+  {
+    path: 'quiz-list',
+    component: QuizzListComponent
   },
   {
     path: 'editor',
@@ -76,6 +82,8 @@ const appRoutes: Routes = [
     MenuComponent,
     ReglageComponent,
     QuizzComponent,
+    QuizzListComponent,
+    QuizCardComponent,
     EditorComponent,
     ModifyComponent,
     CreateComponent,

@@ -1,0 +1,38 @@
+.card
+{
+    border-radius: 10px;
+    background-image: url("../../../assets/backgroundGreen.jpg");
+    margin: 10px;
+    box-shadow: 2.5px 2.5px 5px gray;
+}
+
+.footer-card
+{
+    background-color: gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.footer-card:hover
+{
+    background-color: lightslategray;
+}
+
+.page-back
+{
+    background-color: red;
+}
+
+h2
+{
+    padding: 10px;
+    font-size: 100%;
+    margin: 0px;
+}
+
+p
+{
+    padding: 10px;
+    font-size: 80%;
+    margin: 0px;
+}
