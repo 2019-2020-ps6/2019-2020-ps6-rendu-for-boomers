@@ -1,6 +1,28 @@
 
 
 
+<div class="buttonGoup">
+    <h2>Création d'un quiz. Veuillez remplir les champs ci-dessous.</h2>
+</div>
+<div class="buttonGoup2">
+    <!--
+    <form class="quiz-form" [formGroup]="quizForm">
+
+    <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
+    </form>-->
+
+    <h3>Titre du Quiz : </h3>
+        <input type="text" class="formulaire" [(ngModel)]="title" size="40">&nbsp;&nbsp;&nbsp;&nbsp;
+    <h3>Nombre de Questions : </h3>
+        <input type="text" class="formulaire" [(ngModel)]="nbQuestions" size="3"><br>
+
+    <label for="Question">Questions</label>
+        <div class="questionCreation" *ngFor="nbQuestions;index as i">
+            <h3>Question {{i}}</h3>
+            <input type="text" class="formulaire" size="40">
+        </div>
+
+</div>
 
 <footer>
     <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
