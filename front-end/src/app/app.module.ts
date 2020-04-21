@@ -17,6 +17,7 @@ import { TutorielComponent } from './tutoriel/tutoriel.component';
 import { ChartsModule } from 'ng2-charts';
 import { QuizzListComponent } from './quizz/quiz-list/quiz-list.component';
 import { QuizCardComponent } from './quizz/quiz-card/quiz-card.component';
+import { HeaderComponent} from './header/header.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -73,7 +74,8 @@ const appRoutes: Routes = [
     EditorComponent,
     ModifyComponent,
     CreateComponent,
-    TutorielComponent
+    TutorielComponent,
+    HeaderComponent
 
   ],
   imports: [
