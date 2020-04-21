@@ -16,6 +16,8 @@ export class QuizzListComponent implements OnInit
     public quizList: Quiz[];
     public quiz: Quiz;
 
+    public pageTitle: string = "LE GIGA TITRE";
+
     buttonIsActivated: boolean = false;
     buttonObserver: Subscription;
 

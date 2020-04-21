@@ -102,7 +102,6 @@ export class QuizzComponent implements OnInit
       this.doughnutChartData = [this.validAnswerCount, this.invalidAnswerCount];
       this.calculateMark();
       this.displayFinalResultPanel = true;
-      //this.router.navigate(['/menu']);
     }
     else
     {
