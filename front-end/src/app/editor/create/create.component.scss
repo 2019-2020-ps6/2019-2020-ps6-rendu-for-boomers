@@ -5,7 +5,7 @@
     margin-right: 50px;
 }
 
-.buttonGoup {
+.buttonGroup {
     text-align: center;
     border: solid 1px lightgray;
     margin-left: 10%;
@@ -13,17 +13,36 @@
     margin-top: 5%;
     padding: 10px;
     box-shadow: 5px 5px 10px lightgray;
+    //display: inline;
 }
-.buttonGoup2 {
+.buttonGroup2 {
     text-align: center;
     border: solid 1px lightgray;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
     padding: 10px;
-    font-size: 60%;
+    font-size: 80%;
+    box-shadow: 5px 5px 10px lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonGroup3 {
+    text-align: center;
+    border: solid 1px lightgray;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    font-size: 80%;
     box-shadow: 5px 5px 10px lightgray;
 }
+
+//.truc{
+//    display: inline-flex;
+//}
 
 .formulaire{
     width: fit-content;
@@ -32,7 +51,7 @@
 }
 
 h3 {
-    display: inline-block;
+    //display: inline-block;
 }
 
 .reglage {

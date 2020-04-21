@@ -5,7 +5,7 @@ import { ReglageService } from 'src/services/reglage.service';
 import * as $ from 'jquery';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
-
+import { Question } from '../../../models/question.model';
 
 @Component({
   selector: 'app-editor',
@@ -20,6 +20,8 @@ export class CreateComponent implements OnInit {
 
   title = "Titre";
   nbQuestions = "1";
+  theme = "";
+  questionList: Question[];
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    

@@ -9,17 +9,17 @@
     </div>
 
     <div class="options"> Police d'écriture 
-        <select #select class="custom-select" (change)="updateFont(select.value)">
-            <option>Arial</option>
-            <option>Calibri</option>
-            <option>Helvetica</option>
-            <option>Aller</option>
-            <option>Comic Sans MS</option>
+        <select #select class="custom-select" (change)="updateFont(select.value)" value="{{this.font}}">
+            <option value="Arial" style="font-family:Arial;">Arial</option>
+            <option value="Calibri" style="font-family:Calibri;">Calibri</option>
+            <option value="Helvetica" style="font-family:Helvetica;">Helvetica</option>
+            <option value="Aller" style="font-family:Aller;">Aller</option>
+            <option value="Comic Sans MS" style="font-family:Comic Sans MS;">Comic Sans MS</option>
         </select> 
     </div>
 
     <div class="options slidecontainer"> Taille de la police
-        <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="20" max="60" value="{{this.value}}" class="slider" id="myRange">
+        <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="20" max="60" value="{{this.fontValue}}" class="slider" id="myRange">
     </div>
     <br>
 

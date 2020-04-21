@@ -1,56 +1,40 @@
-<div class="contrast">
 
-    <h1 class="titre">Tutoriel</h1>
+<h1 class="titre">Tutoriel</h1>
 
-    <h2 class="sommaire">Sommaire :</h2>
+<h2 class="titre2" id="Jouer"> Pour jouer : </h2>
 
-    <ul class="liste">
-        <li> <a routerLink="." fragment="Jouer"> Jouer </a></li>
-        <li> <a routerLink="." fragment="Modifier"> Créer un quiz </a> </li>
-        <li> <a routerLink="." fragment="Creer"> Modifier un quiz </a> </li>
-    </ul>
-
-    <div class="quote-container">
-        <i class="pin"></i>
-        <blockquote class="note grey">
-            Cliquer sur la partie du sommaire que vous souhaitez mieux comprendre !
-        </blockquote>
-    </div>
-
-    <h1 class="titre2" id="Jouer"> Pour jouer : </h1>
-
-    <div class="p-image">
-        <img *ngIf="valueContrast == 1" src="../assets/cercle-1.png"/>
-        <img *ngIf="valueContrast == 2" src="../assets/cercle-1-dalto1.png"/>
-        <img *ngIf="valueContrast == 3" src="../assets/cercle-1-dalto2.png"/>
-        <p> Cliquer sur jouer comme ci-dessous </p>
-        <img class="fleche" *ngIf="valueContrast == 1" src="../assets/arrow1tutoclassic.png"/>
-        <img class="fleche" *ngIf="valueContrast == 2" src="../assets/arrow1tutodalto1.png"/>
-        <img class="fleche" *ngIf="valueContrast == 3" src="../assets/arrow1tutodalto2.png"/>
-    </div>
-
-    <img class="image" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png"/>
-    <img class="image" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png"/>
-    <img class="image" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png"/>
-
-
-    <h1 class="titre2" id="Creer"> Pour créer un quiz : </h1>
-
-
-
-    <h1 class="titre2" id="Modifier"> Pour modifier un quiz : </h1>
-
-
-    <footer>
-        <div class="listeLien">
-            <a routerLink="." fragment="Jouer"> Jouer </a> <br>
-            <a routerLink="." fragment="Modifier"> Créer</a> <br>
-            <a routerLink="." fragment="Creer"> Modifier</a>
-        </div>
-        <button class="button btn btn-default return" routerLink="/menu">Menu</button>
-        <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
-    </footer>
-
-    <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
-
+<div class="p-image">
+    <img *ngIf="valueContrast == 1" src="../assets/cercle-1.png"/>
+    <img *ngIf="valueContrast == 2" src="../assets/cercle-1-dalto1.png"/>
+    <img *ngIf="valueContrast == 3" src="../assets/cercle-1-dalto2.png"/>
+    <p> Cliquer sur jouer comme ci-dessous </p>
+    <img class="fleche" *ngIf="valueContrast == 1" src="../assets/arrow1tutoclassic.png"/>
+    <img class="fleche" *ngIf="valueContrast == 2" src="../assets/arrow1tutodalto1.png"/>
+    <img class="fleche" *ngIf="valueContrast == 3" src="../assets/arrow1tutodalto2.png"/>
 </div>
+
+<img class="image" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png"/>
+<img class="image" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png"/>
+<img class="image" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png"/>
+
+
+<h2 class="titre2" id="Creer"> Pour créer un quiz : </h2>
+
+
+
+<h2 class="titre2" id="Modifier"> Pour modifier un quiz : </h2>
+
+
+<footer>
+    <div class="listeLien">
+        <p class="sommaire"> Sommaire : </p> <br>
+        <a routerLink="." fragment="Jouer"> Jouer </a> <br>
+        <a routerLink="." fragment="Modifier"> Créer</a> <br>
+        <a routerLink="." fragment="Creer"> Modifier</a>
+    </div>
+    <button class="button btn btn-default return" routerLink="/menu">Menu</button>
+    <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+</footer>
+
+<app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
+

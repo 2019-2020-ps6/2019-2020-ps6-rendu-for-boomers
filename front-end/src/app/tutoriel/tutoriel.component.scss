@@ -9,27 +9,17 @@
 
 .titre2 {
     position: relative;
-    font-size: 120px;
-    text-align: center;
-    margin-block-start: 0;
+    font-size: 180%;
     margin-top: 100px;
     padding-top: 30px;
+    padding-left: 80px;
 }
 
 .sommaire {
-    margin-left: 180px;
-    margin-bottom: 30px;
+    font-weight: bold;
     text-decoration: underline;
 }
 
-ul {
-    display: inline-block;
-}
-
-.liste {
-    margin-left: 220px;
-    margin-bottom: 100px;
-}
 
 .button {
     position: fixed;
@@ -39,12 +29,11 @@ ul {
     text-align: center;
 }
 
-.reglage {
+.button-reglage {
     position: fixed;
     bottom : 30px;
     right: 30px;
     font-size: 60px;
-    float: right;
 }
 
 .listeLien {
@@ -52,8 +41,8 @@ ul {
     padding: 5px;
     border: 1px solid;
     position: fixed;
-    bottom : 280px;
-    right: 30px;
+    bottom : 500px;
+    right: 20px;
 }
 
 h1 {
