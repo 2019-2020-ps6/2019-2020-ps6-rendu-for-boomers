@@ -19,9 +19,9 @@ export class CreateComponent implements OnInit {
   public height: number;
 
   title = "Titre";
-  nbQuestions = "1";
+  nbQuestions = 1;
   theme = "aucun";
-  tab : number[] = [1, 2, 3];
+  tab = new Array(1);
   questionList: Question[];
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
@@ -46,10 +46,14 @@ export class CreateComponent implements OnInit {
     else this.buttonIsActivated = false;
   }
 
-  //addQuiz() {
+  updateQuestions(nbQuestions: number){
+    this.tab=new Array(nbQuestions);
+  }
+
+  addQuiz() {
     // We retrieve here the quiz object from the quizForm and we cast the type "as Quiz".
     //const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
 
     //this.quizService.addQuiz(quizToCreate);
-  //}
+  }
 }
