@@ -5,6 +5,36 @@
     margin-right: 50px;
 }
 
+.buttonGoup {
+    text-align: center;
+    border: solid 1px lightgray;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 10px;
+    box-shadow: 5px 5px 10px lightgray;
+}
+.buttonGoup2 {
+    text-align: center;
+    border: solid 1px lightgray;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    font-size: 60%;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+.formulaire{
+    width: fit-content;
+    min-width: 100px;
+    margin: 0.1em;
+}
+
+h3 {
+    display: inline-block;
+}
+
 .reglage {
     font-size: 60px;
     float: right;
@@ -15,3 +45,4 @@ footer{
     margin-top: 10%;
     margin-left: 2%;
 }
+

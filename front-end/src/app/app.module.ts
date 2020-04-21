@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -90,7 +91,8 @@ const appRoutes: Routes = [
     BrowserModule, 
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [CloseReglageService],
