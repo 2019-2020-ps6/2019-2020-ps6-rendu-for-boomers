@@ -22,8 +22,7 @@ export class QuizzComponent implements OnInit
   public answerIsValid: boolean = false;
   public validAnswerCount: number = 0;
   public invalidAnswerCount: number = 0;
-  public marksArray: Array<any> = ["./assets/rank/ranking-SH.png", 
-                                    "./assets/rank/ranking-S.png", 
+  public marksArray: Array<any> = [ "./assets/rank/ranking-S.png", 
                                     "./assets/rank/ranking-A.png", 
                                     "./assets/rank/ranking-B.png", 
                                     "./assets/rank/ranking-C.png", 
@@ -101,19 +100,16 @@ export class QuizzComponent implements OnInit
     this.markcss = "rank rank-normal";
     if(res == 1)
       this.mark = this.marksArray[0];
-    else if(res >= 90)
+    else if(res >= 0.80)
       this.mark = this.marksArray[1];
-    else if(res >= 80)
+    else if(res >= 0.60)
       this.mark = this.marksArray[2];
-    else if(res >= 70)
+    else if(res >= 0.40)
       this.mark = this.marksArray[3];
-    else if(res >= 60)
-      this.mark = this.marksArray[4];
     else
     {
       this.markcss = "rank rank-break"
-      this.mark = this.marksArray[5];
+      this.mark = this.marksArray[4];
     }
-      
   }
 }
