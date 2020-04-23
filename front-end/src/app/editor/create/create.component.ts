@@ -24,8 +24,8 @@ export class CreateComponent implements OnInit {
   tab = new Array(1);
   questionList: Question[];
 
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
-   
+  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService, public quizService: QuizService) { 
+
   }
 
   ngOnInit(): void {
