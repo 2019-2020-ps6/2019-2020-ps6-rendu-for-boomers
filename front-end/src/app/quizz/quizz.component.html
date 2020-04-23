@@ -1,40 +1,42 @@
 
-<app-header [title]="quiz.name"></app-header>
-<br>
-
-<div class="buttonGoup">
-    <h2 id="questionTitle">{{question.label}}</h2>
-    <button class="button btn btn-default" type='button' (click)="selectAnswer(0)">{{question.answers[0].value}}</button>
-    <button class="button btn btn-default" type='button' (click)="selectAnswer(1)">{{question.answers[1].value}}</button>
+<ng-container *ngIf="quiz">
+    <app-header [title]="quiz.name"></app-header>
     <br>
-    <button class="button btn btn-default" type='button' (click)="selectAnswer(2)">{{question.answers[2].value}}</button>
-    <button class="button btn btn-default" type='button' (click)="selectAnswer(3)">{{question.answers[3].value}}</button>
-</div>
-<h3>Question {{questionIndex}}/{{quiz.questions.length}}</h3>
 
-<div class="panel finalResultPanel" *ngIf="displayResultPanel == true">
-    <img src={{answerIconSrc}} height="150" width="150"> 
-    <p>{{answerString}}</p>
-    <button class="answerButton" (click)="goToNextQuestion()">Suivant</button>
-</div>
+    <div class="buttonGoup">
+        <h2 id="questionTitle">{{quiz.questions[questionIndex].label}}</h2>
+        <button class="button btn btn-default" type='button' (click)="selectAnswer(0)">{{quiz.questions[questionIndex].answers[0].value}}</button>
+        <button class="button btn btn-default" type='button' (click)="selectAnswer(1)">{{quiz.questions[questionIndex].answers[1].value}}</button>
+        <br>
+        <button class="button btn btn-default" type='button' (click)="selectAnswer(2)">{{quiz.questions[questionIndex].answers[2].value}}</button>
+        <button class="button btn btn-default" type='button' (click)="selectAnswer(3)">{{quiz.questions[questionIndex].answers[3].value}}</button>
+    </div>
+    <h3>Question {{questionIndex+1}}/{{quiz.questions.length}}</h3>
 
-<img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
+    <div class="panel finalResultPanel" *ngIf="displayResultPanel == true">
+        <img src={{answerIconSrc}} height="150" width="150"> 
+        <p>{{answerString}}</p>
+        <button class="answerButton" (click)="goToNextQuestion()">Suivant</button>
+    </div>
 
-<div class="panel finalResultPanel" *ngIf="displayFinalResultPanel == true">
-    <h2>Résultats du quiz sur {{quiz.name}}</h2>
+    <img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
 
-    <canvas baseChart
-        [data]="doughnutChartData"
-        [labels]="doughnutChartLabels"
-        [colors]="doughnutChartColor"
-        [legend]="false"
-        [options]="doughnutChartOption"
-        [chartType]="doughnutChartType"></canvas>
+    <div class="panel finalResultPanel" *ngIf="displayFinalResultPanel == true">
+        <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
-    <p id="mark">{{mark}}</p>
-    <p id="score1">bonne réponse : {{validAnswerCount}}</p>
-    <p id="score2">mauvaise réponse : {{invalidAnswerCount}}</p>
-    
+        <canvas baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [colors]="doughnutChartColor"
+            [legend]="false"
+            [options]="doughnutChartOption"
+            [chartType]="doughnutChartType"></canvas>
 
-    <button routerLink="/menu">Retour au menu</button>
-</div>
+        <p id="mark">{{mark}}</p>
+        <p id="score1">bonne réponse : {{validAnswerCount}}</p>
+        <p id="score2">mauvaise réponse : {{invalidAnswerCount}}</p>
+        
+
+        <button routerLink="/menu">Retour au menu</button>
+    </div>
+</ng-container>

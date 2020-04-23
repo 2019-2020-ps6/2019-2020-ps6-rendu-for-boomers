@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { QuizService } from '../../services/quiz.service';
 import { Quiz } from 'src/models/quiz.model';
-import { Question } from 'src/models/question.model';
 
 
 @Component({
@@ -13,7 +12,6 @@ import { Question } from 'src/models/question.model';
 export class QuizzComponent implements OnInit 
 {
   public quiz: Quiz;
-  public question: Question;
   public questionIndex: number;
   public answerString: string;
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
@@ -44,23 +42,22 @@ export class QuizzComponent implements OnInit
     animation : { duration : 1500, easing : 'easeOutCubic' }
   };
 
-  constructor(private router: Router, public quizService: QuizService) 
-  { 
-    this.quizService.quizzes$.subscribe((quizzes: Quiz[]) => 
-    {
-      this.quiz = quizzes[0];
-      this.question = this.quiz.questions[0];
-    })
+  constructor(private route: ActivatedRoute, public quizService: QuizService) 
+  {
+    this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
 
-    this.questionIndex = 1;
+    this.questionIndex = 0;
   }
 
-  ngOnInit(): void {
+  ngOnInit()
+  {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.quizService.setSelectedQuiz(id);
   }
 
   selectAnswer(answerIndex:number)
   {
-    if(this.question.answers[answerIndex].isCorrect)
+    if(this.quiz.questions[this.questionIndex].answers[answerIndex].isCorrect)
     {
       this.answerIsValid = true;
       this.answerIconSrc = this.validAnswerIconSrc;
@@ -82,15 +79,13 @@ export class QuizzComponent implements OnInit
   {
     this.displayResultPanel = false;
     this.questionIndex++;
-    if(this.questionIndex > this.quiz.questions.length)
+    if(this.questionIndex >= this.quiz.questions.length)
     {
+      console.log("heheheheeheheh");
       this.doughnutChartData = [this.validAnswerCount, this.invalidAnswerCount];
       this.calculateMark();
       this.displayFinalResultPanel = true;
-    }
-    else
-    {
-      this.question = this.quiz.questions[1];
+      this.questionIndex--;
     }
   }
 

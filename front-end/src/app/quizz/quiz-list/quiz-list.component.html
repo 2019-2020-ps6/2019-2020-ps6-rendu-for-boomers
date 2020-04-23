@@ -7,8 +7,10 @@
         </div>
         <div class="col-6">
             <div class="wow">
-                <app-quiz-card [quiz]="quiz"></app-quiz-card>
-                <app-quiz-card [quiz]="quiz"></app-quiz-card>
+                <div *ngFor="let quiz of quizList">
+                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelected($event)" (playQuiz)="playQuiz($event)"></app-quiz-card>
+                </div>
+                
             </div>
             
         </div>

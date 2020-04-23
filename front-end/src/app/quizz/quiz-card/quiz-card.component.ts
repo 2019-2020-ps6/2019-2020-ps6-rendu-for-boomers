@@ -14,6 +14,8 @@ export class QuizCardComponent implements OnInit {
     @Output()
     quizSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output()
+    playQuiz: EventEmitter<Quiz> = new EventEmitter<Quiz>();
+    @Output()
     quizDeleted: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
     constructor(private router: Router) {
@@ -24,9 +26,13 @@ export class QuizCardComponent implements OnInit {
 
     }
 
+    play() {
+        //this.playQuiz.emit(this.quiz);
+        this.router.navigate(['/quizz/'+ this.quiz.id]);
+    }
+
     selectQuiz() {
         this.quizSelected.emit(true);
-        this.router.navigate(['/quizz']);
     }
 
     deleteQuiz() {

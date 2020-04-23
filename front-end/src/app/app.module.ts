@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     component: ReglageComponent
   },
   {
-    path: 'quizz',
+    path: 'quizz/:id',
     component: QuizzComponent
   },
   {

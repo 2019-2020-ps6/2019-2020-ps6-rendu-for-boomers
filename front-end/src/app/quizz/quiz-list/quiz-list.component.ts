@@ -36,4 +36,15 @@ export class QuizzListComponent implements OnInit
           });
           this.closeReglageService.update();
     }
+
+    quizSelected(selected: boolean)
+    {
+        console.log('event received from child ', selected);
+        
+    }
+
+    playQuiz(quiz: Quiz)
+    {
+        this.router.navigate(['/quizz/'+ quiz.name]);
+    }
 }
