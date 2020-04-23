@@ -1,15 +1,7 @@
+<app-header [title]="pageTitle"></app-header>
 
 
-
-<div class="buttonGroup">
-    <h2><b>Création d'un quiz. Veuillez remplir les champs ci-dessous.</b></h2>
-</div>
-<div class="buttonGroup2">
-    <!--
-    <form class="quiz-form" [formGroup]="quizForm">
-
-    <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
-    </form>-->
+<div class="inputGroup1">
     <div class="truc">
      <h3>Titre du Quiz : </h3>
         <input type="text" class="formulaire" [(ngModel)]="title" size="30">&nbsp;&nbsp;&nbsp;&nbsp;       
@@ -23,7 +15,7 @@
         <input type="number" class="formulaire" [(ngModel)]="nbQuestions" (change)="updateQuestions(nbQuestions)" size="3"><br>       
     </div>
 </div>
-<div class="buttonGroup3">
+<div class="inputGroup2">
     <div class="questionCreation" *ngFor="let question of tab;let index = index">
         <h3><U><b>Question {{index+1}}</b></U></h3><br>
         <h3>Énoncé</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
@@ -36,11 +28,5 @@
         <button class="button btn btn-default return" routerLink="/menu" (click)="addQuiz()">Valider</button>
     </div>
 </div>
-
-<footer>
-    <button class="button btn btn-default return" routerLink="/menu">retour au menu</button>
-    
-    <button class="reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
-</footer>
 
 <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>

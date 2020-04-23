@@ -17,6 +17,7 @@ export class CreateComponent implements OnInit {
   buttonObserver: Subscription;
   public valueContrast: number;
   public height: number;
+  public pageTitle: string = "Création d'un quiz";
 
   title = "Titre";
   nbQuestions = 1;

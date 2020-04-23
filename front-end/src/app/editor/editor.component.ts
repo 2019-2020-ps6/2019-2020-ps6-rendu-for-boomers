@@ -16,6 +16,7 @@ export class EditorComponent implements OnInit {
   buttonObserver: Subscription;
   public valueContrast: number;
   public height: number;
+  public pageTitle: string = "Éditeur de quiz";
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    

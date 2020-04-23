@@ -15,6 +15,7 @@ export class ModifyComponent implements OnInit {
   buttonObserver: Subscription;
   public valueContrast: number;
   public height: number;
+  public pageTitle: string = "Modifier un quiz";
 
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    
