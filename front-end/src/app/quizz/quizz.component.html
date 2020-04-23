@@ -24,15 +24,19 @@
     <div class="panel finalResultPanel" *ngIf="displayFinalResultPanel == true">
         <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
-        <canvas baseChart
-            [data]="doughnutChartData"
-            [labels]="doughnutChartLabels"
-            [colors]="doughnutChartColor"
-            [legend]="false"
-            [options]="doughnutChartOption"
-            [chartType]="doughnutChartType"></canvas>
-
-        <p id="mark">{{mark}}</p>
+        <div>
+            <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [colors]="doughnutChartColor"
+                [legend]="false"
+                [options]="doughnutChartOption"
+                [chartType]="doughnutChartType">
+            </canvas>
+            <img class={{markcss}} src={{mark}}>
+        </div>
+        
+        
         <p id="score1">bonne réponse : {{validAnswerCount}}</p>
         <p id="score2">mauvaise réponse : {{invalidAnswerCount}}</p>
         

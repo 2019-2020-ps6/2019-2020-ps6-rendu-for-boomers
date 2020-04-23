@@ -22,8 +22,14 @@ export class QuizzComponent implements OnInit
   public answerIsValid: boolean = false;
   public validAnswerCount: number = 0;
   public invalidAnswerCount: number = 0;
-  public marksArray: Array<any> = ["S", "S", "A", "B", "C", "D"];
+  public marksArray: Array<any> = ["./assets/rank/ranking-SH.png", 
+                                    "./assets/rank/ranking-S.png", 
+                                    "./assets/rank/ranking-A.png", 
+                                    "./assets/rank/ranking-B.png", 
+                                    "./assets/rank/ranking-C.png", 
+                                    "./assets/rank/ranking-D.png"];
   public mark: string;
+  public markcss: string;
 
   public displayResultPanel: boolean = false;
   public displayFinalResultPanel: boolean = false;
@@ -92,6 +98,7 @@ export class QuizzComponent implements OnInit
   calculateMark(): void
   {
     var res = this.validAnswerCount/this.quiz.questions.length;
+    this.markcss = "rank rank-normal";
     if(res == 1)
       this.mark = this.marksArray[0];
     else if(res >= 90)
@@ -103,6 +110,10 @@ export class QuizzComponent implements OnInit
     else if(res >= 60)
       this.mark = this.marksArray[4];
     else
+    {
+      this.markcss = "rank rank-break"
       this.mark = this.marksArray[5];
+    }
+      
   }
 }
