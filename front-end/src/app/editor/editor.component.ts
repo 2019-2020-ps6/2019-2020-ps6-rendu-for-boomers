@@ -10,6 +10,7 @@ import * as $ from 'jquery';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss']
 })
+
 export class EditorComponent implements OnInit {
   buttonIsActivated: boolean = false;
   buttonObserver: Subscription;
