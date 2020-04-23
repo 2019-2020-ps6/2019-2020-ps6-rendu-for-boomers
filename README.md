@@ -30,3 +30,14 @@ npm install ng2-charts
 ```
 npm install chart.js
 ```
+
+### run front
+
+```
+ng serve
+```
+### run server
+
+```
+npm run dev
+```
