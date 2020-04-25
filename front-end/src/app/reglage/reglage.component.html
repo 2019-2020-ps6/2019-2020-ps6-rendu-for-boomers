@@ -21,8 +21,7 @@
     <div class="options slidecontainer"> Taille de la police
         <input #slider type="range" (change)="updateFontSize(slider.value)" autocomplete="off" min="20" max="60" value="{{this.fontValue}}" class="slider" id="myRange">
     </div>
-    <br>
-
+    
     <button class="button-retour button btn btn-default" (click)="onCloseReglage()">Fermer</button>
 </div>
 
