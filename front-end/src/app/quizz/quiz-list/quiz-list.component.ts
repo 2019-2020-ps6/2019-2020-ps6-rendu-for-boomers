@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from 'src/models/quiz.model';
-import { Question } from 'src/models/question.model';
 import { CloseReglageService } from '../../close-reglage.service';
 import { Subscription } from 'rxjs';
 
@@ -13,15 +12,13 @@ import { Subscription } from 'rxjs';
 })
 export class QuizzListComponent implements OnInit
 {
+    @Output()
+    quizSelected: EventEmitter<Quiz> = new EventEmitter<Quiz>();
+
     public quizList: Quiz[];
     public quiz: Quiz;
 
-    public pageTitle: string = "LE GIGA TITRE";
-
-    buttonIsActivated: boolean = false;
-    buttonObserver: Subscription;
-
-    constructor(private router: Router, public quizService: QuizService, private closeReglageService: CloseReglageService)
+    constructor(private router: Router, public quizService: QuizService)
     {
         this.quizService.quizzes$.subscribe((quizzes: Quiz[]) =>
         {
@@ -30,17 +27,11 @@ export class QuizzListComponent implements OnInit
         })
     }
 
-    ngOnInit(): void {
-        this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
-            this.buttonIsActivated = false;
-          });
-          this.closeReglageService.update();
-    }
+    ngOnInit(): void {}
 
-    quizSelected(selected: boolean)
+    quizSelectedHandle(quiz: Quiz)
     {
-        console.log('event received from child ', selected);
-        
+        this.quizSelected.emit(quiz);   
     }
 
     playQuiz(quiz: Quiz)

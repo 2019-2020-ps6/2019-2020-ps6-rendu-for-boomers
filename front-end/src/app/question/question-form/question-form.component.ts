@@ -18,7 +18,7 @@ export class QuestionFormComponent implements OnInit
 
     constructor(public formBuilder: FormBuilder, private quizSerivce: QuizService)
     {
-        
+        this.initializeQuestionForm();
     }
 
     private initializeQuestionForm()

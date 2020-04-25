@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
+import { Question } from 'src/models/question.model';
 
 @Component({
     selector: 'app-quiz-form',
@@ -11,6 +12,9 @@ import { Quiz } from '../../../models/quiz.model';
   })
   export class QuizFormComponent implements OnInit {
 
+    @Output()
+    quizCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
+    
     public quizForm: FormGroup;
 
     constructor(public formBuilder: FormBuilder, public quizServices: QuizService)
@@ -27,7 +31,8 @@ import { Quiz } from '../../../models/quiz.model';
 
     addQuiz() {
         const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
-
         this.quizServices.addQuiz(quizToCreate);
+
+        this.quizCreated.emit(true);
     }
   }

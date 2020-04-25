@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
     styleUrls: ['./quiz-card.component.scss']
 })
 export class QuizCardComponent implements OnInit {
+    
     @Input()
     quiz: Quiz;
 
     @Output()
-    quizSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
+    quizSelected: EventEmitter<Quiz> = new EventEmitter<Quiz>();
     @Output()
     playQuiz: EventEmitter<Quiz> = new EventEmitter<Quiz>();
     @Output()
@@ -32,7 +33,7 @@ export class QuizCardComponent implements OnInit {
     }
 
     selectQuiz() {
-        this.quizSelected.emit(true);
+        this.quizSelected.emit(this.quiz);
     }
 
     deleteQuiz() {

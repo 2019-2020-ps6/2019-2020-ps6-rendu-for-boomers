@@ -18,6 +18,8 @@ export class EditorComponent implements OnInit {
   public height: number;
   public pageTitle: string = "Éditeur de quiz";
 
+  public creatingQuiz: boolean = false;
+
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { 
    
   }
@@ -33,6 +35,16 @@ export class EditorComponent implements OnInit {
       this.valueContrast = value;
     })
     this.reglageService.updateContrast(this.valueContrast);
+  }
+
+  startQuizCreation(): void
+  {
+    this.creatingQuiz = true;
+  }
+
+  quizCreated(selected: boolean)
+  {
+    this.creatingQuiz = false;
   }
 
   goToReglageOrQuit(): void {

@@ -20,6 +20,7 @@ import { QuizCardComponent } from './quizz/quiz-card/quiz-card.component';
 import { HeaderComponent } from './header/header.component';
 import { QuizFormComponent } from './quizz/quiz-from/quiz-form.component';
 import { QuestionFormComponent } from './question/question-form/question-form.component';
+import { SelectionComponent } from './selection/selection.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -36,10 +37,6 @@ const appRoutes: Routes = [
   {
     path: 'quizz/:id',
     component: QuizzComponent
-  },
-  {
-    path: 'quiz-list',
-    component: QuizzListComponent
   },
   {
     path: 'editor',
@@ -61,6 +58,10 @@ const appRoutes: Routes = [
   {
     path: 'tutoriel',
     component: TutorielComponent
+  },
+  {
+    path: 'selection',
+    component: SelectionComponent
   }
 ];
 
@@ -79,7 +80,8 @@ const appRoutes: Routes = [
     TutorielComponent,
     HeaderComponent,
     QuizFormComponent,
-    QuestionFormComponent
+    QuestionFormComponent,
+    SelectionComponent
 
   ],
   imports: [

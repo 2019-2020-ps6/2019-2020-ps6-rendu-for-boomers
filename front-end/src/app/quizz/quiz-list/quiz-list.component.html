@@ -1,22 +1,13 @@
-<app-header [title]="pageTitle"></app-header>
-
 <div class="container">
     <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
         <div class="col-6">
             <div class="wow">
                 <div *ngFor="let quiz of quizList">
-                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelected($event)" (playQuiz)="playQuiz($event)"></app-quiz-card>
+                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelectedHandle($event)" (playQuiz)="playQuiz($event)"></app-quiz-card>
                 </div>
-                
             </div>
-            
         </div>
-        <div class="col">
-
-        </div>
-
+        <div class="col"></div>
     </div>
 </div>
