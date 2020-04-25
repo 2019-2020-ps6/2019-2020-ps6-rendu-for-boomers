@@ -32,7 +32,7 @@ export class AccueilComponent implements OnInit {
   }
 
   updateFontSize(value: number): void {
-    console.log("new font-size :" + value);
+    this.reglageService.setFontSize(value);
     $(":root").css("--main-font-size", value + "px");
   }
 
