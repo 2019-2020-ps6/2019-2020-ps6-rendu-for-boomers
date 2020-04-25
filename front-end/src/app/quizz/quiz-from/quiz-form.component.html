@@ -1,0 +1,16 @@
+<div>
+    <h2>Create a new Quiz</h2>
+    <form class="quiz-form" [formGroup]="quizForm">
+        <label for="title">
+            Title <br>
+            <input type="text" id="name" [formControlName]="'name'">
+        </label>
+        <br>
+        <label for="theme">
+            Theme <br>
+            <input type="text" [formControlName]="'theme'">
+        </label>
+    
+        <button type="submit" (click)="addQuiz()">Create</button>
+    </form>
+</div>
