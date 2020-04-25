@@ -8,6 +8,7 @@
 
 .menu-button
 {
+    font-size: max(var(--main-font-size), 45px);
     position: fixed;
     top: 10px;
     left: 10px;
@@ -15,9 +16,10 @@
 
 .reglage-button
 {
+    font-size: max(var(--main-font-size), 45px);
     position: fixed;
     top: 10px;
-    left: 180px;
+    left: calc(max(var(--main-font-size), 45px)*5);
 }
 
 h2

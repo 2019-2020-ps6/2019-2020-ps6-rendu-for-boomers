@@ -1,6 +1,6 @@
 <div class="headerbar">
-    <button class="menu-button" (click)="goToMenu()">Menu</button>
+    <button class="menu-button btn btn-default" (click)="goToMenu()">Menu</button>
     <h2>{{title}}</h2>
-    <button class="reglage-button" (click)="goToReglageOrQuit()">Réglage</button>
+    <button class="reglage-button btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
 </div>
 <app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
