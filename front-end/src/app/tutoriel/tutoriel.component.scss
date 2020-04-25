@@ -66,8 +66,24 @@ p {
 .image {
     display: block;
     margin-left: 50px;
+    width: 80%;
 }
 
+.big-image {
+    position: fixed;
+    color:black;
+    background-color: gray;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.closeButton {
+    display: block;
+    margin: auto;
+}
 
 
 //bloc-note
