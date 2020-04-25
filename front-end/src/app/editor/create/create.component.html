@@ -5,25 +5,25 @@
 <div class="inputGroup1">
     <div class="truc">
      <h3>Titre du Quiz : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="title" size="30">&nbsp;&nbsp;&nbsp;&nbsp;       
+        <input type="text" class="paramQuestion" [(ngModel)]="title">&nbsp;&nbsp;&nbsp;&nbsp;       
     </div>
     <div class="truc">
      <h3>Thème : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="theme" size="30">&nbsp;&nbsp;&nbsp;&nbsp;            
+        <input type="text" class="paramQuestion" [(ngModel)]="theme">&nbsp;&nbsp;&nbsp;&nbsp;            
     </div>
     <div class="truc">
      <h3>Nombre de Questions : </h3>
-        <input type="number" class="formulaire" [(ngModel)]="nbQuestions" (change)="updateQuestions(nbQuestions)" size="3" min="1"><br>       
+        <input type="number" class="numberQuesion" [(ngModel)]="nbQuestions" (change)="updateQuestions(nbQuestions)" size="3" min="1"><br>       
     </div>
 </div>
 <div class="inputGroup2">
     <div class="questionCreation" *ngFor="let question of tab;let index = index">
         <h3><U><b>Question {{index+1}}</b></U></h3><br>
-        <h3>Énoncé</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 1</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 2</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 3</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 4</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40">
+        <h3>Énoncé</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="formulaire" max-size="100"><br>
+        <h3>Réponse 1</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 2</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 3</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 4</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60">
     </div>
     <div class="questionCreation">
         <button class="button btn btn-default return" routerLink="/menu" (click)="addQuiz()">Valider</button>
