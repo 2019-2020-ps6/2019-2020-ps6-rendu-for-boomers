@@ -4,15 +4,15 @@
 <div class="inputGroup1">
     <div class="truc">
      <h3>Titre du Quiz : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="title" max-size="30">&nbsp;&nbsp;&nbsp;&nbsp;       
+        <input type="text" class="paramQuestion" [(ngModel)]="title">&nbsp;&nbsp;&nbsp;&nbsp;       
     </div>
     <div class="truc">
      <h3>Thème : </h3>
-        <input type="text" class="formulaire" [(ngModel)]="theme" max-size="30">&nbsp;&nbsp;&nbsp;&nbsp;            
+        <input type="text" class="paramQuestion" [(ngModel)]="theme">&nbsp;&nbsp;&nbsp;&nbsp;            
     </div>
     <div class="truc">
      <h3>Nombre de Questions : </h3>
-        <input type="number" class="formulaire" [(ngModel)]="nbQuestions" (change)="updateQuestions(nbQuestions)" size="3" min="1"><br>       
+        <input type="number" class="numberQuesion" [(ngModel)]="nbQuestions" (change)="updateQuestions(nbQuestions)" size="3" min="1"><br>       
     </div>
 </div>
 <div class="inputGroup2">
