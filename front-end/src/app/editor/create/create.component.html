@@ -18,11 +18,11 @@
 <div class="inputGroup2">
     <div class="questionCreation" *ngFor="let question of tab;let index = index">
         <h3><U><b>Question {{index+1}}</b></U></h3><br>
-        <h3>Énoncé</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 1</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 2</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 3</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40"><br>
-        <h3>Réponse 4</h3>&nbsp;&nbsp;<input type="text" class="formulaire" size="40">
+        <h3>Énoncé</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="formulaire" max-size="100"><br>
+        <h3>Réponse 1</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 2</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 3</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60"><br>
+        <h3>Réponse 4</h3>&nbsp;&nbsp;<input type="text" class="formulaire" max-size="60">
     </div>
     <div class="questionCreation">
         <button class="button btn btn-default return" routerLink="/menu" (click)="addQuiz()">Valider</button>
