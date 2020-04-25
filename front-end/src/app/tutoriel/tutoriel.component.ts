@@ -14,6 +14,7 @@ export class TutorielComponent implements OnInit {
   public valueContrast: number;
   public height: number;
   displayBigImage: boolean = false;
+  idImage: number;
   
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { }
 
@@ -35,9 +36,9 @@ export class TutorielComponent implements OnInit {
     else this.buttonIsActivated = false;
   }
 
-  setBiggerImage(value): void {
+  setBiggerImage(value, id): void {
     this.displayBigImage = value;
-    console.log("oui");
+    this.idImage = id;
   }
 
 }

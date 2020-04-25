@@ -8,7 +8,7 @@
         <div class="col-6">
             <div class="wow">
                 <div *ngFor="let quiz of quizList">
-                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelected($event)" (editQuiz)="playQuiz($event)"></app-quiz-card>
+                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelected($event)" (editQuiz)="editQuiz($event)"></app-quiz-card>
                 </div>
                 
             </div>
