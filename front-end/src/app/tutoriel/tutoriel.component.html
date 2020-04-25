@@ -13,22 +13,22 @@
     <img class="fleche" *ngIf="valueContrast == 3" src="../assets/arrow1tutodalto2.png"/>
 </div>
 
-<img class="image" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true)"/>
-<img class="image" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true)"/>
-<img class="image" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true)"/>
+<img class="image curseur" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true)"/>
+<img class="image curseur" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true)"/>
+<img class="image curseur" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true)"/>
 
 <div class="big-image" *ngIf="displayBigImage == true && valueContrast == 1">
-    <img src="../assets/menu_jouer_classic.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
+    <img class ="curseur" src="../assets/menu_jouer_classic.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
     <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
 </div>
 
 <div class="big-image" *ngIf="displayBigImage == true && valueContrast == 2">
-    <img src="../assets/menu_jouer_daltonien1.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
+    <img class ="curseur" src="../assets/menu_jouer_daltonien1.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
     <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
 </div>
 
 <div class="big-image" *ngIf="displayBigImage == true && valueContrast == 3">
-    <img src="../assets/menu_jouer_daltonien2.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
+    <img class ="curseur" src="../assets/menu_jouer_daltonien2.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
     <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
 </div>
 
