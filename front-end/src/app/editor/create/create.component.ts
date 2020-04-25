@@ -51,7 +51,8 @@ export class CreateComponent implements OnInit {
     this.tab=new Array(nbQuestions);
   }
 
-  addQuiz() {
+  addQuiz() 
+  {
     // We retrieve here the quiz object from the quizForm and we cast the type "as Quiz".
     //const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
 

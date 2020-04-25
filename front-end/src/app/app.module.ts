@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -17,7 +17,9 @@ import { TutorielComponent } from './tutoriel/tutoriel.component';
 import { ChartsModule } from 'ng2-charts';
 import { QuizzListComponent } from './quizz/quiz-list/quiz-list.component';
 import { QuizCardComponent } from './quizz/quiz-card/quiz-card.component';
-import { HeaderComponent} from './header/header.component';
+import { HeaderComponent } from './header/header.component';
+import { QuizFormComponent } from './quizz/quiz-from/quiz-form.component';
+import { QuestionFormComponent } from './question/question-form/question-form.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -75,7 +77,9 @@ const appRoutes: Routes = [
     ModifyComponent,
     CreateComponent,
     TutorielComponent,
-    HeaderComponent
+    HeaderComponent,
+    QuizFormComponent,
+    QuestionFormComponent
 
   ],
   imports: [
@@ -87,7 +91,8 @@ const appRoutes: Routes = [
     }),
     HttpClientModule,
     ChartsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [RouterModule],
   providers: [CloseReglageService],
