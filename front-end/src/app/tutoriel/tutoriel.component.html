@@ -13,23 +13,26 @@
     <img class="fleche" *ngIf="valueContrast == 3" src="../assets/arrow1tutodalto2.png"/>
 </div>
 
-<img class="image" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true)"/>
-<img class="image" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true)"/>
-<img class="image" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true)"/>
+<!-- Afficher image -->
+<img class="image curseur" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true,1.1)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseur" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true,1.2)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseur" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true,1.3)"/>
 
-<div class="big-image" *ngIf="displayBigImage == true && valueContrast == 1">
-    <img src="../assets/menu_jouer_classic.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
-    <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.1">
+    <img class ="curseur" src="../assets/menu_jouer_classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Close</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && valueContrast == 2">
-    <img src="../assets/menu_jouer_daltonien1.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
-    <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.2">
+    <img class ="curseur" src="../assets/menu_jouer_daltonien1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Close</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && valueContrast == 3">
-    <img src="../assets/menu_jouer_daltonien2.png" width="100%" height="93%" (click)=setBiggerImage(false)> 
-    <button class="closeButton" (click)="setBiggerImage(false)">Close</button>
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.3">
+    <img class ="curseur" src="../assets/menu_jouer_daltonien2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Close</button>
 </div>
 
 <h2 class="titre2" id="Creer"> Pour créer un quiz : </h2>
