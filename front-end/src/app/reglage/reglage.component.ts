@@ -64,9 +64,4 @@ export class ReglageComponent implements OnInit {
   updateContrast(value: number): void {
     this.reglageService.updateContrast(value);
   }
-
-  updateHeightCompoToHeightReglagle(){
-    this.reglageService.updateHeightReglage(this.height);
-    $(".contrast").css("height", this.height + "px");
-  }
 }

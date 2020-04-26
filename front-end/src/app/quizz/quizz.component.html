@@ -5,11 +5,13 @@
 
     <div class="buttonGoup">
         <h2 id="questionTitle">{{quiz.questions[questionIndex].label}}</h2>
-        <button class="button btn btn-default" type='button' (click)="selectAnswer(0)">{{quiz.questions[questionIndex].answers[0].value}}</button>
-        <button class="button btn btn-default" type='button' (click)="selectAnswer(1)">{{quiz.questions[questionIndex].answers[1].value}}</button>
+        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(0)">{{quiz.questions[questionIndex].answers[0].value}}</button>
+        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(1)">{{quiz.questions[questionIndex].answers[1].value}}</button>
         <br>
-        <button class="button btn btn-default" type='button' (click)="selectAnswer(2)">{{quiz.questions[questionIndex].answers[2].value}}</button>
-        <button class="button btn btn-default" type='button' (click)="selectAnswer(3)">{{quiz.questions[questionIndex].answers[3].value}}</button>
+        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(2)">{{quiz.questions[questionIndex].answers[2].value}}</button>
+        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(3)">{{quiz.questions[questionIndex].answers[3].value}}</button>
+        <br>
+        <button class="button btn btn-default" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
     </div>
     <h3>Question {{questionIndex+1}}/{{quiz.questions.length}}</h3>
 
