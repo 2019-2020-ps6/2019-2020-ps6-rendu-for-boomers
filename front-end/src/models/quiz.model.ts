@@ -5,6 +5,6 @@ export interface Quiz
     id: string;
     name: string;
     theme?: string;
+    creator?: string;    
     questions: Question[];
-    creator?: string;
 }
