@@ -5,6 +5,12 @@
     margin: 20px;
 }
 
+
+.focused:focus {
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+}
+
 .button-reglage {
     font-size: 60px;
     float: right;
