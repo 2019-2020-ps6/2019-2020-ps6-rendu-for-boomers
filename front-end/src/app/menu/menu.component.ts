@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CloseReglageService } from '../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
-import * as $ from 'jquery';
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
