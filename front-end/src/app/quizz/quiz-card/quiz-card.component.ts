@@ -24,8 +24,21 @@ export class QuizCardComponent implements OnInit {
 
     deleteEmit: boolean = false;
 
+    defaultBackgroundImage: string = "../../../assets/backgroundGreen.jpg";
+
     constructor(private router: Router) {
 
+    }
+
+    get imgPath()
+    {
+        var style = "background-image: url(";
+        if(this.quiz.bgimage)
+            style+=this.quiz.bgimage;
+        else
+            style+=this.defaultBackgroundImage;
+        
+        return style + ")";
     }
 
     ngOnInit() {

@@ -23,6 +23,7 @@ import { Question } from 'src/models/question.model';
             name: [''],
             theme: [''],
             creator: [''],
+            bgimage: ['']
         });
     }
 
@@ -32,6 +33,7 @@ import { Question } from 'src/models/question.model';
 
     addQuiz() {
         const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
+
         this.quizServices.addQuiz(quizToCreate);
 
         this.quizCreated.emit(true);

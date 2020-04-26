@@ -5,6 +5,7 @@ export interface Quiz
     id: string;
     name: string;
     theme?: string;
-    creator?: string;    
+    creator?: string;
+    bgimage?: string;    
     questions: Question[];
 }
