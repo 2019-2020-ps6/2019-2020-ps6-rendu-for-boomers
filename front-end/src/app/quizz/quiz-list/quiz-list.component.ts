@@ -16,6 +16,10 @@ export class QuizzListComponent implements OnInit
     quizSelected: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
     public quizList: Quiz[];
+
+    quizToDelete: Quiz;
+
+
     constructor(private router: Router, public quizService: QuizService)
     {
         this.quizService.quizzes$.subscribe((quizzes: Quiz[]) =>
@@ -34,5 +38,21 @@ export class QuizzListComponent implements OnInit
     playQuiz(quiz: Quiz)
     {
         this.router.navigate(['/quizz/'+ quiz.name]);
+    }
+
+    deleteQuiz(quiz: Quiz)
+    {
+        this.quizToDelete = quiz;
+    }
+
+    deleteQuizPourDeBon()
+    {
+        this.quizService.deleteQuiz(this.quizToDelete);
+        this.quizToDelete = null;
+    }
+
+    nePasDeleteQuiz()
+    {
+        this.quizToDelete = null;
     }
 }

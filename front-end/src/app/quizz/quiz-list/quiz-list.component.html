@@ -4,10 +4,15 @@
         <div class="col-6">
             <div class="wow">
                 <div *ngFor="let quiz of quizList">
-                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelectedHandle($event)" (playQuiz)="playQuiz($event)"></app-quiz-card>
+                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelectedHandle($event)" (deleteQuiz)="deleteQuiz($event)"></app-quiz-card>
                 </div>
             </div>
         </div>
         <div class="col"></div>
     </div>
+</div>
+<div class="panel" *ngIf="quizToDelete">
+    <h2>Supprimer {{quizToDelete.name}} ?</h2>
+    <button (click)="nePasDeleteQuiz()">Non</button>
+    <button (click)="deleteQuizPourDeBon()">OUI</button>
 </div>

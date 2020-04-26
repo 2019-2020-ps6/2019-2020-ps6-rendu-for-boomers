@@ -4,3 +4,11 @@
     padding: 10px;
     box-shadow: 2.5px 2.5px 10px lightgray;
 }
+
+.panel
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
