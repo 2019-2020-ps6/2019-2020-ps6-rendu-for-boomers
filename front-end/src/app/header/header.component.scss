@@ -1,9 +1,14 @@
 .headerbar
 {
-    margin-bottom: 20px;
-    padding: 20px;
+    position: fixed;
+    top: 0px;
+    padding: 15px;
+    margin: 0;
     box-shadow: 0px 0px 10px var(--main-shadow-color);
     min-height: 100px;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--main-bg-color);
 }
 
 .menu-button
@@ -20,6 +25,7 @@
     position: fixed;
     top: 10px;
     left: calc(max(var(--main-font-size), 45px)*5);
+    //right: 10px;
 }
 
 h2
