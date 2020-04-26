@@ -13,33 +13,37 @@ h3 {
 
 @font-face {
     font-family: "Arial";
-    src: url("../font/Arial.ttf")
+    src: url("font/Arial.ttf");
 }
 
 @font-face {
     font-family: "Helvetica";
-    src: url("../font/Helvetica.ttf")
+    src: url("font/Helvetica.ttf");
 }
 
 @font-face {
     font-family: "Aller";
-    src: url("../font/Aller.ttf")
+    src: url("font/Aller.ttf");
 }
 
 @font-face {
     font-family: "Calibri";
-    src: url("../font/Calibri.ttf")
+    src: url("font/Calibri.ttf");
 }
 
 @font-face {
     font-family: "Comic Sans MS";
-    src: url("../font/Comic Sans MS.ttf")
+    src: url("font/Comic Sans MS.ttf");
 }
 
 :root{
     --main-font-size: 45px;
     --main-bg-color: white;
     --main-color: black;
+    --main-panel-color: lightgray;
+    --main-panel-color-light: white;
+    --alt-panel-color: #e0e0e0;
+    --main-shadow-color: lightgray;
     --main-font: Arial, Helvetica, sans-serif;
     //--main-filter: brightness(0%);
 }

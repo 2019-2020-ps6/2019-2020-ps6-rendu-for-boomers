@@ -1,21 +1,17 @@
 
 <ng-container *ngIf="quiz">
     <app-header [title]="quiz.name"></app-header>
-    <br>
 
     <div class="buttonGoup">
         <h2 id="questionTitle">{{quiz.questions[questionIndex].label}}</h2>
-        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(0)">{{quiz.questions[questionIndex].answers[0].value}}</button>
-        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(1)">{{quiz.questions[questionIndex].answers[1].value}}</button>
-        <br>
-        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(2)">{{quiz.questions[questionIndex].answers[2].value}}</button>
-        <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(3)">{{quiz.questions[questionIndex].answers[3].value}}</button>
-        <br>
+        <div *ngFor="let answer of quiz.questions[questionIndex].answers; let i=index">
+            <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(i)">{{answer.value}}</button>
+        </div>
         <button class="button btn btn-default" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
     </div>
     <h3>Question {{questionIndex+1}}/{{quiz.questions.length}}</h3>
 
-    <div class="panel finalResultPanel" *ngIf="displayResultPanel == true">
+    <div class="panel panel-animation" *ngIf="displayResultPanel == true">
         <img src={{answerIconSrc}} height="150" width="150"> 
         <p>{{answerString}}</p>
         <button class="answerButton" (click)="goToNextQuestion()">Suivant</button>
@@ -23,7 +19,7 @@
 
     <img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
 
-    <div class="panel finalResultPanel" *ngIf="displayFinalResultPanel == true">
+    <div class="panel panel-animation" *ngIf="displayFinalResultPanel == true">
         <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
         <div>

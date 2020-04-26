@@ -32,14 +32,27 @@ export class ReglageService {
     if(value == 1){
       $(":root").css("--main-color", "black");
       $(":root").css("--main-bg-color", "white");
+      $(":root").css("--main-panel-color", "lightgray");
+      $(":root").css("--main-panel-color-light", "white");
+      $(":root").css("--alt-panel-color", "#e0e0e0");
+      $(":root").css("--main-shadow-color", "lightgray");
     }
     if(value == 2){
       $(":root").css("--main-color", "#FEDB01");
-      $(":root").css("--main-bg-color", "black");
+      $(":root").css("--main-bg-color", "#1A1A1A");
+      $(":root").css("--main-panel-color", "#333333");
+      $(":root").css("--main-panel-color-light", "#404040");
+      $(":root").css("--alt-panel-color", "#262626");
+      $(":root").css("--main-shadow-color", "#0D0D0D");
     }
     if(value == 3){
       $(":root").css("--main-color", "white");
       $(":root").css("--main-bg-color", "#3b5998");
+      $(":root").css("--main-panel-color", "#4c70ba");
+      $(":root").css("--main-panel-color-light", "#5f7ec1");
+      $(":root").css("--alt-panel-color", "#4264aa");
+
+      $(":root").css("--main-shadow-color", "#2d4373");
     }
   }
 }
