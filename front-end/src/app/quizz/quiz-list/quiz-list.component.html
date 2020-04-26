@@ -13,6 +13,7 @@
 </div>
 <div class="panel" *ngIf="quizToDelete">
     <h2>Supprimer {{quizToDelete.name}} ?</h2>
-    <button (click)="nePasDeleteQuiz()">Non</button>
-    <button (click)="deleteQuizPourDeBon()">OUI</button>
+    
+    <button class="validationButton" (click)="nePasDeleteQuiz()">Non</button>
+    <button class="validationButton" (click)="deleteQuizPourDeBon()">OUI</button>
 </div>
