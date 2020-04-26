@@ -16,14 +16,11 @@ export class QuizzListComponent implements OnInit
     quizSelected: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
     public quizList: Quiz[];
-    public quiz: Quiz;
-
     constructor(private router: Router, public quizService: QuizService)
     {
         this.quizService.quizzes$.subscribe((quizzes: Quiz[]) =>
         {
             this.quizList = quizzes;
-            this.quiz = quizzes[0];
         })
     }
 

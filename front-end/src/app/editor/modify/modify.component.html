@@ -1,23 +1,7 @@
 <app-header [title]="pageTitle"></app-header>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col-6">
-            <div class="wow">
-                <div *ngFor="let quiz of quizList">
-                    <app-quiz-card [quiz]="quiz" (quizSelected)="quizSelected($event)" (editQuiz)="editQuiz($event)"></app-quiz-card>
-                </div>
-                
-            </div>
-            
-        </div>
-        <div class="col">
-
-        </div>
-
-    </div>
-</div>
-<app-reglage class="absolute" *ngIf="buttonIsActivated == true"></app-reglage>
+<ng-container *ngIf="quiz">
+    <h2>{{quiz.name}}</h2>
+    <app-question-form [quiz]="quiz"></app-question-form>
+    <app-question-list [quiz]="quiz"></app-question-list>
+</ng-container>
