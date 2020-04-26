@@ -12,6 +12,9 @@ export class QuizCardComponent implements OnInit {
     @Input()
     quiz: Quiz;
 
+    @Input()
+    deletable: boolean;
+
     @Output()
     quizSelected: EventEmitter<Quiz> = new EventEmitter<Quiz>();
     @Output()
@@ -26,7 +29,6 @@ export class QuizCardComponent implements OnInit {
     }
 
     ngOnInit() {
-
     }
 
     play() {

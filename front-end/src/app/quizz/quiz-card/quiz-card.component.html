@@ -1,5 +1,5 @@
 <div class="card" (click)="selectQuiz()">
-    <img class="deleteIcon" src="../assets/cross_icon.svg" (click)="delete()">
+    <img *ngIf="deletable" class="deleteIcon" src="../assets/cross_icon.svg" (click)="delete()">
     <h2>{{quiz.name}}</h2>
     <p>Thème : {{quiz.theme}}</p>
     

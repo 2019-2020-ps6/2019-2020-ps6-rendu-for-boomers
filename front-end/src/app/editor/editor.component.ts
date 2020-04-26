@@ -14,6 +14,8 @@ export class EditorComponent implements OnInit {
 
   public creatingQuiz: boolean = false;
 
+  deletableQuiz: boolean = true;
+
   constructor(private router: Router) { 
    
   }

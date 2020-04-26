@@ -5,4 +5,4 @@
     <button (click)="startQuizCreation()">Créer un quiz</button>
 </ng-template>
 
-<app-quiz-list (quizSelected)="handleSelection($event)"></app-quiz-list>
+<app-quiz-list (quizSelected)="handleSelection($event)" [deletable]="deletableQuiz"></app-quiz-list>
