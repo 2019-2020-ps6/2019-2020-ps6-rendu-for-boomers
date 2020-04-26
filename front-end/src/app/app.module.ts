@@ -21,6 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { QuizFormComponent } from './quizz/quiz-from/quiz-form.component';
 import { QuestionFormComponent } from './question/question-form/question-form.component';
 import { SelectionComponent } from './selection/selection.component';
+import { QuestionListComponent } from './question/question-list/question-list.component';
+import { QuestionComponent } from './question/question.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', 
@@ -43,7 +45,7 @@ const appRoutes: Routes = [
     component: EditorComponent
   }, 
   {
-    path: 'modify',
+    path: 'modify/:id',
     component: ModifyComponent
   }, 
   {
@@ -81,7 +83,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     QuizFormComponent,
     QuestionFormComponent,
-    SelectionComponent
+    SelectionComponent,
+    QuestionListComponent,
+    QuestionComponent
 
   ],
   imports: [
