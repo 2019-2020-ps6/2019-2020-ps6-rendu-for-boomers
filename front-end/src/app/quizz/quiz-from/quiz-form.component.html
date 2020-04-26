@@ -1,13 +1,13 @@
 <div>
-    <h2>Create a new Quiz</h2>
+    <h2>Créer un nouveau quiz</h2>
     <form class="quiz-form" [formGroup]="quizForm">
         <label for="title">
-            Title <br>
+            Titre <br>
             <input type="text" id="name" [formControlName]="'name'">
         </label>
         <br>
         <label for="theme">
-            Theme <br>
+            Thème <br>
             <input type="text" [formControlName]="'theme'">
         </label>
         <br>
@@ -15,6 +15,6 @@
             Créateur du quiz <br>
             <input type="text" [formControlName]="'creator'">
         </label>
-        <button type="submit" (click)="addQuiz()">Create</button>
+        <button type="submit" (click)="addQuiz()">Créer</button>
     </form>
 </div>
