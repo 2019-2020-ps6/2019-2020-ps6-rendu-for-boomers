@@ -13,6 +13,7 @@ export class QuizzComponent implements OnInit
 {
   public quiz: Quiz;
   public questionIndex: number;
+  public selectedAnswer: number = -1;
   public answerString: string;
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
   public invalidAnswer: string = "Non non non ! c'est pas bon !";
@@ -60,6 +61,10 @@ export class QuizzComponent implements OnInit
     this.quizService.setSelectedQuiz(id);
   }
 
+  getSelectedAnswer(answerIndex: number) {
+    this.selectedAnswer = answerIndex
+  }
+
   selectAnswer(answerIndex:number)
   {
     if(this.quiz.questions[this.questionIndex].answers[answerIndex].isCorrect)
@@ -92,6 +97,7 @@ export class QuizzComponent implements OnInit
       this.displayFinalResultPanel = true;
       this.questionIndex--;
     }
+    this.selectedAnswer = -1;
   }
 
   calculateMark(): void

@@ -21,7 +21,8 @@ import { Question } from 'src/models/question.model';
     {
         this.quizForm = this.formBuilder.group({
             name: [''],
-            theme: ['']
+            theme: [''],
+            creator: [''],
         });
     }
 

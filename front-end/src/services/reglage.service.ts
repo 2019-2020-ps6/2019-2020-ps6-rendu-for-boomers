@@ -27,10 +27,6 @@ export class ReglageService {
  //   this.brightness.next(value);
  // }
 
-  updateHeightReglage(value: number){
-    this.heightReglage.next(value);
-  }
-
   updateContrast(value: number): void {
     this.valueContrast.next(value);
     if(value == 1){
