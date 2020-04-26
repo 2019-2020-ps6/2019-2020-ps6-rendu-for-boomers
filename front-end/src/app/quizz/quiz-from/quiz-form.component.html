@@ -10,6 +10,11 @@
             Theme <br>
             <input type="text" [formControlName]="'theme'">
         </label>
+        <br>
+        <label for="creator">
+            Créateur du quiz <br>
+            <input type="text" [formControlName]="'creator'">
+        </label>
         <button type="submit" (click)="addQuiz()">Create</button>
     </form>
 </div>
