@@ -30,12 +30,12 @@ export class ReglageService {
   updateContrast(value: number): void {
     this.valueContrast.next(value);
     if(value == 1){
-      $(":root").css("--main-color", "black");
-      $(":root").css("--main-bg-color", "white");
-      $(":root").css("--main-panel-color", "lightgray");
-      $(":root").css("--main-panel-color-light", "white");
-      $(":root").css("--alt-panel-color", "#e0e0e0");
-      $(":root").css("--main-shadow-color", "lightgray");
+      $(":root").css("--main-color", "#202020");
+      $(":root").css("--main-bg-color", "whitesmoke");
+      $(":root").css("--main-panel-color", "darkgray");
+      $(":root").css("--main-panel-color-light", "silver");
+      $(":root").css("--alt-panel-color", "gainsboro");
+      $(":root").css("--main-shadow-color", "silver");
     }
     if(value == 2){
       $(":root").css("--main-color", "#FEDB01");
