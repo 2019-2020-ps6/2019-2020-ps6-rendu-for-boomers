@@ -2,8 +2,9 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-6">
-            <h2>Créer un nouveau quiz</h2>
+            
             <form class="quiz-form" [formGroup]="quizForm">
+                <h2 id="quiz-form-title">Créer un nouveau quiz</h2>
                 <div class="input-field">
                     <label class="form-label" for="title">Titre</label>
                     <input class="input-edit" type="text" id="name" [formControlName]="'name'">
@@ -20,7 +21,7 @@
                 </div>
                 <div class="input-field">
                     <label class="form-label" for="bgimage">Background image</label>
-                    <input class="input-edit" type="text" [formControlName]="'bgimage'">
+                    <input class="input-edit" placeholder="http://image..." type="text" [formControlName]="'bgimage'">
                 </div>
                 
                 <button class="button" type="submit" (click)="addQuiz()">Créer</button>
