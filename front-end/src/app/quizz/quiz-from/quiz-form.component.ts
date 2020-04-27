@@ -14,6 +14,9 @@ import { Question } from 'src/models/question.model';
 
     @Output()
     quizCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+    @Output()
+    quizCanceled: EventEmitter<boolean> = new EventEmitter<boolean>();
     
     public quizForm: FormGroup;
 
@@ -37,5 +40,10 @@ import { Question } from 'src/models/question.model';
         this.quizServices.addQuiz(quizToCreate);
 
         this.quizCreated.emit(true);
+    }
+
+    cancelQuiz()
+    {
+        this.quizCanceled.emit(true);
     }
   }

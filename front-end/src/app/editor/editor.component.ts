@@ -36,4 +36,9 @@ export class EditorComponent implements OnInit {
   {
     this.router.navigate(['/modify/'+ quiz.id]);
   }
+
+  handleCancel(canceled: boolean)
+  {
+    this.creatingQuiz = false;
+  }
 }
