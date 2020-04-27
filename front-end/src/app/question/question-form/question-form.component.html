@@ -4,7 +4,7 @@
         <label class="input-label" for="label">Question</label>
         <input class="input-edit" type="text" [formControlName]="'label'">
     </div>
-    <button class="button" (click)="addAnswer()">Ajouter un réponse</button>
+    <button class="button" (click)="addAnswer()">Ajouter une réponse</button>
 
     <div formArrayName="answers">
         <div *ngFor="let address of answers.controls; let i=index">
