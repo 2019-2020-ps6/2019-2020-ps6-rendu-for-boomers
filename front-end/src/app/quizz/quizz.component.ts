@@ -126,4 +126,32 @@ export class QuizzComponent implements OnInit
       this.mark = this.marksArray[4];
     }
   }
+
+  get goodAnswer()
+  {
+    if(this.validAnswerCount > 1)
+      return this.validAnswerCount + " bonnes réponses";
+    else if(this.validAnswerCount == 1)
+      return this.validAnswerCount + " bonne réponse";
+    else
+    {
+      if(this.quiz.questions.length > 1)
+        return "aucune bonnes réponses";
+      return "aucune bonne réponse";
+    }
+  }
+
+  get badAnswer()
+  {
+    if(this.invalidAnswerCount > 1)
+      return this.invalidAnswerCount + " mauvaises réponses";
+    else if(this.invalidAnswerCount == 1)
+      return this.invalidAnswerCount + " mauvaise réponse";
+    else
+    {
+      if(this.quiz.questions.length > 1)
+        return "aucune mauvaises réponses";
+      return "aucune mauvaise réponse";
+    }
+  }
 }
