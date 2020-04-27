@@ -84,4 +84,13 @@ export class QuizCardComponent implements OnInit {
         else
             return " ";
     }
+
+    get questionCount()
+    {
+        let count: string = this.quiz.questions.length + " question";
+        if(this.quiz.questions.length > 1)
+            count += "s";
+
+        return count;
+    }
 }
