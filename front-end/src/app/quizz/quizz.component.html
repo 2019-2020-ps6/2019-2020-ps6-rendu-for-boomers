@@ -5,16 +5,16 @@
     <div class="buttonGoup">
         <h2 id="questionTitle">{{quiz.questions[questionIndex].label}}</h2>
         <div *ngFor="let answer of quiz.questions[questionIndex].answers; let i=index">
-            <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(i)">{{answer.value}}</button>
+            <button class="button focused" type='button' (click)="getSelectedAnswer(i)">{{answer.value}}</button>
         </div>
-        <button class="button btn btn-default" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
+        <button class="button" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
     </div>
     <h3>Question {{questionIndex+1}}/{{quiz.questions.length}}</h3>
 
     <div class="panel panel-animation" *ngIf="displayResultPanel == true">
         <img src={{answerIconSrc}} height="150" width="150"> 
         <p>{{answerString}}</p>
-        <button class="answerButton" (click)="goToNextQuestion()">Suivant</button>
+        <button class="button" (click)="goToNextQuestion()">Suivant</button>
     </div>
 
     <img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
@@ -39,6 +39,6 @@
         <p id="score2">mauvaise réponse : {{invalidAnswerCount}}</p>
         
 
-        <button routerLink="/menu">Retour au menu</button>
+        <button class="button" routerLink="/menu">Retour au menu</button>
     </div>
 </ng-container>
