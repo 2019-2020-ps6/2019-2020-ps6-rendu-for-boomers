@@ -76,4 +76,12 @@ export class QuizCardComponent implements OnInit {
             return "../../../assets/backgroundDefaultDalto2.png";
         }
     }
+
+    get creator()
+    {
+        if(this.quiz.creator)
+            return "créé par " + this.quiz.creator;
+        else
+            return " ";
+    }
 }

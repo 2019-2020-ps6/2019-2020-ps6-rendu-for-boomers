@@ -4,8 +4,8 @@
     <p>Thème : {{quiz.theme}}</p>
     
     <div class="footer-card">
-        <p>{{quiz.questions.length}} questions</p>
-        <p *ngIf="quiz.creator">Créé par : {{quiz.creator}}</p>
+        <div class="small-text">{{creator}}</div>
+        <div class="small-text">{{quiz.questions.length}} questions</div>
     </div>
     
 </div>
