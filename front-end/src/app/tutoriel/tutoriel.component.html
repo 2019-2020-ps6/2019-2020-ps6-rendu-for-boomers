@@ -1,35 +1,37 @@
 <app-header [title]="pageTitle"></app-header>
 
-<h2 class="titre2" id="Jouer"> Pour jouer : </h2>
 
 <!-- Jouer -->
+
+<h2 class="titre2" id="Jouer"> Pour jouer : </h2>
+
 <!-- Etape 1  -->
 
 <div class="p-image">
     <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-1.png"/>
     <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-1-dalto1.png"/>
     <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-1-dalto2.png"/>
-    <p> Cliquer sur jouer comme ci-dessous </p>
+    <p> Cliquer sur jouer comme ci-dessous. </p>
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true,1.1)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true,1.2)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true,1.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/menu_jouer_classic.png" (click)="setBiggerImage(true,1.11)"/> <!-- 1.1.1 correspond à la premère image du tutoriel en version classique de jouer  -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/menu_jouer_daltonien1.png" (click)="setBiggerImage(true,1.12)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 de jouer-->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/menu_jouer_daltonien2.png" (click)="setBiggerImage(true,1.13)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.11">
     <img class ="curseurOut" src="../assets/menu_jouer_classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.12">
     <img class ="curseurOut" src="../assets/menu_jouer_daltonien1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.13">
     <img class ="curseurOut" src="../assets/menu_jouer_daltonien2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -44,23 +46,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/SelectionQuizJouerClassic.png" (click)="setBiggerImage(true,2.1)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/SelectionQuizJouerDalto1.png" (click)="setBiggerImage(true,2.2)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/SelectionQuizJouerDalto2.png" (click)="setBiggerImage(true,2.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/SelectionQuizJouerClassic.png" (click)="setBiggerImage(true,1.21)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/SelectionQuizJouerDalto1.png" (click)="setBiggerImage(true,1.22)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/SelectionQuizJouerDalto2.png" (click)="setBiggerImage(true,1.23)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.21">
     <img class ="curseurOut" src="../assets/SelectionQuizJouerClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.22">
     <img class ="curseurOut" src="../assets/SelectionQuizJouerDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.23">
     <img class ="curseurOut" src="../assets/SelectionQuizJouerDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -75,23 +77,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape1Classic.png" (click)="setBiggerImage(true,3.1)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape1Dalto1.png" (click)="setBiggerImage(true,3.2)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape1Dalto2.png" (click)="setBiggerImage(true,3.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape1Classic.png" (click)="setBiggerImage(true,1.31)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape1Dalto1.png" (click)="setBiggerImage(true,1.32)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape1Dalto2.png" (click)="setBiggerImage(true,1.33)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.31">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape1Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.32">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape1Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.33">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape1Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -106,23 +108,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape2Classic.png" (click)="setBiggerImage(true,4.1)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape2Dalto1.png" (click)="setBiggerImage(true,4.2)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape2Dalto2.png" (click)="setBiggerImage(true,4.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape2Classic.png" (click)="setBiggerImage(true,1.41)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape2Dalto1.png" (click)="setBiggerImage(true,1.42)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape2Dalto2.png" (click)="setBiggerImage(true,1.43)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 4.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.41">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape2Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 4.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.42">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape2Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 4.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.43">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape2Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -137,23 +139,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape3Classic.png" (click)="setBiggerImage(true,5.1)"/>  
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape3Dalto1.png" (click)="setBiggerImage(true,5.2)"/>   
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape3Dalto2.png" (click)="setBiggerImage(true,5.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape3Classic.png" (click)="setBiggerImage(true,1.51)"/>  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape3Dalto1.png" (click)="setBiggerImage(true,1.52)"/>   
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape3Dalto2.png" (click)="setBiggerImage(true,1.53)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 5.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.51">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape3Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 5.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.52">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape3Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 5.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.53">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape3Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -168,23 +170,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape4Classic.png" (click)="setBiggerImage(true,6.1)"/>  
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape4Dalto1.png" (click)="setBiggerImage(true,6.2)"/>   
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape4Dalto2.png" (click)="setBiggerImage(true,6.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape4Classic.png" (click)="setBiggerImage(true,1.61)"/>  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape4Dalto1.png" (click)="setBiggerImage(true,1.62)"/>   
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape4Dalto2.png" (click)="setBiggerImage(true,1.63)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 6.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.61">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape4Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 6.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.62">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape4Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 6.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.63">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape4Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -199,23 +201,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape5Classic.png" (click)="setBiggerImage(true,7.1)"/> 
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape5Dalto1.png" (click)="setBiggerImage(true,7.2)"/>  
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape5Dalto2.png" (click)="setBiggerImage(true,7.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape5Classic.png" (click)="setBiggerImage(true,1.71)"/> 
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape5Dalto1.png" (click)="setBiggerImage(true,1.72)"/>  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape5Dalto2.png" (click)="setBiggerImage(true,1.73)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 7.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.71">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape5Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 7.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.72">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape5Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 7.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.73">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape5Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -230,23 +232,23 @@
 </div>
 
 <!-- Afficher image -->
-<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape6Classic.png" (click)="setBiggerImage(true,8.1)"/>  
-<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape6Dalto1.png" (click)="setBiggerImage(true,8.2)"/>   
-<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape6Dalto2.png" (click)="setBiggerImage(true,8.3)"/>
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/QuizJouerRepondreQuestionEtape6Classic.png" (click)="setBiggerImage(true,1.81)"/>  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/QuizJouerRepondreQuestionEtape6Dalto1.png" (click)="setBiggerImage(true,1.82)"/>   
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/QuizJouerRepondreQuestionEtape6Dalto2.png" (click)="setBiggerImage(true,1.83)"/>
 
 
 <!-- Afficher image en grand -->
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 8.1">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.81">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape6Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 8.2">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.82">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape6Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
 
-<div class="big-image" *ngIf="displayBigImage == true && idImage == 8.3">
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 1.83">
     <img class ="curseurOut" src="../assets/QuizJouerRepondreQuestionEtape6Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
     <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
 </div>
@@ -254,22 +256,489 @@
 <!-- Créer  -->
 
 <h2 class="titre2" id="Creer"> Pour créer un quiz : </h2>
-<!-- Dans la partie créer, comme tout le monde a accès à tous les quiz du site, il peut être long de retrouver son quiz créé, essayer de mettre un nom "unique" exemple : Le drapeau français par Joseph
-exemple (si vous êtes employé d'une EPHAD : titre : "EPHAD Nice quiz monuments Jean") -->
 
+<!-- Etape 1  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-1.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-1-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-1-dalto2.png"/>
+    <p> Cliquer sur "Créer/Modifier Quiz" comme ci-dessous. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/MenuCreeTutoClassic.png" (click)="setBiggerImage(true,2.11)"/> <!-- 2.1.1 correspond à la premère image du tutoriel en version classique de Créer-->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/MenuCreeTutoDalto1.png" (click)="setBiggerImage(true,2.12)"/> <!-- 2.1.2 correspond à la premère image du tutoriel en version daltonien 1 de Créer -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/MenuCreeTutoDalto2.png" (click)="setBiggerImage(true,2.13)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.11">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.12">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.13">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 2  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-2.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-2-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-2-dalto2.png"/>
+    <p> Cliquer sur "Créer un quiz". </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/EditeurCreeTutoClassic.png" (click)="setBiggerImage(true,2.21)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/EditeurCreeTutoDalto1.png" (click)="setBiggerImage(true,2.22)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/EditeurCreeTutoDalto2.png" (click)="setBiggerImage(true,2.23)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.21">
+    <img class ="curseurOut" src="../assets/EditeurCreeTutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.22">
+    <img class ="curseurOut" src="../assets/EditeurCreeTutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.23">
+    <img class ="curseurOut" src="../assets/EditeurCreeTutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 3  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-3.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-3-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-3-dalto2.png"/>
+    <p> Vous devez remplir les deux champs Titre, Thème. Les deux autres sont optionnels, c'est que du bonus ! </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTutoClassic.png" (click)="setBiggerImage(true,2.31)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTutoDalto1.png" (click)="setBiggerImage(true,2.32)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTutoDalto2.png" (click)="setBiggerImage(true,2.33)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.31">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.32">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.33">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 4  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-4.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-4-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-4-dalto2.png"/>
+    <p> Cliquer ensuite sur "Créer". </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto2Classic.png" (click)="setBiggerImage(true,2.41)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto2Dalto1.png" (click)="setBiggerImage(true,2.42)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto2Dalto2.png" (click)="setBiggerImage(true,2.43)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.41">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto2Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.42">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto2Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.43">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto2Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 5  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-5.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-5-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-5-dalto2.png"/>
+    <p> Votre quiz a été créé. Pour pouvoir lui ajouter des questions, allez au bas de la page. Vous devriez voir votre quiz présent en fin de liste. Cliquer dessus. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto3Classic.png" (click)="setBiggerImage(true,2.51)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto3Dalto1.png" (click)="setBiggerImage(true,2.52)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto3Dalto2.png" (click)="setBiggerImage(true,2.53)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.51">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto3Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.52">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto3Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.53">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto3Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 6  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-6.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-6-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-6-dalto2.png"/>
+    <p> Dans la partie question, écrivez la première question pour votre quiz. Ensuite, cliquer sur "Ajouter une réponse" et passer à la prochaine étape du tutoriel. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto4Classic.png" (click)="setBiggerImage(true,2.61)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto4Dalto1.png" (click)="setBiggerImage(true,2.62)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto4Dalto2.png" (click)="setBiggerImage(true,2.63)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.61">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto4Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.62">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto4Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.63">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto4Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 7  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-7.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-7-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-7-dalto2.png"/>
+    <p> En cliquant sur "Ajouter une réponse", deux nouveaux champs devraient apparaître, un champ "Réponse" dans lequel vous écrivez la première réponse possible à votre question, et une case "Bonne réponse" à cocher si la réponse que vous avez tapé, est la bonne réponse. Vous devez cliquer autant de fois sur "Ajouter une réponse" que vous voulez de réponse. <br> N.B : Vous pouvez mettre plusieurs bonnes réponses pour une même question.</p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto5Classic.png" (click)="setBiggerImage(true,2.71)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto5Dalto1.png" (click)="setBiggerImage(true,2.72)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto5Dalto2.png" (click)="setBiggerImage(true,2.73)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.71">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.72">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.73">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 8  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-8.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-8-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-8-dalto2.png"/>
+    <p> Pour finir, cliquer sur "Créer" pour valider votre question et ses réponses. Vous pouvez créer plusieurs questions en répétant l'opération depuis l'étape 6 !</p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto6Classic.png" (click)="setBiggerImage(true,2.81)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto6Dalto1.png" (click)="setBiggerImage(true,2.82)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto6Dalto2.png" (click)="setBiggerImage(true,2.83)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.81">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.82">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.83">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 9  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-9.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-9-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-9-dalto2.png"/>
+    <p> Un aperçu de votre quiz est présent en bas de page, contenant toutes les questions et leurs réponses associées. Vous pouvez supprimer une question si elle ne vous plait plus. Vous pouvez retourner au menu et votre quiz sera automatiquement créé. Vous pourrez toujours le modifier après création ! </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto7Classic.png" (click)="setBiggerImage(true,2.91)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto7Dalto1.png" (click)="setBiggerImage(true,2.92)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto7Dalto2.png" (click)="setBiggerImage(true,2.93)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.91">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.92">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 2.93">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+
+
+<!-- Modifier -->
 
 <h2 class="titre2" id="Modifier"> Pour modifier un quiz : </h2>
 
+<!-- Etape 1  -->
 
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-1.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-1-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-1-dalto2.png"/>
+    <p> Cliquer sur "Créer/Modifier Quiz" comme ci-dessous. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/MenuCreeTutoClassic.png" (click)="setBiggerImage(true,3.11)"/> <!-- 2.1.1 correspond à la premère image du tutoriel en version classique de Créer-->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/MenuCreeTutoDalto1.png" (click)="setBiggerImage(true,3.12)"/> <!-- 2.1.2 correspond à la premère image du tutoriel en version daltonien 1 de Créer -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/MenuCreeTutoDalto2.png" (click)="setBiggerImage(true,3.13)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.11">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.12">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.13">
+    <img class ="curseurOut" src="../assets/MenuCreeTutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 2  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-2.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-2-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-2-dalto2.png"/>
+    <p> Cliquer sur le quiz que vous souhaitez modifier. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/ModifierEtape1TutoClassic.png" (click)="setBiggerImage(true,3.21)"/> <!-- 2.1.1 correspond à la premère image du tutoriel en version classique de Créer-->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/ModifierEtape1TutoDalto1.png" (click)="setBiggerImage(true,3.22)"/> <!-- 2.1.2 correspond à la premère image du tutoriel en version daltonien 1 de Créer -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/ModifierEtape1TutoDalto2.png" (click)="setBiggerImage(true,3.23)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.21">
+    <img class ="curseurOut" src="../assets/ModifierEtape1TutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.22">
+    <img class ="curseurOut" src="../assets/ModifierEtape1TutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.23">
+    <img class ="curseurOut" src="../assets/ModifierEtape1TutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 3  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-3.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-3-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-3-dalto2.png"/>
+    <p> Dans la partie question, écrivez une nouvelle question que vous voulez ajouter à votre quiz. Ensuite, cliquer sur "Ajouter une réponse" et passer à la prochaine étape du tutoriel. </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/ModifierEtape2TutoClassic.png" (click)="setBiggerImage(true,3.31)"/> <!-- 2.1.1 correspond à la premère image du tutoriel en version classique de Créer-->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/ModifierEtape2TutoDalto1.png" (click)="setBiggerImage(true,3.32)"/> <!-- 2.1.2 correspond à la premère image du tutoriel en version daltonien 1 de Créer -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/ModifierEtape2TutoDalto2.png" (click)="setBiggerImage(true,3.33)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.31">
+    <img class ="curseurOut" src="../assets/ModifierEtape2TutoClassic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.32">
+    <img class ="curseurOut" src="../assets/ModifierEtape2TutoDalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.33">
+    <img class ="curseurOut" src="../assets/ModifierEtape2TutoDalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 4  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-4.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-4-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-4-dalto2.png"/>
+    <p> En cliquant sur "Ajouter une réponse", deux nouveaux champs devraient apparaître, un champ "Réponse" dans lequel vous écrivez la première réponse possible à votre question, et une case "Bonne réponse" à cocher si la réponse que vous avez tapé, est la bonne réponse. Vous devez cliquer autant de fois sur "Ajouter une réponse" que vous voulez de réponse. <br> N.B : Vous pouvez mettre plusieurs bonnes réponses pour une même question.</p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto5Classic.png" (click)="setBiggerImage(true,3.41)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto5Dalto1.png" (click)="setBiggerImage(true,3.42)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto5Dalto2.png" (click)="setBiggerImage(true,3.43)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.41">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.42">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.43">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto5Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 5  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-5.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-5-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-5-dalto2.png"/>
+    <p> Pour finir, cliquer sur "Créer" pour valider votre question et ses réponses. Vous pouvez créer plusieurs questions en répétant les opérations précédentes.</p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto6Classic.png" (click)="setBiggerImage(true,3.51)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto6Dalto1.png" (click)="setBiggerImage(true,3.52)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto6Dalto2.png" (click)="setBiggerImage(true,3.53)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.51">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.52">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.53">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto6Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<!-- Etape 6  -->
+
+<div class="p-image">
+    <img class="float" *ngIf="valueContrast == 1" src="../assets/cercle-6.png"/>
+    <img class="float" *ngIf="valueContrast == 2" src="../assets/cercle-6-dalto1.png"/>
+    <img class="float" *ngIf="valueContrast == 3" src="../assets/cercle-6-dalto2.png"/>
+    <p> Un aperçu de votre quiz est présent en bas de page, contenant toutes les questions et leurs réponses associées. Vous pouvez supprimer une question si elle ne vous plait plus. Vous pouvez retourner au menu et votre quiz sera automatiquement créé. Vous pourrez toujours le modifier après création ! </p>
+</div>
+
+<!-- Afficher image -->
+<img class="image curseurIn" *ngIf="valueContrast == 1" src="../assets/RemplissageCreationCreeTuto7Classic.png" (click)="setBiggerImage(true,3.61)"/> <!-- 1.1 correspond à la premère image du tutoriel en version classique -->  
+<img class="image curseurIn" *ngIf="valueContrast == 2" src="../assets/RemplissageCreationCreeTuto7Dalto1.png" (click)="setBiggerImage(true,3.62)"/> <!-- 1.2 correspond à la premère image du tutoriel en version daltonien 1 -->  
+<img class="image curseurIn" *ngIf="valueContrast == 3" src="../assets/RemplissageCreationCreeTuto7Dalto2.png" (click)="setBiggerImage(true,3.63)"/>
+
+
+<!-- Afficher image en grand -->
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.61">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Classic.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.62">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Dalto1.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
+
+<div class="big-image" *ngIf="displayBigImage == true && idImage == 3.63">
+    <img class ="curseurOut" src="../assets/RemplissageCreationCreeTuto7Dalto2.png" width="100%" height="93%" (click)=setBiggerImage(false,0)> 
+    <button class="closeButton" (click)="setBiggerImage(false,0)">Fermer</button>
+</div>
 
 <footer>
     <div class="listeLien">
         <p class="sommaire"> Sommaire : </p> <br>
         <a class ="lienFocus" routerLink="." fragment="Jouer"> Jouer </a> <br>
-        <a class ="lienFocus" routerLink="." fragment="Modifier"> Créer</a> <br>
-        <a class ="lienFocus" routerLink="." fragment="Creer"> Modifier</a>
+        <a class ="lienFocus" routerLink="." fragment="Creer"> Créer</a> <br>
+        <a class ="lienFocus" routerLink="." fragment="Modifier"> Modifier</a>
     </div>
 </footer>
 
+<div class="buttonFinTutoBlock">
+    <button class="buttonFinTuto" routerLink="/menu">Fin du tutoriel</button>
+</div>
 <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
 

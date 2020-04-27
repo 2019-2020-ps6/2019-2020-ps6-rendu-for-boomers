@@ -3,5 +3,5 @@
     <div *ngFor="let answer of question.answers; let i=index">
         {{i+1}} - {{answer.value}} <ng-container *ngIf="answer.isCorrect"><img src="../../assets/check_icon.svg"></ng-container> <br>
     </div>
-    <button class="button" (click)="delete()">Delete</button>
+    <button class="button" (click)="delete()">Supprimer</button>
 </div>
