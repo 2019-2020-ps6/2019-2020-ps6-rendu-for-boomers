@@ -12,6 +12,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    background-color: var(--main-panel-color);
+    border: 2px solid var(--main-color);
 }
 
 h2
@@ -24,4 +26,6 @@ h2
 {
     margin: 40px;
     text-align: center;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
 }

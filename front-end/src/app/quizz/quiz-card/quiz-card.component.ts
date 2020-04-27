@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Quiz } from '../../../models/quiz.model';
 import { Router } from '@angular/router';
+import { ReglageService } from 'src/services/reglage.service';
 
 @Component({
     selector: 'app-quiz-card',
@@ -24,10 +25,14 @@ export class QuizCardComponent implements OnInit {
 
     deleteEmit: boolean = false;
 
-    defaultBackgroundImage: string = "../../../assets/backgroundGreen.jpg";
+    public valueContrast: number;
 
-    constructor(private router: Router) {
 
+    constructor(private router: Router, public reglageService: ReglageService) {
+        this.reglageService.valueContrast.subscribe((value: number) => 
+        {
+          this.valueContrast = value;
+        })
     }
 
     get imgPath()
@@ -36,12 +41,13 @@ export class QuizCardComponent implements OnInit {
         if(this.quiz.bgimage)
             style+=this.quiz.bgimage;
         else
-            style+=this.defaultBackgroundImage;
+            style+=this.choseBackgroundImage();
         
         return style + ")";
     }
 
     ngOnInit() {
+        this.reglageService.updateContrast(this.valueContrast);
     }
 
     play() {
@@ -57,5 +63,17 @@ export class QuizCardComponent implements OnInit {
     delete() {
         this.deleteQuiz.emit(this.quiz);
         this.deleteEmit = true;
+    }
+
+    choseBackgroundImage():  string{
+        if(this.valueContrast == 1){
+            return "../../../assets/backgroundDefaultClassique.png";
+        }
+        if(this.valueContrast == 2){
+            return "../../../assets/backgroundDefaultDalto1.png";
+        }
+        if(this.valueContrast == 3){
+            return "../../../assets/backgroundDefaultDalto2.png";
+        }
     }
 }
