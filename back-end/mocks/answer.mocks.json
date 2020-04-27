@@ -1,24 +1,24 @@
 [
   {
-    "value": "bleu blanc rouge",
+    "value": "Bleu Blanc Rouge",
     "isCorrect": true,
     "questionId": 1,
     "id": 99
   },
   {
-    "value": "rouge vert jaune",
+    "value": "Rouge Vert Jaune",
     "isCorrect": false,
     "questionId": 1,
     "id": 990
   },
   {
-    "value": "noir gris cyan",
+    "value": "Noir Gris Cyan",
     "isCorrect": false,
     "questionId": 1,
     "id": 991
   },
   {
-    "value": "vert orange pourpre",
+    "value": "Vert Orange Pourpre",
     "isCorrect": false,
     "questionId": 1,
     "id": 992
@@ -120,30 +120,6 @@
     "id": 1587897029982
   },
   {
-    "value": "Aldé",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346960
-  },
-  {
-    "value": "Aldériate",
-    "isCorrect": true,
-    "questionId": 1587897346960,
-    "id": 1587897346963
-  },
-  {
-    "value": "Sardoche",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346963
-  },
-  {
-    "value": "ssza",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346964
-  },
-  {
     "value": "France",
     "isCorrect": false,
     "questionId": 1588001351667,
@@ -162,25 +138,29 @@
     "id": 1588001351670
   },
   {
-    "value": "lait de dromadaire",
+    "value": "Lait de dromadaire",
     "isCorrect": false,
     "questionId": 1588001507119,
     "id": 1588001507119
   },
   {
-    "value": "lait de vache",
+    "value": "Lait de vache",
     "isCorrect": true,
     "questionId": 1588001507119,
     "id": 1588001507119
   },
   {
-    "value": "lait de brebis",
+    "value": "Lait de brebis",
     "isCorrect": false,
     "questionId": 1588001507119,
     "id": 1588001507120
   },
   {
-    "value": "Emmental, conté, Tomme de Savoie",
+<<<<<<< HEAD
+    "value": "Emmental, Comté, Tomme de Savoie",
+=======
+    "value": "Emmental, comté, Tomme de Savoie",
+>>>>>>> 36c3814cae1ee54fe7d191f52c2f4eaf9e913129
     "isCorrect": false,
     "questionId": 1588001743056,
     "id": 1588001743057
@@ -192,7 +172,7 @@
     "id": 1588001743057
   },
   {
-    "value": "Beaufort, emmental, conté",
+    "value": "Beaufort, Emmental, Comté",
     "isCorrect": true,
     "questionId": 1588001743056,
     "id": 1588001743058
@@ -306,54 +286,6 @@
     "id": 1588002766189
   },
   {
-    "value": "Des tentacules",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "De l'inceste",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "Yamete kodasai sempai",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "Oni-chan",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245792
-  },
-  {
-    "value": "Ahri",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245792
-  },
-  {
-    "value": "Paul Laudien",
-    "isCorrect": false,
-    "questionId": 1588003245790,
-    "id": 1588003245793
-  },
-  {
-    "value": "l'argent",
-    "isCorrect": false,
-    "questionId": 1588003267934,
-    "id": 1588003267934
-  },
-  {
-    "value": "la passion",
-    "isCorrect": true,
-    "questionId": 1588003267934,
-    "id": 1588003267935
-  },
-  {
     "value": "L'allégorie de la taverne",
     "isCorrect": false,
     "questionId": 1588003500497,
@@ -426,57 +358,15 @@
     "id": 1588003718864
   },
   {
-    "value": "1966",
+    "value": "non",
     "isCorrect": false,
-    "questionId": 1588012174757,
-    "id": 1588012174759
+    "questionId": 1588016601293,
+    "id": 1588016601295
   },
   {
-    "value": "1956",
-    "isCorrect": false,
-    "questionId": 1588012174757,
-    "id": 1588012174760
-  },
-  {
-    "value": "1947",
+    "value": "oui",
     "isCorrect": true,
-    "questionId": 1588012174757,
-    "id": 1588012174761
-  },
-  {
-    "value": "Violet",
-    "isCorrect": false,
-    "questionId": 1588012236472,
-    "id": 1588012236473
-  },
-  {
-    "value": "violet",
-    "isCorrect": false,
-    "questionId": 1588012277994,
-    "id": 1588012277994
-  },
-  {
-    "value": "vert",
-    "isCorrect": true,
-    "questionId": 1588012277994,
-    "id": 1588012277995
-  },
-  {
-    "value": "bleu",
-    "isCorrect": false,
-    "questionId": 1588012277994,
-    "id": 1588012277995
-  },
-  {
-    "value": "One for all",
-    "isCorrect": true,
-    "questionId": 1588014227984,
-    "id": 1588014227985
-  },
-  {
-    "value": "All for one",
-    "isCorrect": false,
-    "questionId": 1588014227984,
-    "id": 1588014227986
+    "questionId": 1588016601293,
+    "id": 1588016601296
   }
 ]
