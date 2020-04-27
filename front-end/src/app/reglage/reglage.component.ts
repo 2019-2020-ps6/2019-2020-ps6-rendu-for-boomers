@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 import { CloseReglageService } from '../close-reglage.service';
 import { ReglageService } from 'src/services/reglage.service';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -48,12 +47,12 @@ export class ReglageComponent implements OnInit {
 
   updateFontSize(value: number): void {
     this.reglageService.setFontSize(value);
-    $(":root").css("--main-font-size", value + "px");
+    document.documentElement.style.setProperty("--main-font-size", value + "px");
   }
 
   updateFont(value: string): void {
     this.reglageService.setFont(value);
-    $(":root").css("--main-font", value);
+    document.documentElement.style.setProperty("--main-font", value);
   }
 
   //updateBrightness(value: number): void {

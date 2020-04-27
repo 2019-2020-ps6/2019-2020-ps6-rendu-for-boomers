@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CloseReglageService } from '../../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
-import * as $ from 'jquery';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
 import { Question } from '../../../models/question.model';
