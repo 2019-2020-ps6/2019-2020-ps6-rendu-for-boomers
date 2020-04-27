@@ -40,5 +40,4 @@ export class TutorielComponent implements OnInit {
     this.displayBigImage = value;
     this.idImage = id;
   }
-
 }

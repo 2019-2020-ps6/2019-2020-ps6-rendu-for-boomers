@@ -4,7 +4,6 @@
     text-align: center;
     margin-block-start: 0;
     margin-bottom: 100px;
-    padding-top: 30px;
 }
 
 .titre2 {
@@ -20,6 +19,9 @@
     text-decoration: underline;
 }
 
+a:hover {
+    color: var(--main-color);
+}
 
 .button {
     position: fixed;
