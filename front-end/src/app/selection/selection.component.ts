@@ -10,7 +10,7 @@ import { Quiz } from 'src/models/quiz.model';
 export class SelectionComponent implements OnInit
 {
 
-    public pageTitle: string = "Choisissez un quiz : ";
+    public pageTitle: string = "Choisissez un quiz";
 
     constructor(private router: Router)
     {
