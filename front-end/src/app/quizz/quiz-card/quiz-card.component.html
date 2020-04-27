@@ -1,11 +1,11 @@
 <div class="card" (click)="selectQuiz()" [style]="imgPath">
     <img *ngIf="deletable" class="deleteIcon" src="../assets/cross_icon.svg" (click)="delete()" title="Supprimer le quiz">
     <h2>{{quiz.name}}</h2>
-    <p>Thème : {{quiz.theme}}</p>
+    <p>Thème {{quiz.theme}}</p>
     
     <div class="footer-card">
         <div class="small-text">{{creator}}</div>
-        <div class="small-text">{{quiz.questions.length}} questions</div>
+        <div class="small-text">{{questionCount}}</div>
     </div>
     
 </div>
