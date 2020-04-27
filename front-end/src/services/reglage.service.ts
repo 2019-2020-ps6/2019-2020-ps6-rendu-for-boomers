@@ -29,21 +29,12 @@ export class ReglageService {
   updateContrast(value: number): void {
     this.valueContrast.next(value);
     if(value == 1){
-<<<<<<< HEAD
-      $(":root").css("--main-color", "#202020");
-      $(":root").css("--main-bg-color", "whitesmoke");
-      $(":root").css("--main-panel-color", "darkgray");
-      $(":root").css("--main-panel-color-light", "silver");
-      $(":root").css("--alt-panel-color", "gainsboro");
-      $(":root").css("--main-shadow-color", "silver");
-=======
       document.documentElement.style.setProperty("--main-color", "#202020");
       document.documentElement.style.setProperty("--main-bg-color", "whitesmoke");
       document.documentElement.style.setProperty("--main-panel-color", "darkgray");
       document.documentElement.style.setProperty("--main-panel-color-light", "silver");
       document.documentElement.style.setProperty("--alt-panel-color", "gainsboro");
       document.documentElement.style.setProperty("--main-shadow-color", "silver");
->>>>>>> c6ec3ef00d35ee5a1fd43cdba1fa296e42affe56
     }
     if(value == 2){
       document.documentElement.style.setProperty("--main-color", "#FEDB01");
