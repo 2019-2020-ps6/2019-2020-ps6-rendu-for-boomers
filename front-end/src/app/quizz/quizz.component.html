@@ -24,7 +24,7 @@
     <div class="panel panel-animation" *ngIf="displayFinalResultPanel == true">
         <h2>Résultats du quiz sur {{quiz.name}}</h2>
 
-        <div>
+        <div class="resultHolder">
             <canvas baseChart
                 [data]="doughnutChartData"
                 [labels]="doughnutChartLabels"
