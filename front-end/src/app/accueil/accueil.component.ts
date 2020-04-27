@@ -40,4 +40,8 @@ export class AccueilComponent implements OnInit {
     if ( this.buttonIsActivated == false ) this.buttonIsActivated = true;
     else this.buttonIsActivated = false;
   }
+
+  updateContrast(value: number): void {
+    this.reglageService.updateContrast(value);
+  }
 }

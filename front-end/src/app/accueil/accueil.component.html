@@ -1,17 +1,27 @@
-<div class="contrast">
-    <h1 class="titre"> PolyQuiz </h1>
-    <nav>
-        <a class="lien1 navbar-link" routerLink="/menu" (click)="updateFontSize(36)">Cliquer ici pour choisir cette taille de police. ( Recommandé )</a> <br>
-        <a class="lien2 navbar-link" routerLink="/menu" (click)="updateFontSize(42)">Cliquer ici pour choisir cette taille de police. ( Fatigué )</a> <br>
-        <a class="lien3 navbar-link" routerLink="/menu" (click)="updateFontSize(48)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien4 navbar-link" routerLink="/menu" (click)="updateFontSize(54)">Cliquer ici pour choisir cette taille de police.</a> <br>
-        <a class="lien5 navbar-link" routerLink="/menu" (click)="updateFontSize(60)">Cliquer ici pour choisir cette taille de police.</a>
-    </nav>
+<h1 class="titre"> PolyQuiz </h1>
 
-    <p class="NB"> N.B : Vous pourrez toujours changer à n'importe quel moment via les réglages.</p>
-
-    <div class="bouton-reglage">
-        <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+<div class="options"> 
+    Choisissez un contraste qui vous convient : <br>
+    <div class="bouttons">
+        <button class="contraste btn btn-default classic" (click)="updateContrast(1)">Classic</button>
+        <button class="contraste btn daltonien1" (click)="updateContrast(2)">Daltonien1</button>
+        <button class="contraste btn daltonien2" (click)="updateContrast(3)">Daltonien2</button>
     </div>
-    <app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
 </div>
+
+
+<nav>
+    <a class="lien1" routerLink="/menu" (click)="updateFontSize(36)">Cliquer ici pour choisir cette taille de police. ( Recommandé )</a> <br>
+    <a class="lien2" routerLink="/menu" (click)="updateFontSize(42)">Cliquer ici pour choisir cette taille de police. ( Fatigué )</a> <br>
+    <a class="lien3" routerLink="/menu" (click)="updateFontSize(48)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien4" routerLink="/menu" (click)="updateFontSize(54)">Cliquer ici pour choisir cette taille de police.</a> <br>
+    <a class="lien5" routerLink="/menu" (click)="updateFontSize(60)">Cliquer ici pour choisir cette taille de police.</a>
+</nav>
+
+<p class="NB"> N.B : Vous pourrez toujours changer à n'importe quel moment via les réglages.</p>
+
+<div class="bouton-reglage">
+    <button class="button-reglage btn btn-info" (click)="goToReglageOrQuit()">Réglage</button>
+</div>
+<app-reglage *ngIf="buttonIsActivated == true"></app-reglage>
+
