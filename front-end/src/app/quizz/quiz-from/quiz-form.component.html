@@ -1,32 +1,23 @@
-<div class="container">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col-6">
-            
-            <form class="form-field" [formGroup]="quizForm">
-                <h2 class="form-title">Créer un nouveau quiz</h2>
-                <div class="input-field">
-                    <label class="input-label" for="title">Titre</label>
-                    <input class="input-edit" type="text" id="name" [formControlName]="'name'">
-                </div>
-                
-                <div class="input-field">
-                    <label class="input-label" for="theme">Thème</label>
-                    <input class="input-edit" type="text" [formControlName]="'theme'">
-                </div>
-                
-                <div class="input-field">
-                    <label class="input-label" for="creator">Créateur du quiz</label>
-                    <input class="input-edit" type="text" [formControlName]="'creator'">
-                </div>
-                <div class="input-field">
-                    <label class="input-label" for="bgimage">Image décorative</label>
-                    <input class="input-edit" placeholder="http://image..." type="text" [formControlName]="'bgimage'">
-                </div>
-                
-                <button class="button" type="submit" (click)="addQuiz()">Créer</button>
-            </form>
-        </div>
-        <div class="col"></div>
+<form class="form-field" [formGroup]="quizForm">
+    <h2 class="form-title">Créer un nouveau quiz</h2>
+    <div class="input-field">
+        <label class="input-label" for="title">Titre</label>
+        <input class="input-edit" type="text" id="name" [formControlName]="'name'">
     </div>
-</div>
+    
+    <div class="input-field">
+        <label class="input-label" for="theme">Thème</label>
+        <input class="input-edit" type="text" [formControlName]="'theme'">
+    </div>
+    
+    <div class="input-field">
+        <label class="input-label" for="creator">Créateur du quiz</label>
+        <input class="input-edit" type="text" [formControlName]="'creator'">
+    </div>
+    <div class="input-field">
+        <label class="input-label" for="bgimage">Image décorative</label>
+        <input class="input-edit" placeholder="http://image..." type="text" [formControlName]="'bgimage'">
+    </div>
+    
+    <button class="button" type="submit" (click)="addQuiz()">Créer</button>
+</form>
