@@ -45,7 +45,7 @@ export class ReglageService {
       document.documentElement.style.setProperty("--main-shadow-color", "#0D0D0D");
     }
     if(value == 3){
-      document.documentElement.style.setProperty("--main-color", "#white");
+      document.documentElement.style.setProperty("--main-color", "whitesmoke");
       document.documentElement.style.setProperty("--main-bg-color", "#3b5998");
       document.documentElement.style.setProperty("--main-panel-color", "#4c70ba");
       document.documentElement.style.setProperty("--main-panel-color-light", "#5f7ec1");
