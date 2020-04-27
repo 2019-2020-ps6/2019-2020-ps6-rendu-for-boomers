@@ -1,7 +1,7 @@
-<div>
+<div class="form-field">
     <h2>{{question.label}}</h2>
     <div *ngFor="let answer of question.answers; let i=index">
-        {{i}} - {{answer.value}} <ng-container *ngIf="answer.isCorrect"><i class="far fa-check-square"></i></ng-container> <br>
+        {{i+1}} - {{answer.value}} <ng-container *ngIf="answer.isCorrect"><img src="../../assets/check_icon.svg"></ng-container> <br>
     </div>
-    <button (click)="delete()">Delete</button>
+    <button class="button" (click)="delete()">Delete</button>
 </div>

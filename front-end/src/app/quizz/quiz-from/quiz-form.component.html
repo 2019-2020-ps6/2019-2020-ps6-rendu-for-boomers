@@ -3,24 +3,24 @@
         <div class="col"></div>
         <div class="col-6">
             
-            <form class="quiz-form" [formGroup]="quizForm">
-                <h2 id="quiz-form-title">Créer un nouveau quiz</h2>
+            <form class="form-field" [formGroup]="quizForm">
+                <h2 class="form-title">Créer un nouveau quiz</h2>
                 <div class="input-field">
-                    <label class="form-label" for="title">Titre</label>
+                    <label class="input-label" for="title">Titre</label>
                     <input class="input-edit" type="text" id="name" [formControlName]="'name'">
                 </div>
                 
                 <div class="input-field">
-                    <label class="form-label" for="theme">Thème</label>
+                    <label class="input-label" for="theme">Thème</label>
                     <input class="input-edit" type="text" [formControlName]="'theme'">
                 </div>
                 
                 <div class="input-field">
-                    <label class="form-label" for="creator">Créateur du quiz</label>
+                    <label class="input-label" for="creator">Créateur du quiz</label>
                     <input class="input-edit" type="text" [formControlName]="'creator'">
                 </div>
                 <div class="input-field">
-                    <label class="form-label" for="bgimage">Image décorative</label>
+                    <label class="input-label" for="bgimage">Image décorative</label>
                     <input class="input-edit" placeholder="http://image..." type="text" [formControlName]="'bgimage'">
                 </div>
                 
