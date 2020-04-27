@@ -24,6 +24,14 @@ a:hover {
     color: var(--main-color);
 }
 
+a:focus {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--main-color);
+}
+
 .button {
     position: fixed;
     bottom: 150px;
@@ -67,7 +75,6 @@ p {
     display: block;
     margin-left: 20px;
 }
-
 
 .image {
     display: block;
