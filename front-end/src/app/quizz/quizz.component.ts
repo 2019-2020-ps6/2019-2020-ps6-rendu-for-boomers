@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuizService } from '../../services/quiz.service';
 import { Quiz } from 'src/models/quiz.model';
+import { ReglageService } from 'src/services/reglage.service';
 
 
 @Component({
@@ -48,9 +49,16 @@ export class QuizzComponent implements OnInit
     animation : { duration : 1500, easing : 'easeOutCubic' }
   };
 
-  constructor(private route: ActivatedRoute, public quizService: QuizService) 
+  public valueContrast: number;
+
+  constructor(private route: ActivatedRoute, public quizService: QuizService, public reglageService: ReglageService) 
   {
     this.quizService.quizSelected$.subscribe((quiz) => this.quiz = quiz);
+
+    this.reglageService.valueContrast.subscribe((value: number) => 
+    {
+      this.valueContrast = value;
+    })
 
     this.questionIndex = 0;
   }
