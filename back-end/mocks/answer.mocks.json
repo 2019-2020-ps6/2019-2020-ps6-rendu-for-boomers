@@ -120,30 +120,6 @@
     "id": 1587897029982
   },
   {
-    "value": "Aldé",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346960
-  },
-  {
-    "value": "Aldériate",
-    "isCorrect": true,
-    "questionId": 1587897346960,
-    "id": 1587897346963
-  },
-  {
-    "value": "Sardoche",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346963
-  },
-  {
-    "value": "ssza",
-    "isCorrect": false,
-    "questionId": 1587897346960,
-    "id": 1587897346964
-  },
-  {
     "value": "France",
     "isCorrect": false,
     "questionId": 1588001351667,
@@ -180,7 +156,11 @@
     "id": 1588001507120
   },
   {
+<<<<<<< HEAD
     "value": "Emmental, Comté, Tomme de Savoie",
+=======
+    "value": "Emmental, comté, Tomme de Savoie",
+>>>>>>> 36c3814cae1ee54fe7d191f52c2f4eaf9e913129
     "isCorrect": false,
     "questionId": 1588001743056,
     "id": 1588001743057
@@ -304,54 +284,6 @@
     "isCorrect": false,
     "questionId": 1588002766188,
     "id": 1588002766189
-  },
-  {
-    "value": "Des tentacules",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "De l'inceste",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "Yamete kodasai sempai",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245791
-  },
-  {
-    "value": "Oni-chan",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245792
-  },
-  {
-    "value": "Ahri",
-    "isCorrect": true,
-    "questionId": 1588003245790,
-    "id": 1588003245792
-  },
-  {
-    "value": "Paul Laudien",
-    "isCorrect": false,
-    "questionId": 1588003245790,
-    "id": 1588003245793
-  },
-  {
-    "value": "l'argent",
-    "isCorrect": false,
-    "questionId": 1588003267934,
-    "id": 1588003267934
-  },
-  {
-    "value": "la passion",
-    "isCorrect": true,
-    "questionId": 1588003267934,
-    "id": 1588003267935
   },
   {
     "value": "L'allégorie de la taverne",

@@ -17,6 +17,7 @@
 .sommaire {
     font-weight: bold;
     text-decoration: underline;
+    max-width: 100%;
 }
 
 a:hover {
@@ -53,8 +54,13 @@ h1 {
 }
 
 p {
+    max-width: 75%;
     display: inline-block;
     margin-left: 10px;
+}
+
+.float {
+    float: left;
 }
 
 .p-image {
@@ -62,10 +68,6 @@ p {
     margin-left: 20px;
 }
 
-.fleche {
-    position: relative;
-    padding-left: 10px;
-}
 
 .image {
     display: block;

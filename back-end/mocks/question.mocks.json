@@ -25,11 +25,6 @@
     "id": 1587897029979
   },
   {
-    "label": "Le plus musclé ?",
-    "quizId": 1587834305109,
-    "id": 1587897346960
-  },
-  {
     "label": "D'où vient le fromage à raclette",
     "quizId": 1588001099447,
     "id": 1588001351667
@@ -75,6 +70,7 @@
     "id": 1588002766188
   },
   {
+<<<<<<< HEAD
     "label": "Quel est l'élément indispensable dans un hentai",
     "quizId": 1588003118578,
     "id": 1588003245790
@@ -86,6 +82,9 @@
   },
   {
     "label": "Quelle est la fameuse allégorie écrite par Platon dans le livre 7 de La République ?",
+=======
+    "label": "Quelle est la fameuse allégorie écrite par Platon dans le livre 7 de La République",
+>>>>>>> 36c3814cae1ee54fe7d191f52c2f4eaf9e913129
     "quizId": 1588003342592,
     "id": 1588003500497
   },
@@ -95,13 +94,33 @@
     "id": 1588003593492
   },
   {
+<<<<<<< HEAD
     "label": "Lequel de ces philosophes était également empereur ?",
+=======
+    "label": "Lequel de ces philosophe était également empereur?",
+>>>>>>> 36c3814cae1ee54fe7d191f52c2f4eaf9e913129
     "quizId": 1588003342592,
     "id": 1588003718862
   },
   {
+<<<<<<< HEAD
     "label": "Suce tu?",
     "quizId": 1588016584184,
     "id": 1588016601293
+=======
+    "label": "En quelle année l'Inde est-elle devenue indépendante ?",
+    "quizId": 1588012056616,
+    "id": 1588012174757
+  },
+  {
+    "label": "Quelle est la couleur complémentaire du rouge",
+    "quizId": 1588012056616,
+    "id": 1588012277994
+  },
+  {
+    "label": "One for all ou all for one ?",
+    "quizId": 1588014176841,
+    "id": 1588014227984
+>>>>>>> 36c3814cae1ee54fe7d191f52c2f4eaf9e913129
   }
 ]
