@@ -24,7 +24,6 @@
     "id": 1587916328725
   },
   {
-<<<<<<< HEAD
     "name": "Cuisine Montagnarde",
     "theme": "Cuisine",
     "creator": "Le Chef",
@@ -58,12 +57,5 @@
     "creator": "Platon",
     "bgimage": "https://img.over-blog-kiwi.com/0/87/36/68/20160905/ob_df7021_socrates.jpg",
     "id": 1588003342592
-=======
-    "name": "test",
-    "theme": "ui",
-    "creator": "lol",
-    "bgimage": "",
-    "id": 1588000110415
->>>>>>> 2c6dd39e27a1e9cb03ce254c7c241d6fa02d2ddc
   }
 ]
