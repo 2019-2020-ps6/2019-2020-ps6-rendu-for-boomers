@@ -15,6 +15,7 @@ export class TutorielComponent implements OnInit {
   public height: number;
   displayBigImage: boolean = false;
   idImage: number;
+  public pageTitle: string = "Tutoriel";
   
   constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) { }
 

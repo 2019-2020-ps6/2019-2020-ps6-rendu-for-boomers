@@ -3,10 +3,22 @@
 <p>Pour créer un quiz, cliquer sur le bouton "Créer un quiz". Pour modifier un quiz déjà créé, cliquer sur un des quiz affichés ! <br> 
     Si vous avez un quelconque problème, n'hésitez pas à aller voir le tutoriel présent sur la page menu, il est là pour vous aider.</p>
 
-<app-quiz-form *ngIf="creatingQuiz ; else proposeCreateQuiz" (quizCreated)="quizCreated($event)"></app-quiz-form>
-<br>
-<ng-template #proposeCreateQuiz>
-    <button class="button" (click)="startQuizCreation()">Créer un quiz</button>
-</ng-template>
 
-<app-quiz-list (quizSelected)="handleSelection($event)" [deletable]="deletableQuiz"></app-quiz-list>
+<br>
+<div class="container">
+    
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <app-quiz-form *ngIf="creatingQuiz ; else proposeCreateQuiz" (quizCreated)="quizCreated($event)"></app-quiz-form>
+            <ng-template #proposeCreateQuiz>
+                <button class="button" (click)="startQuizCreation()">Créer un quiz</button>
+            </ng-template>
+            
+            
+            <app-quiz-list (quizSelected)="handleSelection($event)" [deletable]="deletableQuiz"></app-quiz-list>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
