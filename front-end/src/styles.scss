@@ -97,3 +97,48 @@ input {
 input:focus {
     border: 2px solid var(--main-color);
 }
+
+.input-label
+{
+    display: inline-block;
+    text-align: right;
+    margin-right: 20px;
+    width: 500px;
+}
+
+.input-field
+{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.input-edit
+{
+    flex: 1;
+    align-self: stretch;
+    max-width: 500px;
+}
+
+.input-checkbox
+{
+    flex: 1;
+    align-self: center;
+    outline: 0px;
+}
+
+.form-field
+{
+    text-align: center;
+    background-color: var(--alt-panel-color);
+    padding: 10px;
+    box-shadow: 2.5px 2.5px 5px var(--main-shadow-color);
+    margin: 20px;
+}
+
+.form-title
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

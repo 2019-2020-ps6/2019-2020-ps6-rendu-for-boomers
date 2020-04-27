@@ -1,25 +1,24 @@
-<div>
-    <h2>Create Question</h2>
-    <form [formGroup]="questionForm">
-        <label for="label">
-            Title <br>
-            <input type="text" [formControlName]="'label'">
-        </label>
-        <br>
-        <button (click)="addAnswer()">Add answer</button>
-        <div formArrayName="answers">
-            <div *ngFor="let address of answers.controls; let i=index">
-                <div [formGroupName]="i">
-                    <label>
-                        answer
-                        <input type="text" [formControlName]="'value'">
-                        <br>
-                        Correct
-                        <input type="checkbox" [formControlName]="'isCorrect'">
-                    </label>
+<form class="form-field" [formGroup]="questionForm">
+    <h2 class="form-title">Create Question</h2>
+    <div class="input-field">
+        <label class="input-label" for="label">Question</label>
+        <input class="input-edit" type="text" [formControlName]="'label'">
+    </div>
+    <button class="button" (click)="addAnswer()">Ajouter un réponse</button>
+
+    <div formArrayName="answers">
+        <div *ngFor="let address of answers.controls; let i=index">
+            <div [formGroupName]="i">
+                <div class="input-field">
+                    <label class="input-label">Réponse</label>
+                    <input class="input-edit" type="text" [formControlName]="'value'">
+                </div>
+                <div class="input-field">
+                    <label class="input-label">Bonne réponse</label>
+                    <input class="input-checkbox" type="checkbox" [formControlName]="'isCorrect'">
                 </div>
             </div>
         </div>
-        <button type="submit" (click)="addQuestion()">Create</button>
-    </form>
-</div>
+    </div>
+    <button class="button" type="submit" (click)="addQuestion()">Create</button>
+</form>
