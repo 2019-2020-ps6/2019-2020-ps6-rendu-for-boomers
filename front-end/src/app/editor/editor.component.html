@@ -1,8 +1,9 @@
 <app-header [title]="pageTitle"></app-header>
 
 <app-quiz-form *ngIf="creatingQuiz ; else proposeCreateQuiz" (quizCreated)="quizCreated($event)"></app-quiz-form>
+<br>
 <ng-template #proposeCreateQuiz>
-    <button (click)="startQuizCreation()">Créer un quiz</button>
+    <button class="button" (click)="startQuizCreation()">Créer un quiz</button>
 </ng-template>
 
 <app-quiz-list (quizSelected)="handleSelection($event)" [deletable]="deletableQuiz"></app-quiz-list>
