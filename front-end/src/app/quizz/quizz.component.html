@@ -19,7 +19,15 @@
         <button class="button" (click)="goToNextQuestion()">Suivant</button>
     </div>
 
-    <img id="blurImage" src="./assets/backToBlur.png" *ngIf="displayFinalResultPanel == true">
+    <div *ngIf="valueContrast == 1">
+        <img id="blurImage" src="./assets/backToBlur_1.png" *ngIf="displayFinalResultPanel == true">
+    </div>
+    <div *ngIf="valueContrast == 2">
+        <img id="blurImage" src="./assets/backToBlur_2.png" *ngIf="displayFinalResultPanel == true">
+    </div>
+    <div *ngIf="valueContrast == 3">
+        <img id="blurImage" src="./assets/backToBlur_3.png" *ngIf="displayFinalResultPanel == true">
+    </div>
 
     <div class="panel panel-animation" *ngIf="displayFinalResultPanel == true">
         <h2>Résultats du quiz sur {{quiz.name}}</h2>
