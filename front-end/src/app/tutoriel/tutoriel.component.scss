@@ -40,10 +40,11 @@ a:hover {
 
 .listeLien {
     display: inline-block;
+    background-color: var(--main-bg-color);
     padding: 5px;
     border: 1px solid;
     position: fixed;
-    bottom : 500px;
+    bottom : 200px;
     right: 20px;
 }
 
@@ -57,6 +58,7 @@ p {
 }
 
 .p-image {
+    display: block;
     margin-left: 20px;
 }
 
@@ -69,10 +71,15 @@ p {
     display: block;
     margin-left: 50px;
     width: 80%;
+    margin-bottom: 30px;
 }
 
-.curseur {
-    cursor: pointer;
+.curseurIn {
+    cursor: zoom-in;
+}
+
+.curseurOut {
+    cursor: zoom-out;
 }
 
 .big-image {
