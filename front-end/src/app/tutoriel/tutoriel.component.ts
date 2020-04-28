@@ -41,9 +41,4 @@ export class TutorielComponent implements OnInit {
     this.displayBigImage = value;
     this.idImage = id;
   }
-
-  goToMenu(): void
-    {
-        this.router.navigate(['/menu']);
-    }
 }
