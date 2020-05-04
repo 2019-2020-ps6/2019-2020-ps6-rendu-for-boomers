@@ -10,6 +10,8 @@ export class ReglageService {
   public font: BehaviorSubject<string> = new BehaviorSubject("Arial");
   //public brightness: BehaviorSubject<number> = new BehaviorSubject(45);
   public valueContrast: BehaviorSubject<number> = new BehaviorSubject(1);
+  closeReglage: boolean = true;
+  closeReglage$: Subject<boolean> = new Subject();
 
   constructor() {
   }
@@ -52,5 +54,18 @@ export class ReglageService {
       document.documentElement.style.setProperty("--alt-panel-color", "#4264aa");
       document.documentElement.style.setProperty("--main-shadow-color", "#2d4373");
     }
+  }
+
+  setCloseReglage(bool: boolean){
+    this.closeReglage = bool;
+    this.update();
+  }
+
+  getCloseReglage(): boolean {
+    return this.closeReglage;
+  }
+
+  update(){
+    this.closeReglage$.next(this.closeReglage);
   }
 }

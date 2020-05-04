@@ -12,7 +12,7 @@ import { EditorComponent } from './editor/editor.component';
 import { ModifyComponent } from './editor/modify/modify.component';
 import { CreateComponent } from './editor/create/create.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CloseReglageService } from './close-reglage.service';
+import { ReglageService } from '../services/reglage.service';
 import { TutorielComponent } from './tutoriel/tutoriel.component';
 import { ChartsModule } from 'ng2-charts';
 import { QuizzListComponent } from './quizz/quiz-list/quiz-list.component';
@@ -101,7 +101,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule
   ],
   exports: [RouterModule],
-  providers: [CloseReglageService],
+  providers: [ReglageService],
   bootstrap: [AppComponent]
 })
 

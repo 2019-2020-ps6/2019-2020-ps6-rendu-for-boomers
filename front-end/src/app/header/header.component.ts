@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CloseReglageService } from '../close-reglage.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ReglageService } from 'src/services/reglage.service';
 
 
 @Component({
@@ -17,18 +17,18 @@ export class HeaderComponent implements OnInit
     buttonIsActivated: boolean = false;
     buttonObserver: Subscription;
 
-    constructor(private router: Router, private closeReglageService: CloseReglageService)
+    constructor(private router: Router, private reglageService: ReglageService)
     {
 
     }
 
     ngOnInit(): void 
     {
-        this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+        this.buttonObserver = this.reglageService.closeReglage$.subscribe(() => {
             this.buttonIsActivated = false;
         });
 
-        this.closeReglageService.update();
+        this.reglageService.update();
     }
 
     goToReglageOrQuit(): void {

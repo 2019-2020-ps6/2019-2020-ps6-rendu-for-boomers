@@ -5,11 +5,6 @@
     "label": "Quels sont les couleurs du drapeau francais ?"
   },
   {
-    "id": 2,
-    "quizId": 1,
-    "label": "La capitale de la France ?"
-  },
-  {
     "id": 3,
     "quizId": 2,
     "label": "Quel est l'intrus ?"

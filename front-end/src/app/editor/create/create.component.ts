@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CloseReglageService } from '../../close-reglage.service';
 import { Subject, Subscription } from 'rxjs';
 import { ReglageService } from 'src/services/reglage.service';
 import { QuizService } from '../../../services/quiz.service';
@@ -24,15 +23,15 @@ export class CreateComponent implements OnInit {
   tab = new Array(1);
   questionList: Question[];
 
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService, public quizService: QuizService) { 
+  constructor(public reglageService: ReglageService, public quizService: QuizService) { 
 
   }
 
   ngOnInit(): void {
-    this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+    this.buttonObserver = this.reglageService.closeReglage$.subscribe(() => {
       this.buttonIsActivated = false;
     });
-    this.closeReglageService.update();
+    this.reglageService.update();
 
     this.reglageService.valueContrast.subscribe((value: number) => 
     {

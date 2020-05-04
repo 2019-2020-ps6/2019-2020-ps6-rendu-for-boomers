@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CloseReglageService } from '../close-reglage.service';
 import { ReglageService } from 'src/services/reglage.service';
-import { BehaviorSubject, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-reglage',
@@ -16,7 +14,7 @@ export class ReglageComponent implements OnInit {
   //public brightness:number;
   public valueContrast: number;
 
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
+  constructor(public reglageService: ReglageService) {
       this.reglageService.fontsize.subscribe((fontsize: number) => 
       {
         this.fontValue = fontsize;
@@ -42,7 +40,7 @@ export class ReglageComponent implements OnInit {
 
   onCloseReglage(): void {
     console.log("click");
-    this.closeReglageService.setCloseReglage(true);
+    this.reglageService.setCloseReglage(true);
   }
 
   updateFontSize(value: number): void {

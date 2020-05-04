@@ -14,6 +14,8 @@ export class QuestionComponent implements OnInit {
   @Output()
   deleteQuestion: EventEmitter<Question> = new EventEmitter<Question>();
 
+  openPopUpToDeleteQuestion: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +23,9 @@ export class QuestionComponent implements OnInit {
 
   delete() {
     this.deleteQuestion.emit(this.question);
+  }
+
+  setOpenPopUpToDeleteQuestion(bool: boolean){
+    this.openPopUpToDeleteQuestion = bool;
   }
 }

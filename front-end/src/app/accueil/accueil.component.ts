@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Subscription } from 'rxjs';
-import { CloseReglageService } from '../close-reglage.service';
 import { ReglageService } from 'src/services/reglage.service';
 
 @Component({
@@ -14,15 +13,15 @@ export class AccueilComponent implements OnInit {
   buttonObserver: Subscription;
   public valueContrast: number;
   
-  constructor(private closeReglageService: CloseReglageService, public reglageService: ReglageService) {
+  constructor(public reglageService: ReglageService) {
    
    }
 
   ngOnInit(): void {
-    this.buttonObserver = this.closeReglageService.closeReglage$.subscribe(() => {
+    this.buttonObserver = this.reglageService.closeReglage$.subscribe(() => {
       this.buttonIsActivated = false;
     });
-    this.closeReglageService.update();
+    this.reglageService.update();
 
     this.reglageService.valueContrast.subscribe((value: number) => 
     {
