@@ -11,7 +11,6 @@ export class ReglageComponent implements OnInit {
   public height: number;
   public fontValue:number;
   public font:string;
-  //public brightness:number;
   public valueContrast: number;
 
   constructor(public reglageService: ReglageService) {
@@ -27,15 +26,10 @@ export class ReglageComponent implements OnInit {
       {
         this.font = value;
       })
-    //this.reglageService.brightness.subscribe((value: number) => 
-    //{
-    //  this.brightness = value;
-    //})
   }
 
   ngOnInit(): void {
     this.updateContrast(this.valueContrast);
-    //this.updateBrightness(this.brightness);
   }
 
   onCloseReglage(): void {
@@ -52,11 +46,6 @@ export class ReglageComponent implements OnInit {
     this.reglageService.setFont(value);
     document.documentElement.style.setProperty("--main-font", value);
   }
-
-  //updateBrightness(value: number): void {
-  //  this.reglageService.setBrightness(value);
-  //  $(":root").css("--main-filter:", value + "%;");
-  //}
 
   updateContrast(value: number): void {
     this.reglageService.updateContrast(value);

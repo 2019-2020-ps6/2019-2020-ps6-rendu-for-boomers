@@ -8,7 +8,6 @@ export class ReglageService {
   public heightReglage: Subject<number> = new Subject();
   public fontsize: BehaviorSubject<number> = new BehaviorSubject(45);
   public font: BehaviorSubject<string> = new BehaviorSubject("Arial");
-  //public brightness: BehaviorSubject<number> = new BehaviorSubject(45);
   public valueContrast: BehaviorSubject<number> = new BehaviorSubject(1);
   closeReglage: boolean = true;
   closeReglage$: Subject<boolean> = new Subject();
@@ -24,9 +23,6 @@ export class ReglageService {
     this.font.next(value);
   }
 
- // setBrightness(value: number){
- //   this.brightness.next(value);
- // }
 
   updateContrast(value: number): void {
     this.valueContrast.next(value);
