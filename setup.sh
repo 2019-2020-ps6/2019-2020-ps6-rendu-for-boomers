@@ -1,2 +1,2 @@
 npm start --prefix front-end&
-npm run dev --prefix back-end&
+npm start --prefix back-end&
