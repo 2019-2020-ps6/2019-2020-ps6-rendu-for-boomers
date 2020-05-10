@@ -5,6 +5,10 @@ Hello there !
 
 ![](https://pics.me.me/hello-there-%D0%B5-hello-there-60378639.png)
 
+# Installation
+
+[Linux](installLinux.md)
+
 # Required Packages
 
 ### npm 
