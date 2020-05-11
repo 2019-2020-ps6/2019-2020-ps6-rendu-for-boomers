@@ -8,10 +8,11 @@ Hello there !
 # Installation
 ### il faut avoir une version récente de nodejs (12 ou plus)
 ```
-pour windows  https://nodejs.org/dist/v12.16.3/node-v12.16.3-x64.msi
+Pour Windows :
+https://nodejs.org/dist/v12.16.3/node-v12.16.3-x64.msi
 ```
 ```
-pour Linux  
+Pour Linux :  
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install nodejs
