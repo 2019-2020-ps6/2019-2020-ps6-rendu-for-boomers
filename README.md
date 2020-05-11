@@ -6,7 +6,7 @@ Hello there !
 ![](https://pics.me.me/hello-there-%D0%B5-hello-there-60378639.png)
 
 # Installation
-### ouvrir une console
+### ouvrir une console (ça peut prendre un peu de temps)
 ```
 ./install.sh
 ```
