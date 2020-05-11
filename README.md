@@ -19,6 +19,10 @@ npm run dev
 ```
 ng serve
 ```
+### ouvrir un navigateur
+```
+http://localhost:4200/
+```
 
 # Required Packages
 
