@@ -24,7 +24,7 @@ ng serve
 http://localhost:4200/
 ```
 
-# Packages
+# Packages (inclus dans le install.sh)
 
 ### npm 
 
