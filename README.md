@@ -24,7 +24,7 @@ ng serve
 http://localhost:4200/
 ```
 
-# Required Packages
+# Packages
 
 ### npm 
 
