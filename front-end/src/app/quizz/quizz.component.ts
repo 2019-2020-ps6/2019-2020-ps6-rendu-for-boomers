@@ -88,8 +88,16 @@ export class QuizzComponent implements OnInit
       this.answerIsValid = false;
       this.answerIconSrc = this.invalidAnswerIconSrc;
       this.invalidAnswerCount++;
-      this.answerString = this.invalidAnswer + this.quiz.questions[this.questionIndex].answers[answerIndex].value;
+      this.answerString = this.invalidAnswer + this.findGoodAnswer(this.questionIndex);
       this.displayResultPanel = true;
+    }
+  }
+
+  findGoodAnswer(questionIndex: number): string{
+    for(let answer of this.quiz.questions[questionIndex].answers){
+      if(answer.isCorrect)  
+        return answer.value;
+      return null;
     }
   }
 
