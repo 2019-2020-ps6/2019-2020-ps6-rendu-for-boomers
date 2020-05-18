@@ -6,7 +6,7 @@
         <div class="buttonGroup2">
             <h2 id="questionTitle">{{quiz.questions[questionIndex].label}}</h2>
             <div class="questions" *ngFor="let answer of quiz.questions[questionIndex].answers; let i=index">
-                <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(i)">{{answer.value}}</button>
+                <button class="button focused btn btn-default" type='button' (click)="getSelectedAnswer(i)" (blur)="getSelectedAnswer(-1)">{{answer.value}}</button>
             </div>
         </div>
         <button class="button" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
