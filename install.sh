@@ -1,5 +1,9 @@
-npm install --prefix back-end
-npm install --prefix front-end
-npm install -g @angular/cli --prefix front-end
-npm install ng2-charts --prefix front-end
-npm install chart.js --prefix front-end
+cd back-end/
+npm install
+cd ../
+cd front-end 
+npm install
+npm install -g @angular/cli
+npm install ng2-charts
+npm install chart.js
+cd ../
