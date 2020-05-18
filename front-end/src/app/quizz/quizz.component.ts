@@ -17,7 +17,7 @@ export class QuizzComponent implements OnInit
   public selectedAnswer: number = -1;
   public answerString: string;
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
-  public invalidAnswer: string = "Non non non ! c'est pas bon !";
+  public invalidAnswer: string = "Non non non ! c'est pas bon ! La bonne réponse était : \n";
   public validAnswerIconSrc: string = "./assets/check_icon.svg";
   public invalidAnswerIconSrc: string = "./assets/cross_icon.svg";
   public answerIconSrc: string;
@@ -88,7 +88,7 @@ export class QuizzComponent implements OnInit
       this.answerIsValid = false;
       this.answerIconSrc = this.invalidAnswerIconSrc;
       this.invalidAnswerCount++;
-      this.answerString = this.invalidAnswer;
+      this.answerString = this.invalidAnswer + this.quiz.questions[this.questionIndex].answers[answerIndex].value;
       this.displayResultPanel = true;
     }
   }
