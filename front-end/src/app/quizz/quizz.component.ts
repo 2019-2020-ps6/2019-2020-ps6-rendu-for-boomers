@@ -97,8 +97,8 @@ export class QuizzComponent implements OnInit
     for(let answer of this.quiz.questions[questionIndex].answers){
       if(answer.isCorrect)  
         return answer.value;
-      return null;
     }
+    return "Aucune";
   }
 
   goToNextQuestion(): void
