@@ -15,7 +15,8 @@ export class TutorielComponent implements OnInit {
   displayBigImage: boolean = false;
   idImage: number;
   public pageTitle: string = "Tutoriel";
-  
+  displaySommaire = false;
+
   constructor(public reglageService: ReglageService) { }
 
   ngOnInit(): void {
@@ -39,5 +40,13 @@ export class TutorielComponent implements OnInit {
   setBiggerImage(value, id): void {
     this.displayBigImage = value;
     this.idImage = id;
+  }
+
+  setDisplaySommaire(): void{
+    if (this.displaySommaire){
+      this.displaySommaire = false;
+    } else {
+      this.displaySommaire = true;
+    }
   }
 }
