@@ -29,12 +29,13 @@
     font-size: max(var(--main-font-size), 45px);
     position: fixed;
     top: 10px;
-    left: calc(max(var(--main-font-size), 45px)*5);
-    //right: 10px;
+    left: calc(max(var(--main-font-size), 45px)*3.5);
+    right: 10px;
 }
 
 h2
 {
     text-align: center;
     margin: 0px;
+    font-size: max(var(--main-font-size), 45px);
 }

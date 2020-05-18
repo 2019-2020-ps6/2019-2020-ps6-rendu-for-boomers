@@ -38,10 +38,12 @@ export class QuizCardComponent implements OnInit {
     get imgPath()
     {
         var style = "background-image: url(";
-        if(this.quiz.bgimage)
+        style+=this.choseBackgroundImage();
+        /*if(this.quiz.bgimage)
             style+=this.quiz.bgimage;
         else
             style+=this.choseBackgroundImage();
+        */
         
         return style + ")";
     }
