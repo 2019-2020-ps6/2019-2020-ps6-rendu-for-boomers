@@ -11,6 +11,7 @@ import { Question } from 'src/models/question.model';
     styleUrls: ['./quiz-form.component.scss']
   })
   export class QuizFormComponent implements OnInit {
+    nameOrThemeIsEmpty: boolean;
 
     @Output()
     quizCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -36,14 +37,21 @@ import { Question } from 'src/models/question.model';
 
     addQuiz() {
         const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
-
-        this.quizServices.addQuiz(quizToCreate);
-
-        this.quizCreated.emit(true);
+        if(quizToCreate.name != '' && quizToCreate.theme != ''){
+            this.quizServices.addQuiz(quizToCreate);
+            this.quizCreated.emit(true);
+        }
+        else{
+            this.setNameOrThemeIsEmpty(true);
+        }
     }
 
     cancelQuiz()
     {
         this.quizCanceled.emit(true);
+    }
+
+    setNameOrThemeIsEmpty(bool: boolean){
+        this.nameOrThemeIsEmpty = bool;
     }
   }
