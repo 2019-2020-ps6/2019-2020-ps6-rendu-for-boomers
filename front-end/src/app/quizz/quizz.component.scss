@@ -17,10 +17,6 @@
     margin-right: 2%;
 }
 
-.questions{
-    display:inline-block;
-    margin-right: 10px;
-}
 
 .answerButton {
     background-color: #e0e0e0;
@@ -39,15 +35,13 @@
 .buttonGoup {
     background-color: var(--alt-panel-color);
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 10px;
     box-shadow: 2.5px 2.5px 8px var(--main-shadow-color);
 }
 
 .buttonGroup2 {
-    text-align: center;
-    //border: solid 3px lightgray;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
