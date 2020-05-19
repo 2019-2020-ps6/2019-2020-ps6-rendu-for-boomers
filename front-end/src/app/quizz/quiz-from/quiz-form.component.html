@@ -2,17 +2,17 @@
     <h2 class="form-title">Créer un nouveau quiz</h2>
     <div class="input-field">
         <label class="input-label" for="title">Titre</label>
-        <input class="input-edit" type="text" id="name" [formControlName]="'name'">
+        <input class="input-edit" type="text" id="name" [formControlName]="'name'" maxlength="40">
     </div>
     
     <div class="input-field">
         <label class="input-label" for="theme">Thème</label>
-        <input class="input-edit" type="text" [formControlName]="'theme'">
+        <input class="input-edit" type="text" [formControlName]="'theme'" maxlength="50">
     </div>
     
     <div class="input-field">
         <label class="input-label" for="creator">Créateur du quiz</label>
-        <input class="input-edit" type="text" [formControlName]="'creator'">
+        <input class="input-edit" type="text" [formControlName]="'creator'" maxlength="50">
     </div>
     <div class="input-field">
         <label class="input-label" for="bgimage">Image décorative</label>
@@ -23,7 +23,7 @@
     <button class="button" type="submit" (click)="cancelQuiz()">Annuler</button>
 
     <div class="panel" *ngIf="nameOrThemeIsEmpty">
-        <h2>Echec de la création du quiz, le titre ou le thème n'a pas été rempli. <br> Veuillez réessayer en complétant bien ces deux champs.</h2>
+        <h2>Échec de la création du quiz, le titre ou le thème n'a pas été rempli. <br> Veuillez réessayer en complétant bien ces deux champs.</h2>
         
         <button class="button validationButton" (click)="setNameOrThemeIsEmpty(false)">C'est compris</button>
     </div>
