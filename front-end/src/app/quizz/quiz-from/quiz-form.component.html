@@ -21,4 +21,10 @@
     
     <button class="button" type="submit" (click)="addQuiz()">Créer</button>
     <button class="button" type="submit" (click)="cancelQuiz()">Annuler</button>
+
+    <div class="panel" *ngIf="nameOrThemeIsEmpty">
+        <h2>Echec de la création du quiz, le titre ou le thème n'a pas été rempli. <br> Veuillez réessayer en complétant bien ces deux champs.</h2>
+        
+        <button class="button validationButton" (click)="setNameOrThemeIsEmpty(false)">C'est compris</button>
+    </div>
 </form>

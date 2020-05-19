@@ -10,6 +10,12 @@
             </div>
         </div>
         <button class="button" type='button' (click)="selectAnswer(selectedAnswer)">Valider</button>
+
+        <div class="panel2" *ngIf="answerIsSelected == false">
+            <h2>Vous n'avez séléctionné aucune réponse. Cliquer sur une réponse puis valider.</h2>
+            
+            <button class="button validationButton" (click)="setAnswerIsSelected(null)">C'est compris !</button>
+        </div>
     </div>
     <h3>Question {{questionIndex+1}}/{{quiz.questions.length}}</h3>
 
@@ -52,3 +58,4 @@
         <button class="button" routerLink="/menu">Retour au menu</button>
     </div>
 </ng-container>
+

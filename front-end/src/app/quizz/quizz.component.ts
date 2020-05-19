@@ -15,6 +15,7 @@ export class QuizzComponent implements OnInit
   public quiz: Quiz;
   public questionIndex: number;
   public selectedAnswer: number = -1;
+  public  answerIsSelected: boolean;
   public answerString: string;
   public validAnswer: string = "Bravo ! c'est la bonne réponse !";
   public invalidAnswer: string = "Non non non ! c'est pas bon ! La bonne réponse était : \n";
@@ -71,26 +72,40 @@ export class QuizzComponent implements OnInit
 
   getSelectedAnswer(answerIndex: number) {
     this.selectedAnswer = answerIndex
+    this.setAnswerIsSelected(true);
   }
 
   selectAnswer(answerIndex:number)
   {
-    if(this.quiz.questions[this.questionIndex].answers[answerIndex].isCorrect)
-    {
-      this.answerIsValid = true;
-      this.answerIconSrc = this.validAnswerIconSrc;
-      this.validAnswerCount++;
-      this.answerString = this.validAnswer;
-      this.displayResultPanel = true;
+    if(this.answerIsSelected){
+      if(this.quiz.questions[this.questionIndex].answers[answerIndex].isCorrect)
+      {
+        this.answerIsValid = true;
+        this.answerIconSrc = this.validAnswerIconSrc;
+        this.validAnswerCount++;
+        this.answerString = this.validAnswer;
+        this.displayResultPanel = true;
+      }
+      else
+      {
+        this.answerIsValid = false;
+        this.answerIconSrc = this.invalidAnswerIconSrc;
+        this.invalidAnswerCount++;
+        this.answerString = this.invalidAnswer + this.findGoodAnswer(this.questionIndex);
+        this.displayResultPanel = true;
+      }
     }
-    else
-    {
-      this.answerIsValid = false;
-      this.answerIconSrc = this.invalidAnswerIconSrc;
-      this.invalidAnswerCount++;
-      this.answerString = this.invalidAnswer + this.quiz.questions[this.questionIndex].answers[answerIndex].value;
-      this.displayResultPanel = true;
+    else{
+      this.answerIsSelected = false;
     }
+  }
+
+  findGoodAnswer(questionIndex: number): string{
+    for(let answer of this.quiz.questions[questionIndex].answers){
+      if(answer.isCorrect)  
+        return answer.value;
+    }
+    return "Aucune";
   }
 
   goToNextQuestion(): void
@@ -106,6 +121,7 @@ export class QuizzComponent implements OnInit
       this.questionIndex--;
     }
     this.selectedAnswer = -1;
+    this.setAnswerIsSelected(null);
   }
 
   calculateMark(): void
@@ -135,8 +151,6 @@ export class QuizzComponent implements OnInit
       return this.validAnswerCount + " bonne réponse";
     else
     {
-      if(this.quiz.questions.length > 1)
-        return "aucune bonnes réponses";
       return "aucune bonne réponse";
     }
   }
@@ -149,9 +163,11 @@ export class QuizzComponent implements OnInit
       return this.invalidAnswerCount + " mauvaise réponse";
     else
     {
-      if(this.quiz.questions.length > 1)
-        return "aucune mauvaises réponses";
       return "aucune mauvaise réponse";
     }
+  }
+
+  setAnswerIsSelected(bool: boolean){
+    this.answerIsSelected = bool;
   }
 }

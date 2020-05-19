@@ -17,10 +17,6 @@
     margin-right: 2%;
 }
 
-.questions{
-    display:inline-block;
-    margin-right: 10px;
-}
 
 .answerButton {
     background-color: #e0e0e0;
@@ -39,15 +35,13 @@
 .buttonGoup {
     background-color: var(--alt-panel-color);
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 10px;
     box-shadow: 2.5px 2.5px 8px var(--main-shadow-color);
 }
 
 .buttonGroup2 {
-    text-align: center;
-    //border: solid 3px lightgray;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
@@ -63,15 +57,17 @@
 }
 
 .panel {
+    z-index: 2;
     background-color: var(--main-panel-color);
     color: var(--main-color);
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 10px;
-    padding: 25px;
+    margin: 25px;
+    overflow-y: auto;
 }
 
 .panel-animation {
@@ -244,4 +240,21 @@ h3
 {
     text-align: center;
     margin: 30px;
+}
+
+
+.panel2
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--main-panel-color);
+    border: 2px solid var(--main-color);
+}
+
+.validationButton
+{
+    margin: 40px;
 }
