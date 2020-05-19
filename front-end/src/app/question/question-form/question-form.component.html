@@ -21,4 +21,28 @@
         </div>
     </div>
     <button class="button" type="submit" (click)="addQuestion()">Créer</button>
+    
+    <div class="panel2" *ngIf="questionIsEmpty == true">
+        <h2>Vous n'avez pas mis de question. Remplissez le champ "Question" puis valider.</h2>
+        
+        <button class="button validationButton" (click)="setQuestionIsEmpty(null)">C'est compris !</button>
+    </div>
+
+    <div class="panel2" *ngIf="answerIsEmpty == true">
+        <h2>Une réponse est vide. Remplissez le champ "Réponse" puis valider.</h2>
+        
+        <button class="button validationButton" (click)="setAnswerIsEmpty(null)">C'est compris !</button>
+    </div>
+
+    <div class="panel2" *ngIf="isThereAnswer == true">
+        <h2>Aucune réponse n'a été ajoutée. Cliquez sur "Ajouter une réponse" pour en ajouter une.</h2>
+        
+        <button class="button validationButton" (click)="setIsThereAnswer(null)">C'est compris !</button>
+    </div>
+
+    <div class="panel2" *ngIf="isThereOneGoodAnswer == true">
+        <h2>Aucune de vos réponses n'est considérée comme vraie. Cochez la case à côté de "Bonne réponse" pour déclarer une réponse comme étant vraie. Vous devez avoir au minimum 1 bonne réponse.</h2>
+        
+        <button class="button validationButton" (click)="setIsThereOneGoodAnswer(null)">C'est compris !</button>
+    </div>
 </form>

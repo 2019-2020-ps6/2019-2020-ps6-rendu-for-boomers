@@ -1,0 +1,15 @@
+.panel2
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--main-panel-color);
+    border: 2px solid var(--main-color);
+}
+
+.validationButton
+{
+    margin: 40px;
+}
