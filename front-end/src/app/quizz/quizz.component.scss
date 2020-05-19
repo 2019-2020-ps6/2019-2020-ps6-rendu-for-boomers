@@ -57,15 +57,17 @@
 }
 
 .panel {
+    z-index: 2;
     background-color: var(--main-panel-color);
     color: var(--main-color);
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 10px;
-    padding: 25px;
+    margin: 25px;
+    overflow-y: auto;
 }
 
 .panel-animation {
@@ -238,4 +240,21 @@ h3
 {
     text-align: center;
     margin: 30px;
+}
+
+
+.panel2
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--main-panel-color);
+    border: 2px solid var(--main-color);
+}
+
+.validationButton
+{
+    margin: 40px;
 }
